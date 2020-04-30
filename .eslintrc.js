@@ -11,7 +11,8 @@ module.exports = {
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/interface-name-prefix": "off",
       "semi": "off",
-      "@typescript-eslint/semi": ["error"]
+      "@typescript-eslint/semi": ["error"],
+      "@typescript-eslint/camelcase": "off"
       // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
       // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },
