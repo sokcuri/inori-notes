@@ -1,15 +1,18 @@
-import "reflect-metadata";
-import { createConnection } from "typeorm";
+import { createConnection, Connection } from "typeorm";
 import { ApolloServer } from 'apollo-server';
-import { UnitDataResolver } from './resolvers/UnitDataResolver'; // add this
 import { buildSchema } from "type-graphql";
+import * as resolvers from './generated/resolvers';
 
 async function main() {
-  const connection = await createConnection();
+  await createConnection().then((connection: Connection) => {
+    const connectionName = connection.name;
+    console.log(`Database opened: ${connectionName}`);
+  }).catch(x => console.error(x));
   const schema = await buildSchema({
-    resolvers: [UnitDataResolver] // add this
+    resolvers: [...Object.values(resolvers)]
   });
   const server = new ApolloServer({ schema });
+
   await server.listen(4000);
   console.log("Server has started!");
 }

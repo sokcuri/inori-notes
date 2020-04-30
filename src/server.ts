@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import { BookResolver } from './resolvers/BookResolver';
+// import { BookResolver } from './resolvers/BookResolver';
 import { buildSchema } from "type-graphql";
 
 import App from './app';
@@ -12,7 +12,7 @@ import HomeController from './controllers/home';
 async function main() {
   const connection = await createConnection();
   const schema = await buildSchema({
-    resolvers: [BookResolver]
+    resolvers: []
   });
   const app = new App({
     port: 5000,

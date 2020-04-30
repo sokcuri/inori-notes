@@ -1,0 +1,10 @@
+import { Resolver, Query } from 'type-graphql';
+import { {{className}} } from '../models/{{className}}';
+
+@Resolver()
+export class {{className}}Resolver {
+  @Query(() => [{{className}}])
+  {{className}}() {
+    return {{className}}.find();
+  }
+}

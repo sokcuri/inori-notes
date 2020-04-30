@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env node src/index.ts",
+    "build": "tsc",
+    "start": "cross-env ts-node --transpile-only src/index.ts",
     "watch": "cross-env ts-node-dev --respawn src/index.ts",
-    "generate-models": "cross-env ts-node-dev --respawn scripts/generate-models",
+    "generate-tableinfo": "cross-env node -r ts-node/register scripts/generate-tableinfo",
     "lint": "eslint . --ext ts"
   },
   "author": "",

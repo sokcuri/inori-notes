@@ -40,7 +40,7 @@ async function getTableNames() {
           return;
         }
 
-        const tables = table.map(x => x.name).filter(x => x !== 'SqliteStat1');
+        const tables = table.map(x => x.name).filter(x => x !== 'sqlite_stat1');
         resolve(tables);
       });
     });
@@ -66,9 +66,9 @@ function toNodeType(type: string): string {
     case 'TEXT':
       return 'string';
     case 'BLOB':
-      return 'any';
+      return 'string';
     default:
-      return 'any';
+      return 'string';
   }
 }
 
@@ -81,7 +81,7 @@ function toTypeORMType(type: string): string {
     case 'TEXT':
       return 'text';
     case 'BLOB':
-      return '';
+      return 'text';
     default:
       return 'text';
   }
@@ -98,14 +98,18 @@ async function getTableInfo(db: sqlite3.Database, name: string) {
       const className = snakeToPascal(name);
       const classFields = [] as TableClassField[];
 
-      fields.forEach((x, i) => {
+      fields.forEach((x) => {
         const cf = {} as TableClassField;
         cf.name = x.name;
         cf.type = toNodeType(x.type);
 
-        if (i === 0) {
+        if (x.pk >= 1) {
           cf.field = `@Field(type => ID)`;
           cf.column = `@PrimaryColumn('${toTypeORMType(x.type)}')`;
+        } else if (x.notnull === 0) {
+          cf.name += '?';
+          cf.field = `@Field()`;
+          cf.column = `@Column({ nullable: true, type: '${toTypeORMType(x.type)}' })`;
         } else {
           cf.field = `@Field()`;
           cf.column = `@Column('${toTypeORMType(x.type)}')`;
@@ -131,19 +135,36 @@ async function getTableArray() {
 
 
 async function makeModel(tableInfo: TableInfo) {
-  const str = fs.readFileSync(__dirname + '/template.pug').toString();
+  const str = fs.readFileSync(__dirname + '/template/model.handlebars').toString();
   const compiled = Handlebars.compile(str);
   const result = compiled(tableInfo);
+
   fs.outputFileSync('./src/generated/models/' + tableInfo.className + '.ts', result);
+}
+
+async function makeResolver(tableInfo: TableInfo) {
+  const str = fs.readFileSync(__dirname + '/template/resolver.handlebars').toString();
+  const compiled = Handlebars.compile(str);
+  const result = compiled(tableInfo);
+
+  fs.outputFileSync('./src/generated/resolvers/' + tableInfo.className + 'Resolver.ts', result);
+}
+
+async function createResolverIndex(tables: TableInfo[]) {
+  const content = tables.map(x => `export * from './${x.className}Resolver';`).join('\n');
+  fs.outputFileSync('./src/generated/resolvers/index.ts', content);
 }
 
 async function main() {
   const tables = await getTableArray();
   for (const table of tables) {
     await makeModel(table);
+    await makeResolver(table);
   }
+  await createResolverIndex(tables);
+
+  db.close();
+  console.log('generated');
 }
 
 main();
-
-console.log('generate models');

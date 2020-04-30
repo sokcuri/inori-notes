@@ -1,8 +1,8 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
 import { ObjectType, Field, ID } from 'type-graphql';
 
-@Entity()
 @ObjectType()
+@Entity({ name: '{{name}}' })
 export class {{className}} extends BaseEntity {
   {{#each classFields}}
   {{{field}}}

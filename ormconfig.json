@@ -1,6 +1,10 @@
 {
+  "name": "default",
   "type": "sqlite",
-  "database": "./master.db",
-  "entities": ["./src/models/*.ts"],
-  "synchronize": true
+  "database": "master.db",
+  "synchronize": false,
+  "logging": true,
+  "entities": [
+    "src/generated/models/*.ts"
+  ]
 }
