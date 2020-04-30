@@ -5,8 +5,8 @@ import * as models from './generated/models';
 import * as resolvers from './generated/resolvers';
 
 async function getUnitData() {
-  const repository = await getRepository(models.UnitData);
-  const item = await repository.find({ unit_name: 'ヒヨリ' });
+  const repository = getRepository(models.UnitData);
+  const item = await repository.find({ unitName: 'ヒヨリ' });
   console.log(item);
 }
 
@@ -15,6 +15,7 @@ async function main() {
     const connectionName = connection.name;
     console.log(`Database opened: ${connectionName}`);
   }).catch(x => console.error(x));
+
   const schema = await buildSchema({
     resolvers: [...Object.values(resolvers)]
   });
