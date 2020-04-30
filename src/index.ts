@@ -1,7 +1,14 @@
-import { createConnection, Connection } from "typeorm";
+import { createConnection, Connection, getRepository } from "typeorm";
 import { ApolloServer } from 'apollo-server';
 import { buildSchema } from "type-graphql";
+import * as models from './generated/models';
 import * as resolvers from './generated/resolvers';
+
+async function getUnitData() {
+  const repository = await getRepository(models.UnitData);
+  const item = await repository.find({ unit_name: 'ヒヨリ' });
+  console.log(item);
+}
 
 async function main() {
   await createConnection().then((connection: Connection) => {
@@ -15,6 +22,8 @@ async function main() {
 
   await server.listen(4000);
   console.log("Server has started!");
+
+  await getUnitData();
 }
 
 main();
