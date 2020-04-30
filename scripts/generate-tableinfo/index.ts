@@ -150,6 +150,11 @@ async function makeResolver(tableInfo: TableInfo) {
   fs.outputFileSync('./src/generated/resolvers/' + tableInfo.className + 'Resolver.ts', result);
 }
 
+async function createModelIndex(tables: TableInfo[]) {
+  const content = tables.map(x => `export * from './${x.className}';`).join('\n');
+  fs.outputFileSync('./src/generated/models/index.ts', content);
+}
+
 async function createResolverIndex(tables: TableInfo[]) {
   const content = tables.map(x => `export * from './${x.className}Resolver';`).join('\n');
   fs.outputFileSync('./src/generated/resolvers/index.ts', content);
@@ -161,6 +166,8 @@ async function main() {
     await makeModel(table);
     await makeResolver(table);
   }
+
+  await createModelIndex(tables);
   await createResolverIndex(tables);
 
   db.close();
