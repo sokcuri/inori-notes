@@ -28,6 +28,7 @@ interface TableClassField {
   field: string;
   column: string;
   name: string;
+  camelName: string;
   type: string;
 }
 
@@ -55,6 +56,17 @@ function snakeToPascal(str: string) {
         substr.slice(1))
       .join(""))
     .join("/");
+};
+
+function snakeToPascalLower(str: string) {
+  const s = str.split("/")
+    .map(snake => snake.split("_")
+      .map(substr => substr.charAt(0)
+        .toUpperCase() +
+        substr.slice(1))
+      .join(""))
+    .join("/");
+  return s.charAt(0).toLowerCase() + s.substr(1);
 };
 
 function toNodeType(type: string): string {
@@ -101,18 +113,19 @@ async function getTableInfo(db: sqlite3.Database, name: string) {
       fields.forEach((x) => {
         const cf = {} as TableClassField;
         cf.name = x.name;
+        cf.camelName = snakeToPascalLower(x.name);
         cf.type = toNodeType(x.type);
 
         if (x.pk >= 1) {
           cf.field = `@Field(type => ID)`;
-          cf.column = `@PrimaryColumn('${toTypeORMType(x.type)}')`;
+          cf.column = `@PrimaryColumn({ name: '${x.name}', type: '${toTypeORMType(x.type)}' })`;
         } else if (x.notnull === 0) {
           cf.name += '?';
           cf.field = `@Field()`;
-          cf.column = `@Column({ nullable: true, type: '${toTypeORMType(x.type)}' })`;
+          cf.column = `@Column({ name: '${x.name}', type: '${toTypeORMType(x.type)}', nullable: true })`;
         } else {
           cf.field = `@Field()`;
-          cf.column = `@Column('${toTypeORMType(x.type)}')`;
+          cf.column = `@Column({ name: '${x.name}', type: '${toTypeORMType(x.type)}' })`;
         }
         classFields.push(cf);
       });
