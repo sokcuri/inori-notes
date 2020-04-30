@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'tower_wave_group_data' })
 export class TowerWaveGroupData extends BaseEntity {
   @Field()
-  @Column('integer')
+  @Column({ name: 'id', type: 'integer' })
   id: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  wave_group_id: number;
+  @PrimaryColumn({ name: 'wave_group_id', type: 'integer' })
+  waveGroupId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'odds', type: 'integer' })
   odds: number;
 
   @Field()
-  @Column('integer')
-  enemy_id_1: number;
+  @Column({ name: 'enemy_id_1', type: 'integer' })
+  enemyId1: number;
 
   @Field()
-  @Column('integer')
-  enemy_id_2: number;
+  @Column({ name: 'enemy_id_2', type: 'integer' })
+  enemyId2: number;
 
   @Field()
-  @Column('integer')
-  enemy_id_3: number;
+  @Column({ name: 'enemy_id_3', type: 'integer' })
+  enemyId3: number;
 
   @Field()
-  @Column('integer')
-  enemy_id_4: number;
+  @Column({ name: 'enemy_id_4', type: 'integer' })
+  enemyId4: number;
 
   @Field()
-  @Column('integer')
-  enemy_id_5: number;
+  @Column({ name: 'enemy_id_5', type: 'integer' })
+  enemyId5: number;
 
 }
 

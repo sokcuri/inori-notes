@@ -5,23 +5,23 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'album_production_list' })
 export class AlbumProductionList extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  unit_id: number;
+  @Column({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'title', type: 'text' })
   title: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
 }

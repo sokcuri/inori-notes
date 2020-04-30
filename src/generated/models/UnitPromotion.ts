@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_promotion' })
 export class UnitPromotion extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  promotion_level: number;
+  @PrimaryColumn({ name: 'promotion_level', type: 'integer' })
+  promotionLevel: number;
 
   @Field()
-  @Column('integer')
-  equip_slot_1: number;
+  @Column({ name: 'equip_slot_1', type: 'integer' })
+  equipSlot1: number;
 
   @Field()
-  @Column('integer')
-  equip_slot_2: number;
+  @Column({ name: 'equip_slot_2', type: 'integer' })
+  equipSlot2: number;
 
   @Field()
-  @Column('integer')
-  equip_slot_3: number;
+  @Column({ name: 'equip_slot_3', type: 'integer' })
+  equipSlot3: number;
 
   @Field()
-  @Column('integer')
-  equip_slot_4: number;
+  @Column({ name: 'equip_slot_4', type: 'integer' })
+  equipSlot4: number;
 
   @Field()
-  @Column('integer')
-  equip_slot_5: number;
+  @Column({ name: 'equip_slot_5', type: 'integer' })
+  equipSlot5: number;
 
   @Field()
-  @Column('integer')
-  equip_slot_6: number;
+  @Column({ name: 'equip_slot_6', type: 'integer' })
+  equipSlot6: number;
 
 }
 

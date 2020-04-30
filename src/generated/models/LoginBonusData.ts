@@ -5,48 +5,48 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'login_bonus_data' })
 export class LoginBonusData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  login_bonus_id: number;
+  @PrimaryColumn({ name: 'login_bonus_id', type: 'integer' })
+  loginBonusId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('integer')
-  login_bonus_type: number;
+  @Column({ name: 'login_bonus_type', type: 'integer' })
+  loginBonusType: number;
 
   @Field()
-  @Column('integer')
-  count_num: number;
+  @Column({ name: 'count_num', type: 'integer' })
+  countNum: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  bg_id: number;
+  @Column({ name: 'bg_id', type: 'integer' })
+  bgId: number;
 
   @Field()
-  @Column('integer')
-  stamp_id: number;
+  @Column({ name: 'stamp_id', type: 'integer' })
+  stampId: number;
 
   @Field()
-  @Column('integer')
-  odds_group_id: number;
+  @Column({ name: 'odds_group_id', type: 'integer' })
+  oddsGroupId: number;
 
   @Field()
-  @Column('integer')
-  adv_play_type: number;
+  @Column({ name: 'adv_play_type', type: 'integer' })
+  advPlayType: number;
 
   @Field()
-  @Column('integer')
-  count_type: number;
+  @Column({ name: 'count_type', type: 'integer' })
+  countType: number;
 
 }
 

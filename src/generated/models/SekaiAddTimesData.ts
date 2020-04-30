@@ -5,27 +5,27 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'sekai_add_times_data' })
 export class SekaiAddTimesData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  sekai_id: number;
+  @Column({ name: 'sekai_id', type: 'integer' })
+  sekaiId: number;
 
   @Field()
-  @Column('integer')
-  add_times: number;
+  @Column({ name: 'add_times', type: 'integer' })
+  addTimes: number;
 
   @Field()
-  @Column('integer')
-  add_times_limit: number;
+  @Column({ name: 'add_times_limit', type: 'integer' })
+  addTimesLimit: number;
 
   @Field()
-  @Column('text')
-  add_times_time: string;
+  @Column({ name: 'add_times_time', type: 'text' })
+  addTimesTime: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'duration', type: 'integer' })
   duration: number;
 
 }

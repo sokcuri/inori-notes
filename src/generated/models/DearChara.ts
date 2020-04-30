@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'dear_chara' })
 export class DearChara extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  event_id: number;
+  @PrimaryColumn({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  chara_index: number;
+  @PrimaryColumn({ name: 'chara_index', type: 'integer' })
+  charaIndex: number;
 
   @Field()
-  @Column('text')
-  chara_name: string;
+  @Column({ name: 'chara_name', type: 'text' })
+  charaName: string;
 
   @Field()
-  @Column('integer')
-  max_dear_point: number;
+  @Column({ name: 'max_dear_point', type: 'integer' })
+  maxDearPoint: number;
 
   @Field()
-  @Column('integer')
-  reference_type: number;
+  @Column({ name: 'reference_type', type: 'integer' })
+  referenceType: number;
 
   @Field()
-  @Column('integer')
-  reference_id: number;
+  @Column({ name: 'reference_id', type: 'integer' })
+  referenceId: number;
 
   @Field()
-  @Column('integer')
-  episode_unlock_offset_x: number;
+  @Column({ name: 'episode_unlock_offset_x', type: 'integer' })
+  episodeUnlockOffsetX: number;
 
   @Field()
-  @Column('integer')
-  episode_unlock_offset_y: number;
+  @Column({ name: 'episode_unlock_offset_y', type: 'integer' })
+  episodeUnlockOffsetY: number;
 
   @Field()
-  @Column('integer')
-  dear_point_up_offset_x: number;
+  @Column({ name: 'dear_point_up_offset_x', type: 'integer' })
+  dearPointUpOffsetX: number;
 
   @Field()
-  @Column('integer')
-  dear_point_up_offset_y: number;
+  @Column({ name: 'dear_point_up_offset_y', type: 'integer' })
+  dearPointUpOffsetY: number;
 
 }
 

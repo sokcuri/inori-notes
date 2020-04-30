@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_battle_schedule' })
 export class ClanBattleSchedule extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  clan_battle_id: number;
+  @PrimaryColumn({ name: 'clan_battle_id', type: 'integer' })
+  clanBattleId: number;
 
   @Field()
-  @Column('integer')
-  release_month: number;
+  @Column({ name: 'release_month', type: 'integer' })
+  releaseMonth: number;
 
   @Field()
-  @Column('integer')
-  last_clan_battle_id: number;
+  @Column({ name: 'last_clan_battle_id', type: 'integer' })
+  lastClanBattleId: number;
 
   @Field()
-  @Column('integer')
-  point_per_stamina: number;
+  @Column({ name: 'point_per_stamina', type: 'integer' })
+  pointPerStamina: number;
 
   @Field()
-  @Column('integer')
-  cost_group_id: number;
+  @Column({ name: 'cost_group_id', type: 'integer' })
+  costGroupId: number;
 
   @Field()
-  @Column('integer')
-  cost_group_id_s: number;
+  @Column({ name: 'cost_group_id_s', type: 'integer' })
+  costGroupIdS: number;
 
   @Field()
-  @Column('text')
-  map_bgm: string;
+  @Column({ name: 'map_bgm', type: 'text' })
+  mapBgm: string;
 
   @Field()
-  @Column('integer')
-  resource_id: number;
+  @Column({ name: 'resource_id', type: 'integer' })
+  resourceId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'goldset_data_teamlevel' })
 export class GoldsetDataTeamlevel extends BaseEntity {
   @Field()
-  @Column('integer')
+  @Column({ name: 'id', type: 'integer' })
   id: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  team_level: number;
+  @PrimaryColumn({ name: 'team_level', type: 'integer' })
+  teamLevel: number;
 
   @Field()
-  @Column('integer')
-  initial_get_gold_count: number;
+  @Column({ name: 'initial_get_gold_count', type: 'integer' })
+  initialGetGoldCount: number;
 
 }
 

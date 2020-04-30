@@ -5,15 +5,15 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'event_effect_setting' })
 export class EventEffectSetting extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  event_id: number;
+  @PrimaryColumn({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'value', type: 'integer' })
   value: number;
 
 }

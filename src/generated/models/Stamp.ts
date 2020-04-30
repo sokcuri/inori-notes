@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'stamp' })
 export class Stamp extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  stamp_id: number;
+  @PrimaryColumn({ name: 'stamp_id', type: 'integer' })
+  stampId: number;
 
   @Field()
-  @Column('integer')
-  disp_order: number;
+  @Column({ name: 'disp_order', type: 'integer' })
+  dispOrder: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('text')
-  start_date: string;
+  @Column({ name: 'start_date', type: 'text' })
+  startDate: string;
 
   @Field()
-  @Column('text')
-  end_date: string;
+  @Column({ name: 'end_date', type: 'text' })
+  endDate: string;
 
 }
 

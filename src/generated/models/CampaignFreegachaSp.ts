@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'campaign_freegacha_sp' })
 export class CampaignFreegachaSp extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  campaign_id: number;
+  @PrimaryColumn({ name: 'campaign_id', type: 'integer' })
+  campaignId: number;
 
   @Field()
-  @Column('integer')
-  max_exec_count: number;
+  @Column({ name: 'max_exec_count', type: 'integer' })
+  maxExecCount: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

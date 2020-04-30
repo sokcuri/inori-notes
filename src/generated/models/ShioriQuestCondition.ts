@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'shiori_quest_condition' })
 export class ShioriQuestCondition extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  quest_id: number;
+  @PrimaryColumn({ name: 'quest_id', type: 'integer' })
+  questId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
-  condition_quest_id: number;
+  @Column({ name: 'condition_quest_id', type: 'integer' })
+  conditionQuestId: number;
 
   @Field()
-  @Column('integer')
-  condition_boss_id: number;
+  @Column({ name: 'condition_boss_id', type: 'integer' })
+  conditionBossId: number;
 
   @Field()
-  @Column('integer')
-  release_quest_id: number;
+  @Column({ name: 'release_quest_id', type: 'integer' })
+  releaseQuestId: number;
 
   @Field()
-  @Column('integer')
-  release_boss_id: number;
+  @Column({ name: 'release_boss_id', type: 'integer' })
+  releaseBossId: number;
 
   @Field()
-  @Column('integer')
-  condition_main_quest_id: number;
+  @Column({ name: 'condition_main_quest_id', type: 'integer' })
+  conditionMainQuestId: number;
 
 }
 

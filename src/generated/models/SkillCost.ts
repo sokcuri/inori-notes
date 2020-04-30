@@ -5,11 +5,11 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'skill_cost' })
 export class SkillCost extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  target_level: number;
+  @PrimaryColumn({ name: 'target_level', type: 'integer' })
+  targetLevel: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'cost', type: 'integer' })
   cost: number;
 
 }

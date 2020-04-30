@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'emblem_data' })
 export class EmblemData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  emblem_id: number;
+  @PrimaryColumn({ name: 'emblem_id', type: 'integer' })
+  emblemId: number;
 
   @Field()
-  @Column('integer')
-  disp_oder: number;
+  @Column({ name: 'disp_oder', type: 'integer' })
+  dispOder: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('text')
-  emblem_name: string;
+  @Column({ name: 'emblem_name', type: 'text' })
+  emblemName: string;
 
   @Field()
-  @Column('integer')
-  description_mission_id: number;
+  @Column({ name: 'description_mission_id', type: 'integer' })
+  descriptionMissionId: number;
 
   @Field()
-  @Column('integer')
-  event_emblem: number;
+  @Column({ name: 'event_emblem', type: 'integer' })
+  eventEmblem: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

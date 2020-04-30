@@ -5,48 +5,48 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'specialfes_banner' })
 export class SpecialfesBanner extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  gacha_id: number;
+  @PrimaryColumn({ name: 'gacha_id', type: 'integer' })
+  gachaId: number;
 
   @Field()
-  @Column('integer')
-  banner_id_1: number;
+  @Column({ name: 'banner_id_1', type: 'integer' })
+  bannerId1: number;
 
   @Field()
-  @Column('integer')
-  banner_id_2: number;
+  @Column({ name: 'banner_id_2', type: 'integer' })
+  bannerId2: number;
 
   @Field()
-  @Column('integer')
-  banner_id_3: number;
+  @Column({ name: 'banner_id_3', type: 'integer' })
+  bannerId3: number;
 
   @Field()
-  @Column('integer')
-  banner_id_4: number;
+  @Column({ name: 'banner_id_4', type: 'integer' })
+  bannerId4: number;
 
   @Field()
-  @Column('integer')
-  banner_id_5: number;
+  @Column({ name: 'banner_id_5', type: 'integer' })
+  bannerId5: number;
 
   @Field()
-  @Column('integer')
-  banner_id_6: number;
+  @Column({ name: 'banner_id_6', type: 'integer' })
+  bannerId6: number;
 
   @Field()
-  @Column('integer')
-  banner_id_7: number;
+  @Column({ name: 'banner_id_7', type: 'integer' })
+  bannerId7: number;
 
   @Field()
-  @Column('integer')
-  banner_id_8: number;
+  @Column({ name: 'banner_id_8', type: 'integer' })
+  bannerId8: number;
 
   @Field()
-  @Column('integer')
-  banner_id_9: number;
+  @Column({ name: 'banner_id_9', type: 'integer' })
+  bannerId9: number;
 
   @Field()
-  @Column('integer')
-  banner_id_10: number;
+  @Column({ name: 'banner_id_10', type: 'integer' })
+  bannerId10: number;
 
 }
 

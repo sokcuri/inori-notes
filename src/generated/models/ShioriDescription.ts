@@ -5,15 +5,15 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'shiori_description' })
 export class ShioriDescription extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
 }

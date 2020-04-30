@@ -5,28 +5,28 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'birthday_login_bonus_data' })
 export class BirthdayLoginBonusData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  login_bonus_id: number;
+  @PrimaryColumn({ name: 'login_bonus_id', type: 'integer' })
+  loginBonusId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('integer')
-  login_bonus_type: number;
+  @Column({ name: 'login_bonus_type', type: 'integer' })
+  loginBonusType: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  adv_id: number;
+  @Column({ name: 'adv_id', type: 'integer' })
+  advId: number;
 
 }
 

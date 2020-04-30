@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'experience_team' })
 export class ExperienceTeam extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  team_level: number;
+  @PrimaryColumn({ name: 'team_level', type: 'integer' })
+  teamLevel: number;
 
   @Field()
-  @Column('integer')
-  total_exp: number;
+  @Column({ name: 'total_exp', type: 'integer' })
+  totalExp: number;
 
   @Field()
-  @Column('integer')
-  max_stamina: number;
+  @Column({ name: 'max_stamina', type: 'integer' })
+  maxStamina: number;
 
   @Field()
-  @Column('integer')
-  over_limit_stamina: number;
+  @Column({ name: 'over_limit_stamina', type: 'integer' })
+  overLimitStamina: number;
 
   @Field()
-  @Column('integer')
-  recover_stamina_count: number;
+  @Column({ name: 'recover_stamina_count', type: 'integer' })
+  recoverStaminaCount: number;
 
 }
 

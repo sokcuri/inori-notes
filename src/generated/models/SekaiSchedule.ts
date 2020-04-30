@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'sekai_schedule' })
 export class SekaiSchedule extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  sekai_id: number;
+  @PrimaryColumn({ name: 'sekai_id', type: 'integer' })
+  sekaiId: number;
 
   @Field()
-  @Column('integer')
-  last_sekai_id: number;
+  @Column({ name: 'last_sekai_id', type: 'integer' })
+  lastSekaiId: number;
 
   @Field()
-  @Column('integer')
-  fix_reward_group_id: number;
+  @Column({ name: 'fix_reward_group_id', type: 'integer' })
+  fixRewardGroupId: number;
 
   @Field()
-  @Column('integer')
-  damage_rank_id: number;
+  @Column({ name: 'damage_rank_id', type: 'integer' })
+  damageRankId: number;
 
   @Field()
-  @Column('text')
-  teaser_time: string;
+  @Column({ name: 'teaser_time', type: 'text' })
+  teaserTime: string;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  count_start_time: string;
+  @Column({ name: 'count_start_time', type: 'text' })
+  countStartTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('text')
-  end_losstime: string;
+  @Column({ name: 'end_losstime', type: 'text' })
+  endLosstime: string;
 
   @Field()
-  @Column('text')
-  result_end: string;
+  @Column({ name: 'result_end', type: 'text' })
+  resultEnd: string;
 
 }
 

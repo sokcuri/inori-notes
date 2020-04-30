@@ -5,27 +5,27 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unique_equipment_enhance_data' })
 export class UniqueEquipmentEnhanceData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  equip_slot: number;
+  @PrimaryColumn({ name: 'equip_slot', type: 'integer' })
+  equipSlot: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  enhance_level: number;
+  @PrimaryColumn({ name: 'enhance_level', type: 'integer' })
+  enhanceLevel: number;
 
   @Field()
-  @Column('integer')
-  needed_point: number;
+  @Column({ name: 'needed_point', type: 'integer' })
+  neededPoint: number;
 
   @Field()
-  @Column('integer')
-  total_point: number;
+  @Column({ name: 'total_point', type: 'integer' })
+  totalPoint: number;
 
   @Field()
-  @Column('integer')
-  needed_mana: number;
+  @Column({ name: 'needed_mana', type: 'integer' })
+  neededMana: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'rank', type: 'integer' })
   rank: number;
 
 }

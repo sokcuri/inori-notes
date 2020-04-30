@@ -5,79 +5,79 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_promotion_status' })
 export class UnitPromotionStatus extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  promotion_level: number;
+  @PrimaryColumn({ name: 'promotion_level', type: 'integer' })
+  promotionLevel: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'hp', type: 'real' })
   hp: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'atk', type: 'real' })
   atk: number;
 
   @Field()
-  @Column('real')
-  magic_str: number;
+  @Column({ name: 'magic_str', type: 'real' })
+  magicStr: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'def', type: 'real' })
   def: number;
 
   @Field()
-  @Column('real')
-  magic_def: number;
+  @Column({ name: 'magic_def', type: 'real' })
+  magicDef: number;
 
   @Field()
-  @Column('real')
-  physical_critical: number;
+  @Column({ name: 'physical_critical', type: 'real' })
+  physicalCritical: number;
 
   @Field()
-  @Column('real')
-  magic_critical: number;
+  @Column({ name: 'magic_critical', type: 'real' })
+  magicCritical: number;
 
   @Field()
-  @Column('real')
-  wave_hp_recovery: number;
+  @Column({ name: 'wave_hp_recovery', type: 'real' })
+  waveHpRecovery: number;
 
   @Field()
-  @Column('real')
-  wave_energy_recovery: number;
+  @Column({ name: 'wave_energy_recovery', type: 'real' })
+  waveEnergyRecovery: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'dodge', type: 'real' })
   dodge: number;
 
   @Field()
-  @Column('real')
-  physical_penetrate: number;
+  @Column({ name: 'physical_penetrate', type: 'real' })
+  physicalPenetrate: number;
 
   @Field()
-  @Column('real')
-  magic_penetrate: number;
+  @Column({ name: 'magic_penetrate', type: 'real' })
+  magicPenetrate: number;
 
   @Field()
-  @Column('real')
-  life_steal: number;
+  @Column({ name: 'life_steal', type: 'real' })
+  lifeSteal: number;
 
   @Field()
-  @Column('real')
-  hp_recovery_rate: number;
+  @Column({ name: 'hp_recovery_rate', type: 'real' })
+  hpRecoveryRate: number;
 
   @Field()
-  @Column('real')
-  energy_recovery_rate: number;
+  @Column({ name: 'energy_recovery_rate', type: 'real' })
+  energyRecoveryRate: number;
 
   @Field()
-  @Column('real')
-  energy_reduce_rate: number;
+  @Column({ name: 'energy_reduce_rate', type: 'real' })
+  energyReduceRate: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'accuracy', type: 'real' })
   accuracy: number;
 
 }

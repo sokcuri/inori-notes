@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'srt_action' })
 export class SrtAction extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('text')
-  action_name: string;
+  @PrimaryColumn({ name: 'action_name', type: 'text' })
+  actionName: string;
 
   @Field()
-  @Column('text')
-  inori_action: string;
+  @Column({ name: 'inori_action', type: 'text' })
+  inoriAction: string;
 
   @Field()
-  @Column('text')
-  dragon_action: string;
+  @Column({ name: 'dragon_action', type: 'text' })
+  dragonAction: string;
 
   @Field()
-  @Column('text')
-  kaya_action: string;
+  @Column({ name: 'kaya_action', type: 'text' })
+  kayaAction: string;
 
   @Field()
-  @Column('text')
-  homare_action: string;
+  @Column({ name: 'homare_action', type: 'text' })
+  homareAction: string;
 
   @Field()
-  @Column('integer')
-  talk_text_type: number;
+  @Column({ name: 'talk_text_type', type: 'integer' })
+  talkTextType: number;
 
   @Field()
-  @Column('text')
-  talk_text: string;
+  @Column({ name: 'talk_text', type: 'text' })
+  talkText: string;
 
   @Field()
-  @Column('text')
-  voice_list: string;
+  @Column({ name: 'voice_list', type: 'text' })
+  voiceList: string;
 
 }
 

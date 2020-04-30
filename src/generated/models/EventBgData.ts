@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'event_bg_data' })
 export class EventBgData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  event_id: number;
+  @PrimaryColumn({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
-  bg_id: number;
+  @Column({ name: 'bg_id', type: 'integer' })
+  bgId: number;
 
   @Field()
-  @Column('text')
-  start_date: string;
+  @Column({ name: 'start_date', type: 'text' })
+  startDate: string;
 
   @Field()
-  @Column('text')
-  end_date: string;
+  @Column({ name: 'end_date', type: 'text' })
+  endDate: string;
 
 }
 

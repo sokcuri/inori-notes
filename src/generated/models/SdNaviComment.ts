@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'sd_navi_comment' })
 export class SdNaviComment extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  comment_id: number;
+  @PrimaryColumn({ name: 'comment_id', type: 'integer' })
+  commentId: number;
 
   @Field()
-  @Column('integer')
-  where_type: number;
+  @Column({ name: 'where_type', type: 'integer' })
+  whereType: number;
 
   @Field()
-  @Column('integer')
-  character_id: number;
+  @Column({ name: 'character_id', type: 'integer' })
+  characterId: number;
 
   @Field()
-  @Column('integer')
-  motion_type: number;
+  @Column({ name: 'motion_type', type: 'integer' })
+  motionType: number;
 
   @Field()
-  @Column({ nullable: true, type: 'text' })
-  description?: string;
+  @Column({ name: 'description', type: 'text', nullable: true })
+  description: string;
 
   @Field()
-  @Column('integer')
-  voice_id: number;
+  @Column({ name: 'voice_id', type: 'integer' })
+  voiceId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

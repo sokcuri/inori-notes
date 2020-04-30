@@ -5,19 +5,19 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'story_character_mask' })
 export class StoryCharacterMask extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  chara_id: number;
+  @PrimaryColumn({ name: 'chara_id', type: 'integer' })
+  charaId: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'offset', type: 'real' })
   offset: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'size', type: 'real' })
   size: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'softness', type: 'real' })
   softness: number;
 
 }

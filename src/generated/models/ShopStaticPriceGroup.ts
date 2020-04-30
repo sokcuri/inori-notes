@@ -5,23 +5,23 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'shop_static_price_group' })
 export class ShopStaticPriceGroup extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  price_group_id: number;
+  @Column({ name: 'price_group_id', type: 'integer' })
+  priceGroupId: number;
 
   @Field()
-  @Column('integer')
-  buy_count_from: number;
+  @Column({ name: 'buy_count_from', type: 'integer' })
+  buyCountFrom: number;
 
   @Field()
-  @Column('integer')
-  buy_count_to: number;
+  @Column({ name: 'buy_count_to', type: 'integer' })
+  buyCountTo: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'count', type: 'integer' })
   count: number;
 
 }

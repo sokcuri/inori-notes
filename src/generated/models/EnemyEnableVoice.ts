@@ -5,12 +5,12 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'enemy_enable_voice' })
 export class EnemyEnableVoice extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
-  voice_id: number;
+  @Column({ name: 'voice_id', type: 'integer' })
+  voiceId: number;
 
 }
 

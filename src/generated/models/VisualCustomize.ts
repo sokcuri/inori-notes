@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'visual_customize' })
 export class VisualCustomize extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  title_prefab: number;
+  @Column({ name: 'title_prefab', type: 'integer' })
+  titlePrefab: number;
 
   @Field()
-  @Column('integer')
-  title_movie: number;
+  @Column({ name: 'title_movie', type: 'integer' })
+  titleMovie: number;
 
   @Field()
-  @Column('integer')
-  title_voice: number;
+  @Column({ name: 'title_voice', type: 'integer' })
+  titleVoice: number;
 
   @Field()
-  @Column('integer')
-  story_top_movie: number;
+  @Column({ name: 'story_top_movie', type: 'integer' })
+  storyTopMovie: number;
 
   @Field()
-  @Column('integer')
-  quest_top_movie: number;
+  @Column({ name: 'quest_top_movie', type: 'integer' })
+  questTopMovie: number;
 
   @Field()
-  @Column('integer')
-  profile_logo: number;
+  @Column({ name: 'profile_logo', type: 'integer' })
+  profileLogo: number;
 
   @Field()
-  @Column('integer')
-  watched_story_id: number;
+  @Column({ name: 'watched_story_id', type: 'integer' })
+  watchedStoryId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

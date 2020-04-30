@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_change' })
 export class RoomChange extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  room_item_id: number;
+  @PrimaryColumn({ name: 'room_item_id', type: 'integer' })
+  roomItemId: number;
 
   @Field()
-  @Column('integer')
-  change_id: number;
+  @Column({ name: 'change_id', type: 'integer' })
+  changeId: number;
 
   @Field()
-  @Column('text')
-  change_start: string;
+  @Column({ name: 'change_start', type: 'text' })
+  changeStart: string;
 
   @Field()
-  @Column('text')
-  change_end: string;
+  @Column({ name: 'change_end', type: 'text' })
+  changeEnd: string;
 
 }
 

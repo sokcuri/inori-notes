@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'space_schedule' })
 export class SpaceSchedule extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  space_id: number;
+  @PrimaryColumn({ name: 'space_id', type: 'integer' })
+  spaceId: number;
 
   @Field()
-  @Column('text')
-  teaser_time: string;
+  @Column({ name: 'teaser_time', type: 'text' })
+  teaserTime: string;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  count_start_time: string;
+  @Column({ name: 'count_start_time', type: 'text' })
+  countStartTime: string;
 
   @Field()
-  @Column('text')
-  count_end_time: string;
+  @Column({ name: 'count_end_time', type: 'text' })
+  countEndTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'sid', type: 'integer' })
   sid: number;
 
   @Field()
-  @Column('integer')
-  pre_story_id: number;
+  @Column({ name: 'pre_story_id', type: 'integer' })
+  preStoryId: number;
 
 }
 

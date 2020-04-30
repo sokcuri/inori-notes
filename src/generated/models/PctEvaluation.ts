@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'pct_evaluation' })
 export class PctEvaluation extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  evaluation_id: number;
+  @PrimaryColumn({ name: 'evaluation_id', type: 'integer' })
+  evaluationId: number;
 
   @Field()
-  @Column('integer')
-  evaluation_point: number;
+  @Column({ name: 'evaluation_point', type: 'integer' })
+  evaluationPoint: number;
 
   @Field()
-  @Column('integer')
-  fever_point: number;
+  @Column({ name: 'fever_point', type: 'integer' })
+  feverPoint: number;
 
   @Field()
-  @Column('integer')
-  meet_width: number;
+  @Column({ name: 'meet_width', type: 'integer' })
+  meetWidth: number;
 
 }
 

@@ -5,19 +5,19 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'love_chara' })
 export class LoveChara extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  love_level: number;
+  @PrimaryColumn({ name: 'love_level', type: 'integer' })
+  loveLevel: number;
 
   @Field()
-  @Column('integer')
-  total_love: number;
+  @Column({ name: 'total_love', type: 'integer' })
+  totalLove: number;
 
   @Field()
-  @Column('integer')
-  unlocked_class: number;
+  @Column({ name: 'unlocked_class', type: 'integer' })
+  unlockedClass: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'rarity', type: 'integer' })
   rarity: number;
 
 }

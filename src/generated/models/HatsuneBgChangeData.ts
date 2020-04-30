@@ -5,28 +5,28 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_bg_change_data' })
 export class HatsuneBgChangeData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  area_id: number;
+  @Column({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('integer')
-  condition_type: number;
+  @Column({ name: 'condition_type', type: 'integer' })
+  conditionType: number;
 
   @Field()
-  @Column('integer')
-  condition_id: number;
+  @Column({ name: 'condition_id', type: 'integer' })
+  conditionId: number;
 
   @Field()
-  @Column('integer')
-  target_type: number;
+  @Column({ name: 'target_type', type: 'integer' })
+  targetType: number;
 
   @Field()
-  @Column('integer')
-  bg_after_change_id: number;
+  @Column({ name: 'bg_after_change_id', type: 'integer' })
+  bgAfterChangeId: number;
 
 }
 

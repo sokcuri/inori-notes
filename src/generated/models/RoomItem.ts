@@ -5,76 +5,76 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_item' })
 export class RoomItem extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  item_type: number;
+  @Column({ name: 'item_type', type: 'integer' })
+  itemType: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'category', type: 'integer' })
   category: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('integer')
-  max_level: number;
+  @Column({ name: 'max_level', type: 'integer' })
+  maxLevel: number;
 
   @Field()
-  @Column('integer')
-  enable_remove: number;
+  @Column({ name: 'enable_remove', type: 'integer' })
+  enableRemove: number;
 
   @Field()
-  @Column('integer')
-  max_possession_num: number;
+  @Column({ name: 'max_possession_num', type: 'integer' })
+  maxPossessionNum: number;
 
   @Field()
-  @Column('integer')
-  effect_id_1: number;
+  @Column({ name: 'effect_id_1', type: 'integer' })
+  effectId1: number;
 
   @Field()
-  @Column('text')
-  shop_start: string;
+  @Column({ name: 'shop_start', type: 'text' })
+  shopStart: string;
 
   @Field()
-  @Column('text')
-  shop_end: string;
+  @Column({ name: 'shop_end', type: 'text' })
+  shopEnd: string;
 
   @Field()
-  @Column('text')
-  shop_new_disp_end: string;
+  @Column({ name: 'shop_new_disp_end', type: 'text' })
+  shopNewDispEnd: string;
 
   @Field()
-  @Column('integer')
-  cost_item_num: number;
+  @Column({ name: 'cost_item_num', type: 'integer' })
+  costItemNum: number;
 
   @Field()
-  @Column('integer')
-  shop_open_type: number;
+  @Column({ name: 'shop_open_type', type: 'integer' })
+  shopOpenType: number;
 
   @Field()
-  @Column('integer')
-  shop_open_id: number;
+  @Column({ name: 'shop_open_id', type: 'integer' })
+  shopOpenId: number;
 
   @Field()
-  @Column('integer')
-  shop_open_value: number;
+  @Column({ name: 'shop_open_value', type: 'integer' })
+  shopOpenValue: number;
 
   @Field()
-  @Column('integer')
-  sold_price: number;
+  @Column({ name: 'sold_price', type: 'integer' })
+  soldPrice: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'sort', type: 'integer' })
   sort: number;
 
   @Field()
-  @Column('integer')
-  condition_quest_id: number;
+  @Column({ name: 'condition_quest_id', type: 'integer' })
+  conditionQuestId: number;
 
 }
 

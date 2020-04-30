@@ -5,108 +5,108 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'prizegacha_data' })
 export class PrizegachaData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  prizegacha_id: number;
+  @PrimaryColumn({ name: 'prizegacha_id', type: 'integer' })
+  prizegachaId: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_1: number;
+  @Column({ name: 'prize_memory_id_1', type: 'integer' })
+  prizeMemoryId1: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_2: number;
+  @Column({ name: 'prize_memory_id_2', type: 'integer' })
+  prizeMemoryId2: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_3: number;
+  @Column({ name: 'prize_memory_id_3', type: 'integer' })
+  prizeMemoryId3: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_4: number;
+  @Column({ name: 'prize_memory_id_4', type: 'integer' })
+  prizeMemoryId4: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_5: number;
+  @Column({ name: 'prize_memory_id_5', type: 'integer' })
+  prizeMemoryId5: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_6: number;
+  @Column({ name: 'prize_memory_id_6', type: 'integer' })
+  prizeMemoryId6: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_7: number;
+  @Column({ name: 'prize_memory_id_7', type: 'integer' })
+  prizeMemoryId7: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_8: number;
+  @Column({ name: 'prize_memory_id_8', type: 'integer' })
+  prizeMemoryId8: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_9: number;
+  @Column({ name: 'prize_memory_id_9', type: 'integer' })
+  prizeMemoryId9: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_10: number;
+  @Column({ name: 'prize_memory_id_10', type: 'integer' })
+  prizeMemoryId10: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_11: number;
+  @Column({ name: 'prize_memory_id_11', type: 'integer' })
+  prizeMemoryId11: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_12: number;
+  @Column({ name: 'prize_memory_id_12', type: 'integer' })
+  prizeMemoryId12: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_13: number;
+  @Column({ name: 'prize_memory_id_13', type: 'integer' })
+  prizeMemoryId13: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_14: number;
+  @Column({ name: 'prize_memory_id_14', type: 'integer' })
+  prizeMemoryId14: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_15: number;
+  @Column({ name: 'prize_memory_id_15', type: 'integer' })
+  prizeMemoryId15: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_16: number;
+  @Column({ name: 'prize_memory_id_16', type: 'integer' })
+  prizeMemoryId16: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_17: number;
+  @Column({ name: 'prize_memory_id_17', type: 'integer' })
+  prizeMemoryId17: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_18: number;
+  @Column({ name: 'prize_memory_id_18', type: 'integer' })
+  prizeMemoryId18: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_19: number;
+  @Column({ name: 'prize_memory_id_19', type: 'integer' })
+  prizeMemoryId19: number;
 
   @Field()
-  @Column('integer')
-  prize_memory_id_20: number;
+  @Column({ name: 'prize_memory_id_20', type: 'integer' })
+  prizeMemoryId20: number;
 
   @Field()
-  @Column('integer')
-  gacha_prize1: number;
+  @Column({ name: 'gacha_prize1', type: 'integer' })
+  gachaPrize1: number;
 
   @Field()
-  @Column('integer')
-  gacha_prize10: number;
+  @Column({ name: 'gacha_prize10', type: 'integer' })
+  gachaPrize10: number;
 
   @Field()
-  @Column('integer')
-  prize_fixed_compensation: number;
+  @Column({ name: 'prize_fixed_compensation', type: 'integer' })
+  prizeFixedCompensation: number;
 
   @Field()
-  @Column('integer')
-  prize_fixed_compensation_quantity: number;
+  @Column({ name: 'prize_fixed_compensation_quantity', type: 'integer' })
+  prizeFixedCompensationQuantity: number;
 
   @Field()
-  @Column('integer')
-  rarity_odds: number;
+  @Column({ name: 'rarity_odds', type: 'integer' })
+  rarityOdds: number;
 
 }
 

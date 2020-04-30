@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'chara_e_ticket_data' })
 export class CharaETicketData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  ticket_id: number;
+  @PrimaryColumn({ name: 'ticket_id', type: 'integer' })
+  ticketId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  jewel_store_id: number;
+  @Column({ name: 'jewel_store_id', type: 'integer' })
+  jewelStoreId: number;
 
 }
 

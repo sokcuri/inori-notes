@@ -5,52 +5,52 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'voice_group_chara' })
 export class VoiceGroupChara extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  group_unit_id: number;
+  @PrimaryColumn({ name: 'group_unit_id', type: 'integer' })
+  groupUnitId: number;
 
   @Field()
-  @Column('text')
-  group_unit_id_comment: string;
+  @Column({ name: 'group_unit_id_comment', type: 'text' })
+  groupUnitIdComment: string;
 
   @Field()
-  @Column('integer')
-  unit_id_01: number;
+  @Column({ name: 'unit_id_01', type: 'integer' })
+  unitId01: number;
 
   @Field()
-  @Column('integer')
-  unit_id_02: number;
+  @Column({ name: 'unit_id_02', type: 'integer' })
+  unitId02: number;
 
   @Field()
-  @Column('integer')
-  unit_id_03: number;
+  @Column({ name: 'unit_id_03', type: 'integer' })
+  unitId03: number;
 
   @Field()
-  @Column('integer')
-  unit_id_04: number;
+  @Column({ name: 'unit_id_04', type: 'integer' })
+  unitId04: number;
 
   @Field()
-  @Column('integer')
-  unit_id_05: number;
+  @Column({ name: 'unit_id_05', type: 'integer' })
+  unitId05: number;
 
   @Field()
-  @Column('integer')
-  unit_id_06: number;
+  @Column({ name: 'unit_id_06', type: 'integer' })
+  unitId06: number;
 
   @Field()
-  @Column('integer')
-  unit_id_07: number;
+  @Column({ name: 'unit_id_07', type: 'integer' })
+  unitId07: number;
 
   @Field()
-  @Column('integer')
-  unit_id_08: number;
+  @Column({ name: 'unit_id_08', type: 'integer' })
+  unitId08: number;
 
   @Field()
-  @Column('integer')
-  unit_id_09: number;
+  @Column({ name: 'unit_id_09', type: 'integer' })
+  unitId09: number;
 
   @Field()
-  @Column('integer')
-  unit_id_10: number;
+  @Column({ name: 'unit_id_10', type: 'integer' })
+  unitId10: number;
 
 }
 

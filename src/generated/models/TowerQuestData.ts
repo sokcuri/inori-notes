@@ -5,204 +5,204 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'tower_quest_data' })
 export class TowerQuestData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  tower_quest_id: number;
+  @PrimaryColumn({ name: 'tower_quest_id', type: 'integer' })
+  towerQuestId: number;
 
   @Field()
-  @Column('integer')
-  tower_area_id: number;
+  @Column({ name: 'tower_area_id', type: 'integer' })
+  towerAreaId: number;
 
   @Field()
-  @Column('integer')
-  floor_num: number;
+  @Column({ name: 'floor_num', type: 'integer' })
+  floorNum: number;
 
   @Field()
-  @Column('integer')
-  floor_image_type: number;
+  @Column({ name: 'floor_image_type', type: 'integer' })
+  floorImageType: number;
 
   @Field()
-  @Column('integer')
-  floor_image_add_type: number;
+  @Column({ name: 'floor_image_add_type', type: 'integer' })
+  floorImageAddType: number;
 
   @Field()
-  @Column('integer')
-  open_tower_ex_quest_id: number;
+  @Column({ name: 'open_tower_ex_quest_id', type: 'integer' })
+  openTowerExQuestId: number;
 
   @Field()
-  @Column('integer')
-  boss_floor_flg: number;
+  @Column({ name: 'boss_floor_flg', type: 'integer' })
+  bossFloorFlg: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'stamina', type: 'integer' })
   stamina: number;
 
   @Field()
-  @Column('integer')
-  stamina_start: number;
+  @Column({ name: 'stamina_start', type: 'integer' })
+  staminaStart: number;
 
   @Field()
-  @Column('integer')
-  team_exp: number;
+  @Column({ name: 'team_exp', type: 'integer' })
+  teamExp: number;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('integer')
-  recovery_hp_rate: number;
+  @Column({ name: 'recovery_hp_rate', type: 'integer' })
+  recoveryHpRate: number;
 
   @Field()
-  @Column('integer')
-  recovery_tp_rate: number;
+  @Column({ name: 'recovery_tp_rate', type: 'integer' })
+  recoveryTpRate: number;
 
   @Field()
-  @Column('integer')
-  start_tp_rate: number;
+  @Column({ name: 'start_tp_rate', type: 'integer' })
+  startTpRate: number;
 
   @Field()
-  @Column('integer')
-  reward_image_1: number;
+  @Column({ name: 'reward_image_1', type: 'integer' })
+  rewardImage1: number;
 
   @Field()
-  @Column('integer')
-  reward_count_1: number;
+  @Column({ name: 'reward_count_1', type: 'integer' })
+  rewardCount1: number;
 
   @Field()
-  @Column('integer')
-  reward_image_2: number;
+  @Column({ name: 'reward_image_2', type: 'integer' })
+  rewardImage2: number;
 
   @Field()
-  @Column('integer')
-  reward_count_2: number;
+  @Column({ name: 'reward_count_2', type: 'integer' })
+  rewardCount2: number;
 
   @Field()
-  @Column('integer')
-  reward_image_3: number;
+  @Column({ name: 'reward_image_3', type: 'integer' })
+  rewardImage3: number;
 
   @Field()
-  @Column('integer')
-  reward_count_3: number;
+  @Column({ name: 'reward_count_3', type: 'integer' })
+  rewardCount3: number;
 
   @Field()
-  @Column('integer')
-  reward_image_4: number;
+  @Column({ name: 'reward_image_4', type: 'integer' })
+  rewardImage4: number;
 
   @Field()
-  @Column('integer')
-  reward_count_4: number;
+  @Column({ name: 'reward_count_4', type: 'integer' })
+  rewardCount4: number;
 
   @Field()
-  @Column('integer')
-  reward_image_5: number;
+  @Column({ name: 'reward_image_5', type: 'integer' })
+  rewardImage5: number;
 
   @Field()
-  @Column('integer')
-  reward_count_5: number;
+  @Column({ name: 'reward_count_5', type: 'integer' })
+  rewardCount5: number;
 
   @Field()
-  @Column('integer')
-  additional_reward_type: number;
+  @Column({ name: 'additional_reward_type', type: 'integer' })
+  additionalRewardType: number;
 
   @Field()
-  @Column('integer')
-  additional_reward_id: number;
+  @Column({ name: 'additional_reward_id', type: 'integer' })
+  additionalRewardId: number;
 
   @Field()
-  @Column('integer')
-  fix_reward_group_id: number;
+  @Column({ name: 'fix_reward_group_id', type: 'integer' })
+  fixRewardGroupId: number;
 
   @Field()
-  @Column('integer')
-  odds_group_id: number;
+  @Column({ name: 'odds_group_id', type: 'integer' })
+  oddsGroupId: number;
 
   @Field()
-  @Column('integer')
-  chest_id: number;
+  @Column({ name: 'chest_id', type: 'integer' })
+  chestId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'background', type: 'integer' })
   background: number;
 
   @Field()
-  @Column('integer')
-  bg_position: number;
+  @Column({ name: 'bg_position', type: 'integer' })
+  bgPosition: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id: number;
+  @Column({ name: 'wave_group_id', type: 'integer' })
+  waveGroupId: number;
 
   @Field()
-  @Column('integer')
-  enemy_position_x_1: number;
+  @Column({ name: 'enemy_position_x_1', type: 'integer' })
+  enemyPositionX1: number;
 
   @Field()
-  @Column('integer')
-  enemy_local_position_y_1: number;
+  @Column({ name: 'enemy_local_position_y_1', type: 'integer' })
+  enemyLocalPositionY1: number;
 
   @Field()
-  @Column('real')
-  enemy_size_1: number;
+  @Column({ name: 'enemy_size_1', type: 'real' })
+  enemySize1: number;
 
   @Field()
-  @Column('integer')
-  enemy_position_x_2: number;
+  @Column({ name: 'enemy_position_x_2', type: 'integer' })
+  enemyPositionX2: number;
 
   @Field()
-  @Column('integer')
-  enemy_local_position_y_2: number;
+  @Column({ name: 'enemy_local_position_y_2', type: 'integer' })
+  enemyLocalPositionY2: number;
 
   @Field()
-  @Column('real')
-  enemy_size_2: number;
+  @Column({ name: 'enemy_size_2', type: 'real' })
+  enemySize2: number;
 
   @Field()
-  @Column('integer')
-  enemy_position_x_3: number;
+  @Column({ name: 'enemy_position_x_3', type: 'integer' })
+  enemyPositionX3: number;
 
   @Field()
-  @Column('integer')
-  enemy_local_position_y_3: number;
+  @Column({ name: 'enemy_local_position_y_3', type: 'integer' })
+  enemyLocalPositionY3: number;
 
   @Field()
-  @Column('real')
-  enemy_size_3: number;
+  @Column({ name: 'enemy_size_3', type: 'real' })
+  enemySize3: number;
 
   @Field()
-  @Column('integer')
-  enemy_position_x_4: number;
+  @Column({ name: 'enemy_position_x_4', type: 'integer' })
+  enemyPositionX4: number;
 
   @Field()
-  @Column('integer')
-  enemy_local_position_y_4: number;
+  @Column({ name: 'enemy_local_position_y_4', type: 'integer' })
+  enemyLocalPositionY4: number;
 
   @Field()
-  @Column('real')
-  enemy_size_4: number;
+  @Column({ name: 'enemy_size_4', type: 'real' })
+  enemySize4: number;
 
   @Field()
-  @Column('integer')
-  enemy_position_x_5: number;
+  @Column({ name: 'enemy_position_x_5', type: 'integer' })
+  enemyPositionX5: number;
 
   @Field()
-  @Column('integer')
-  enemy_local_position_y_5: number;
+  @Column({ name: 'enemy_local_position_y_5', type: 'integer' })
+  enemyLocalPositionY5: number;
 
   @Field()
-  @Column('real')
-  enemy_size_5: number;
+  @Column({ name: 'enemy_size_5', type: 'real' })
+  enemySize5: number;
 
   @Field()
-  @Column('text')
-  wave_bgm: string;
+  @Column({ name: 'wave_bgm', type: 'text' })
+  waveBgm: string;
 
   @Field()
-  @Column('integer')
-  clp_flag: number;
+  @Column({ name: 'clp_flag', type: 'integer' })
+  clpFlag: number;
 
   @Field()
-  @Column('integer')
-  skip_level: number;
+  @Column({ name: 'skip_level', type: 'integer' })
+  skipLevel: number;
 
 }
 

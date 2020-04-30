@@ -5,27 +5,27 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_special_enemy' })
 export class HatsuneSpecialEnemy extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  enemy_id: number;
+  @PrimaryColumn({ name: 'enemy_id', type: 'integer' })
+  enemyId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'mode', type: 'integer' })
   mode: number;
 
   @Field()
-  @Column('integer')
-  enemy_point: number;
+  @Column({ name: 'enemy_point', type: 'integer' })
+  enemyPoint: number;
 
   @Field()
-  @Column('integer')
-  initial_position: number;
+  @Column({ name: 'initial_position', type: 'integer' })
+  initialPosition: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'order', type: 'integer' })
   order: number;
 
 }

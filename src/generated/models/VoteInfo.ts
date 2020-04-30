@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'vote_info' })
 export class VoteInfo extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  vote_id: number;
+  @PrimaryColumn({ name: 'vote_id', type: 'integer' })
+  voteId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  vote_help_index: number;
+  @PrimaryColumn({ name: 'vote_help_index', type: 'integer' })
+  voteHelpIndex: number;
 
   @Field()
-  @Column('text')
-  vote_title: string;
+  @Column({ name: 'vote_title', type: 'text' })
+  voteTitle: string;
 
   @Field()
-  @Column('text')
-  vote_help: string;
+  @Column({ name: 'vote_help', type: 'text' })
+  voteHelp: string;
 
 }
 

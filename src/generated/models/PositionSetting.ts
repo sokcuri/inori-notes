@@ -5,15 +5,15 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'position_setting' })
 export class PositionSetting extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  position_setting_id: number;
+  @PrimaryColumn({ name: 'position_setting_id', type: 'integer' })
+  positionSettingId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'front', type: 'integer' })
   front: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'middle', type: 'integer' })
   middle: number;
 
 }

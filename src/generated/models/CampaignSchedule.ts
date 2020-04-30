@@ -5,40 +5,40 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'campaign_schedule' })
 export class CampaignSchedule extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  campaign_category: number;
+  @Column({ name: 'campaign_category', type: 'integer' })
+  campaignCategory: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'value', type: 'real' })
   value: number;
 
   @Field()
-  @Column('integer')
-  system_id: number;
+  @Column({ name: 'system_id', type: 'integer' })
+  systemId: number;
 
   @Field()
-  @Column('integer')
-  icon_image: number;
+  @Column({ name: 'icon_image', type: 'integer' })
+  iconImage: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  level_id: number;
+  @Column({ name: 'level_id', type: 'integer' })
+  levelId: number;
 
   @Field()
-  @Column('integer')
-  shiori_group_id: number;
+  @Column({ name: 'shiori_group_id', type: 'integer' })
+  shioriGroupId: number;
 
 }
 

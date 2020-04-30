@@ -5,27 +5,27 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'album_voice_list' })
 export class AlbumVoiceList extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  unit_id: number;
+  @Column({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  voice_id: string;
+  @Column({ name: 'voice_id', type: 'text' })
+  voiceId: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'title', type: 'text' })
   title: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
 }

@@ -5,64 +5,64 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'character_love_rankup_text' })
 export class CharacterLoveRankupText extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  chara_id: number;
+  @PrimaryColumn({ name: 'chara_id', type: 'integer' })
+  charaId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('integer')
-  love_level: number;
+  @Column({ name: 'love_level', type: 'integer' })
+  loveLevel: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'scale', type: 'real' })
   scale: number;
 
   @Field()
-  @Column('integer')
-  position_x: number;
+  @Column({ name: 'position_x', type: 'integer' })
+  positionX: number;
 
   @Field()
-  @Column('integer')
-  position_y: number;
+  @Column({ name: 'position_y', type: 'integer' })
+  positionY: number;
 
   @Field()
-  @Column('integer')
-  voice_id_1: number;
+  @Column({ name: 'voice_id_1', type: 'integer' })
+  voiceId1: number;
 
   @Field()
-  @Column('integer')
-  face_1: number;
+  @Column({ name: 'face_1', type: 'integer' })
+  face1: number;
 
   @Field()
-  @Column('text')
-  serif_1: string;
+  @Column({ name: 'serif_1', type: 'text' })
+  serif1: string;
 
   @Field()
-  @Column('integer')
-  voice_id_2: number;
+  @Column({ name: 'voice_id_2', type: 'integer' })
+  voiceId2: number;
 
   @Field()
-  @Column('integer')
-  face_2: number;
+  @Column({ name: 'face_2', type: 'integer' })
+  face2: number;
 
   @Field()
-  @Column('text')
-  serif_2: string;
+  @Column({ name: 'serif_2', type: 'text' })
+  serif2: string;
 
   @Field()
-  @Column('integer')
-  voice_id_3: number;
+  @Column({ name: 'voice_id_3', type: 'integer' })
+  voiceId3: number;
 
   @Field()
-  @Column('integer')
-  face_3: number;
+  @Column({ name: 'face_3', type: 'integer' })
+  face3: number;
 
   @Field()
-  @Column('text')
-  serif_3: string;
+  @Column({ name: 'serif_3', type: 'text' })
+  serif3: string;
 
 }
 

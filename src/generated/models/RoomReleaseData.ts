@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_release_data' })
 export class RoomReleaseData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  system_id: number;
+  @PrimaryColumn({ name: 'system_id', type: 'integer' })
+  systemId: number;
 
   @Field()
-  @Column('integer')
-  story_id: number;
+  @Column({ name: 'story_id', type: 'integer' })
+  storyId: number;
 
   @Field()
-  @Column('integer')
-  pre_story_id: number;
+  @Column({ name: 'pre_story_id', type: 'integer' })
+  preStoryId: number;
 
 }
 

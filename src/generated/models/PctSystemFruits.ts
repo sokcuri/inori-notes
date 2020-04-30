@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'pct_system_fruits' })
 export class PctSystemFruits extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  last_time: number;
+  @Column({ name: 'last_time', type: 'integer' })
+  lastTime: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'appearance', type: 'integer' })
   appearance: number;
 
   @Field()
-  @Column('integer')
-  bar_split: number;
+  @Column({ name: 'bar_split', type: 'integer' })
+  barSplit: number;
 
   @Field()
-  @Column('integer')
-  appearance_chara_odds: number;
+  @Column({ name: 'appearance_chara_odds', type: 'integer' })
+  appearanceCharaOdds: number;
 
   @Field()
-  @Column('text')
-  appearance_pattern: string;
+  @Column({ name: 'appearance_pattern', type: 'text' })
+  appearancePattern: string;
 
   @Field()
-  @Column('integer')
-  wait_time: number;
+  @Column({ name: 'wait_time', type: 'integer' })
+  waitTime: number;
 
 }
 

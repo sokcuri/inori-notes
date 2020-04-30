@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'banner' })
 export class Banner extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  banner_id: number;
+  @PrimaryColumn({ name: 'banner_id', type: 'integer' })
+  bannerId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('integer')
-  system_id: number;
+  @Column({ name: 'system_id', type: 'integer' })
+  systemId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'priority', type: 'integer' })
   priority: number;
 
   @Field()
-  @Column('text')
-  start_date: string;
+  @Column({ name: 'start_date', type: 'text' })
+  startDate: string;
 
   @Field()
-  @Column('text')
-  end_date: string;
+  @Column({ name: 'end_date', type: 'text' })
+  endDate: string;
 
   @Field()
-  @Column('integer')
-  sub_banner_id_1: number;
+  @Column({ name: 'sub_banner_id_1', type: 'integer' })
+  subBannerId1: number;
 
   @Field()
-  @Column('integer')
-  is_show_room: number;
+  @Column({ name: 'is_show_room', type: 'integer' })
+  isShowRoom: number;
 
 }
 

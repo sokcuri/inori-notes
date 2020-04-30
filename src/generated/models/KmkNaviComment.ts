@@ -5,60 +5,60 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'kmk_navi_comment' })
 export class KmkNaviComment extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  comment_id: number;
+  @PrimaryColumn({ name: 'comment_id', type: 'integer' })
+  commentId: number;
 
   @Field()
-  @Column('integer')
-  where_type: number;
+  @Column({ name: 'where_type', type: 'integer' })
+  whereType: number;
 
   @Field()
-  @Column('integer')
-  character_id: number;
+  @Column({ name: 'character_id', type: 'integer' })
+  characterId: number;
 
   @Field()
-  @Column('integer')
-  face_type: number;
+  @Column({ name: 'face_type', type: 'integer' })
+  faceType: number;
 
   @Field()
-  @Column('text')
-  character_name: string;
+  @Column({ name: 'character_name', type: 'text' })
+  characterName: string;
 
   @Field()
-  @Column({ nullable: true, type: 'text' })
-  description?: string;
+  @Column({ name: 'description', type: 'text', nullable: true })
+  description: string;
 
   @Field()
-  @Column('integer')
-  voice_id: number;
+  @Column({ name: 'voice_id', type: 'integer' })
+  voiceId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('real')
-  pos_x: number;
+  @Column({ name: 'pos_x', type: 'real' })
+  posX: number;
 
   @Field()
-  @Column('real')
-  pos_y: number;
+  @Column({ name: 'pos_y', type: 'real' })
+  posY: number;
 
   @Field()
-  @Column('real')
-  change_face_time: number;
+  @Column({ name: 'change_face_time', type: 'real' })
+  changeFaceTime: number;
 
   @Field()
-  @Column('integer')
-  change_face_type: number;
+  @Column({ name: 'change_face_type', type: 'integer' })
+  changeFaceType: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
 }
 

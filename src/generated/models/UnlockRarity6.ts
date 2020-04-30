@@ -5,103 +5,103 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unlock_rarity_6' })
 export class UnlockRarity6 extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  slot_id: number;
+  @PrimaryColumn({ name: 'slot_id', type: 'integer' })
+  slotId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unlock_level: number;
+  @PrimaryColumn({ name: 'unlock_level', type: 'integer' })
+  unlockLevel: number;
 
   @Field()
-  @Column('integer')
-  unlock_flag: number;
+  @Column({ name: 'unlock_flag', type: 'integer' })
+  unlockFlag: number;
 
   @Field()
-  @Column('integer')
-  consume_gold: number;
+  @Column({ name: 'consume_gold', type: 'integer' })
+  consumeGold: number;
 
   @Field()
-  @Column('integer')
-  material_type: number;
+  @Column({ name: 'material_type', type: 'integer' })
+  materialType: number;
 
   @Field()
-  @Column('integer')
-  material_id: number;
+  @Column({ name: 'material_id', type: 'integer' })
+  materialId: number;
 
   @Field()
-  @Column('integer')
-  material_count: number;
+  @Column({ name: 'material_count', type: 'integer' })
+  materialCount: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'hp', type: 'integer' })
   hp: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'atk', type: 'integer' })
   atk: number;
 
   @Field()
-  @Column('integer')
-  magic_str: number;
+  @Column({ name: 'magic_str', type: 'integer' })
+  magicStr: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'def', type: 'integer' })
   def: number;
 
   @Field()
-  @Column('integer')
-  magic_def: number;
+  @Column({ name: 'magic_def', type: 'integer' })
+  magicDef: number;
 
   @Field()
-  @Column('integer')
-  physical_critical: number;
+  @Column({ name: 'physical_critical', type: 'integer' })
+  physicalCritical: number;
 
   @Field()
-  @Column('integer')
-  magic_critical: number;
+  @Column({ name: 'magic_critical', type: 'integer' })
+  magicCritical: number;
 
   @Field()
-  @Column('integer')
-  wave_hp_recovery: number;
+  @Column({ name: 'wave_hp_recovery', type: 'integer' })
+  waveHpRecovery: number;
 
   @Field()
-  @Column('integer')
-  wave_energy_recovery: number;
+  @Column({ name: 'wave_energy_recovery', type: 'integer' })
+  waveEnergyRecovery: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'dodge', type: 'integer' })
   dodge: number;
 
   @Field()
-  @Column('integer')
-  physical_penetrate: number;
+  @Column({ name: 'physical_penetrate', type: 'integer' })
+  physicalPenetrate: number;
 
   @Field()
-  @Column('integer')
-  magic_penetrate: number;
+  @Column({ name: 'magic_penetrate', type: 'integer' })
+  magicPenetrate: number;
 
   @Field()
-  @Column('integer')
-  life_steal: number;
+  @Column({ name: 'life_steal', type: 'integer' })
+  lifeSteal: number;
 
   @Field()
-  @Column('integer')
-  hp_recovery_rate: number;
+  @Column({ name: 'hp_recovery_rate', type: 'integer' })
+  hpRecoveryRate: number;
 
   @Field()
-  @Column('integer')
-  energy_recovery_rate: number;
+  @Column({ name: 'energy_recovery_rate', type: 'integer' })
+  energyRecoveryRate: number;
 
   @Field()
-  @Column('integer')
-  energy_reduce_rate: number;
+  @Column({ name: 'energy_reduce_rate', type: 'integer' })
+  energyReduceRate: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'accuracy', type: 'integer' })
   accuracy: number;
 
 }

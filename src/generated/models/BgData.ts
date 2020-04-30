@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'bg_data' })
 export class BgData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('text')
-  view_name: string;
+  @PrimaryColumn({ name: 'view_name', type: 'text' })
+  viewName: string;
 
   @Field()
-  @Column('integer')
-  bg_id: number;
+  @Column({ name: 'bg_id', type: 'integer' })
+  bgId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
 }
 

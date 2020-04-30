@@ -5,48 +5,48 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'content_map_data' })
 export class ContentMapData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  content_map_id: number;
+  @PrimaryColumn({ name: 'content_map_id', type: 'integer' })
+  contentMapId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('integer')
-  map_type: number;
+  @Column({ name: 'map_type', type: 'integer' })
+  mapType: number;
 
   @Field()
-  @Column('integer')
-  area_id: number;
+  @Column({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('integer')
-  condition_quest_id: number;
+  @Column({ name: 'condition_quest_id', type: 'integer' })
+  conditionQuestId: number;
 
   @Field()
-  @Column('integer')
-  quest_position_x: number;
+  @Column({ name: 'quest_position_x', type: 'integer' })
+  questPositionX: number;
 
   @Field()
-  @Column('integer')
-  quest_position_y: number;
+  @Column({ name: 'quest_position_y', type: 'integer' })
+  questPositionY: number;
 
   @Field()
-  @Column('integer')
-  icon_id: number;
+  @Column({ name: 'icon_id', type: 'integer' })
+  iconId: number;
 
   @Field()
-  @Column('integer')
-  system_id: number;
+  @Column({ name: 'system_id', type: 'integer' })
+  systemId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

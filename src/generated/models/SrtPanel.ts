@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'srt_panel' })
 export class SrtPanel extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  reading_id: number;
+  @PrimaryColumn({ name: 'reading_id', type: 'integer' })
+  readingId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'reading', type: 'text' })
   reading: string;
 
   @Field()
-  @Column('integer')
-  read_type: number;
+  @Column({ name: 'read_type', type: 'integer' })
+  readType: number;
 
   @Field()
-  @Column('integer')
-  panel_id: number;
+  @Column({ name: 'panel_id', type: 'integer' })
+  panelId: number;
 
   @Field()
-  @Column('text')
-  detail_text: string;
+  @Column({ name: 'detail_text', type: 'text' })
+  detailText: string;
 
 }
 

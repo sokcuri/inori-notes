@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'gacha_exchange_lineup' })
 export class GachaExchangeLineup extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  exchange_id: number;
+  @Column({ name: 'exchange_id', type: 'integer' })
+  exchangeId: number;
 
   @Field()
-  @Column('integer')
-  unit_id: number;
+  @Column({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'rarity', type: 'integer' })
   rarity: number;
 
   @Field()
-  @Column('integer')
-  gacha_bonus_id: number;
+  @Column({ name: 'gacha_bonus_id', type: 'integer' })
+  gachaBonusId: number;
 
 }
 

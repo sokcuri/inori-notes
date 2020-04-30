@@ -5,12 +5,12 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unlock_skill_data' })
 export class UnlockSkillData extends BaseEntity {
   @Field()
-  @Column('integer')
-  promotion_level: number;
+  @Column({ name: 'promotion_level', type: 'integer' })
+  promotionLevel: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unlock_skill: number;
+  @PrimaryColumn({ name: 'unlock_skill', type: 'integer' })
+  unlockSkill: number;
 
 }
 

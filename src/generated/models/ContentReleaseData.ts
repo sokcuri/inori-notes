@@ -5,23 +5,23 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'content_release_data' })
 export class ContentReleaseData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  system_id: number;
+  @PrimaryColumn({ name: 'system_id', type: 'integer' })
+  systemId: number;
 
   @Field()
-  @Column('integer')
-  team_level: number;
+  @Column({ name: 'team_level', type: 'integer' })
+  teamLevel: number;
 
   @Field()
-  @Column('integer')
-  story_id: number;
+  @Column({ name: 'story_id', type: 'integer' })
+  storyId: number;
 
   @Field()
-  @Column('integer')
-  quest_id: number;
+  @Column({ name: 'quest_id', type: 'integer' })
+  questId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'dialog', type: 'text' })
   dialog: string;
 
 }

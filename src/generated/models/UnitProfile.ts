@@ -5,68 +5,68 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_profile' })
 export class UnitProfile extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('text')
-  unit_name: string;
+  @Column({ name: 'unit_name', type: 'text' })
+  unitName: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'age', type: 'text' })
   age: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'guild', type: 'text' })
   guild: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'race', type: 'text' })
   race: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'height', type: 'text' })
   height: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'weight', type: 'text' })
   weight: string;
 
   @Field()
-  @Column('text')
-  birth_month: string;
+  @Column({ name: 'birth_month', type: 'text' })
+  birthMonth: string;
 
   @Field()
-  @Column('text')
-  birth_day: string;
+  @Column({ name: 'birth_day', type: 'text' })
+  birthDay: string;
 
   @Field()
-  @Column('text')
-  blood_type: string;
+  @Column({ name: 'blood_type', type: 'text' })
+  bloodType: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'favorite', type: 'text' })
   favorite: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'voice', type: 'text' })
   voice: string;
 
   @Field()
-  @Column('integer')
-  voice_id: number;
+  @Column({ name: 'voice_id', type: 'integer' })
+  voiceId: number;
 
   @Field()
-  @Column('text')
-  catch_copy: string;
+  @Column({ name: 'catch_copy', type: 'text' })
+  catchCopy: string;
 
   @Field()
-  @Column('text')
-  self_text: string;
+  @Column({ name: 'self_text', type: 'text' })
+  selfText: string;
 
   @Field()
-  @Column('text')
-  guild_id: string;
+  @Column({ name: 'guild_id', type: 'text' })
+  guildId: string;
 
 }
 

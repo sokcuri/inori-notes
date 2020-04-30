@@ -5,39 +5,39 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'space_top_data' })
 export class SpaceTopData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  space_id: number;
+  @Column({ name: 'space_id', type: 'integer' })
+  spaceId: number;
 
   @Field()
-  @Column('integer')
-  space_battle_id: number;
+  @Column({ name: 'space_battle_id', type: 'integer' })
+  spaceBattleId: number;
 
   @Field()
-  @Column('integer')
-  part_flag: number;
+  @Column({ name: 'part_flag', type: 'integer' })
+  partFlag: number;
 
   @Field()
-  @Column('integer')
-  story_id: number;
+  @Column({ name: 'story_id', type: 'integer' })
+  storyId: number;
 
   @Field()
-  @Column('text')
-  time_from: string;
+  @Column({ name: 'time_from', type: 'text' })
+  timeFrom: string;
 
   @Field()
-  @Column('text')
-  time_to: string;
+  @Column({ name: 'time_to', type: 'text' })
+  timeTo: string;
 
   @Field()
-  @Column('text')
-  skip_battle_time: string;
+  @Column({ name: 'skip_battle_time', type: 'text' })
+  skipBattleTime: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
 }

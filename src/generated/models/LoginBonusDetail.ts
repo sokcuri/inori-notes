@@ -5,48 +5,48 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'login_bonus_detail' })
 export class LoginBonusDetail extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  login_bonus_id: number;
+  @Column({ name: 'login_bonus_id', type: 'integer' })
+  loginBonusId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'count', type: 'integer' })
   count: number;
 
   @Field()
-  @Column('integer')
-  reward_type: number;
+  @Column({ name: 'reward_type', type: 'integer' })
+  rewardType: number;
 
   @Field()
-  @Column('integer')
-  reward_id: number;
+  @Column({ name: 'reward_id', type: 'integer' })
+  rewardId: number;
 
   @Field()
-  @Column('integer')
-  reward_num: number;
+  @Column({ name: 'reward_num', type: 'integer' })
+  rewardNum: number;
 
   @Field()
-  @Column('integer')
-  character_id: number;
+  @Column({ name: 'character_id', type: 'integer' })
+  characterId: number;
 
   @Field()
-  @Column('text')
-  character_name: string;
+  @Column({ name: 'character_name', type: 'text' })
+  characterName: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('integer')
-  voice_id: number;
+  @Column({ name: 'voice_id', type: 'integer' })
+  voiceId: number;
 
   @Field()
-  @Column('integer')
-  bg_id: number;
+  @Column({ name: 'bg_id', type: 'integer' })
+  bgId: number;
 
 }
 

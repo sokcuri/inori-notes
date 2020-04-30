@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'tower_schedule' })
 export class TowerSchedule extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  tower_schedule_id: number;
+  @PrimaryColumn({ name: 'tower_schedule_id', type: 'integer' })
+  towerScheduleId: number;
 
   @Field()
-  @Column('integer')
-  max_tower_area_id: number;
+  @Column({ name: 'max_tower_area_id', type: 'integer' })
+  maxTowerAreaId: number;
 
   @Field()
-  @Column('integer')
-  opening_story_id: number;
+  @Column({ name: 'opening_story_id', type: 'integer' })
+  openingStoryId: number;
 
   @Field()
-  @Column('text')
-  count_start_time: string;
+  @Column({ name: 'count_start_time', type: 'text' })
+  countStartTime: string;
 
   @Field()
-  @Column('text')
-  recovery_disable_time: string;
+  @Column({ name: 'recovery_disable_time', type: 'text' })
+  recoveryDisableTime: string;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

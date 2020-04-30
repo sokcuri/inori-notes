@@ -5,120 +5,120 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'shiori_boss' })
 export class ShioriBoss extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  boss_id: number;
+  @PrimaryColumn({ name: 'boss_id', type: 'integer' })
+  bossId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
-  area_id: number;
+  @Column({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'difficulty', type: 'integer' })
   difficulty: number;
 
   @Field()
-  @Column('text')
-  quest_name: string;
+  @Column({ name: 'quest_name', type: 'text' })
+  questName: string;
 
   @Field()
-  @Column('integer')
-  position_x: number;
+  @Column({ name: 'position_x', type: 'integer' })
+  positionX: number;
 
   @Field()
-  @Column('integer')
-  position_y: number;
+  @Column({ name: 'position_y', type: 'integer' })
+  positionY: number;
 
   @Field()
-  @Column('integer')
-  boss_position_x: number;
+  @Column({ name: 'boss_position_x', type: 'integer' })
+  bossPositionX: number;
 
   @Field()
-  @Column('integer')
-  boss_position_y: number;
+  @Column({ name: 'boss_position_y', type: 'integer' })
+  bossPositionY: number;
 
   @Field()
-  @Column('integer')
-  result_boss_position_y: number;
+  @Column({ name: 'result_boss_position_y', type: 'integer' })
+  resultBossPositionY: number;
 
   @Field()
-  @Column('integer')
-  icon_id: number;
+  @Column({ name: 'icon_id', type: 'integer' })
+  iconId: number;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('integer')
-  clear_reward_group: number;
+  @Column({ name: 'clear_reward_group', type: 'integer' })
+  clearRewardGroup: number;
 
   @Field()
-  @Column('integer')
-  background_1: number;
+  @Column({ name: 'background_1', type: 'integer' })
+  background1: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id_1: number;
+  @Column({ name: 'wave_group_id_1', type: 'integer' })
+  waveGroupId1: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_1: string;
+  @Column({ name: 'wave_bgm_sheet_id_1', type: 'text' })
+  waveBgmSheetId1: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_1: string;
+  @Column({ name: 'wave_bgm_que_id_1', type: 'text' })
+  waveBgmQueId1: string;
 
   @Field()
-  @Column('integer')
-  story_id_wavestart_1: number;
+  @Column({ name: 'story_id_wavestart_1', type: 'integer' })
+  storyIdWavestart1: number;
 
   @Field()
-  @Column('integer')
-  story_id_waveend_1: number;
+  @Column({ name: 'story_id_waveend_1', type: 'integer' })
+  storyIdWaveend1: number;
 
   @Field()
-  @Column('integer')
-  detail_bg_id: number;
+  @Column({ name: 'detail_bg_id', type: 'integer' })
+  detailBgId: number;
 
   @Field()
-  @Column('integer')
-  detail_bg_position: number;
+  @Column({ name: 'detail_bg_position', type: 'integer' })
+  detailBgPosition: number;
 
   @Field()
-  @Column('real')
-  detail_boss_bg_size: number;
+  @Column({ name: 'detail_boss_bg_size', type: 'real' })
+  detailBossBgSize: number;
 
   @Field()
-  @Column('real')
-  detail_boss_bg_height: number;
+  @Column({ name: 'detail_boss_bg_height', type: 'real' })
+  detailBossBgHeight: number;
 
   @Field()
-  @Column('real')
-  map_position_x: number;
+  @Column({ name: 'map_position_x', type: 'real' })
+  mapPositionX: number;
 
   @Field()
-  @Column('real')
-  map_position_y: number;
+  @Column({ name: 'map_position_y', type: 'real' })
+  mapPositionY: number;
 
   @Field()
-  @Column('real')
-  map_size: number;
+  @Column({ name: 'map_size', type: 'real' })
+  mapSize: number;
 
   @Field()
-  @Column('real')
-  deatail_aura_size: number;
+  @Column({ name: 'deatail_aura_size', type: 'real' })
+  deatailAuraSize: number;
 
   @Field()
-  @Column('real')
-  map_aura_size: number;
+  @Column({ name: 'map_aura_size', type: 'real' })
+  mapAuraSize: number;
 
   @Field()
-  @Column('integer')
-  disp_on_bg: number;
+  @Column({ name: 'disp_on_bg', type: 'integer' })
+  dispOnBg: number;
 
 }
 

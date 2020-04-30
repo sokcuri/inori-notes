@@ -5,48 +5,48 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_introduction' })
 export class UnitIntroduction extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  gacha_id: number;
+  @Column({ name: 'gacha_id', type: 'integer' })
+  gachaId: number;
 
   @Field()
-  @Column('integer')
-  introduction_number: number;
+  @Column({ name: 'introduction_number', type: 'integer' })
+  introductionNumber: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  maximum_chunk_size_1: number;
+  @Column({ name: 'maximum_chunk_size_1', type: 'integer' })
+  maximumChunkSize1: number;
 
   @Field()
-  @Column('integer')
-  maximum_chunk_size_loop_1: number;
+  @Column({ name: 'maximum_chunk_size_loop_1', type: 'integer' })
+  maximumChunkSizeLoop1: number;
 
   @Field()
-  @Column('integer')
-  maximum_chunk_size_2: number;
+  @Column({ name: 'maximum_chunk_size_2', type: 'integer' })
+  maximumChunkSize2: number;
 
   @Field()
-  @Column('integer')
-  maximum_chunk_size_loop_2: number;
+  @Column({ name: 'maximum_chunk_size_loop_2', type: 'integer' })
+  maximumChunkSizeLoop2: number;
 
   @Field()
-  @Column('integer')
-  maximum_chunk_size_3: number;
+  @Column({ name: 'maximum_chunk_size_3', type: 'integer' })
+  maximumChunkSize3: number;
 
   @Field()
-  @Column('integer')
-  maximum_chunk_size_loop_3: number;
+  @Column({ name: 'maximum_chunk_size_loop_3', type: 'integer' })
+  maximumChunkSizeLoop3: number;
 
 }
 

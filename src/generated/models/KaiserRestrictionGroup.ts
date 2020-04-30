@@ -5,12 +5,12 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'kaiser_restriction_group' })
 export class KaiserRestrictionGroup extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  restriction_group_id: number;
+  @PrimaryColumn({ name: 'restriction_group_id', type: 'integer' })
+  restrictionGroupId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
 }
 

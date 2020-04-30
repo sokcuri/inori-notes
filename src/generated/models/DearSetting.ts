@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'dear_setting' })
 export class DearSetting extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  event_id: number;
+  @PrimaryColumn({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('text')
-  system_name: string;
+  @Column({ name: 'system_name', type: 'text' })
+  systemName: string;
 
   @Field()
-  @Column('integer')
-  tutorial_quest_id: number;
+  @Column({ name: 'tutorial_quest_id', type: 'integer' })
+  tutorialQuestId: number;
 
   @Field()
-  @Column('integer')
-  tutorial_chara_index: number;
+  @Column({ name: 'tutorial_chara_index', type: 'integer' })
+  tutorialCharaIndex: number;
 
   @Field()
-  @Column('integer')
-  tutorial_story_id: number;
+  @Column({ name: 'tutorial_story_id', type: 'integer' })
+  tutorialStoryId: number;
 
 }
 

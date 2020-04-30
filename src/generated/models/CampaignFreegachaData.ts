@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'campaign_freegacha_data' })
 export class CampaignFreegachaData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  campaign_id: number;
+  @Column({ name: 'campaign_id', type: 'integer' })
+  campaignId: number;
 
   @Field()
-  @Column('integer')
-  gacha_id: number;
+  @Column({ name: 'gacha_id', type: 'integer' })
+  gachaId: number;
 
 }
 

@@ -5,55 +5,55 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_enemy_data' })
 export class UnitEnemyData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('text')
-  unit_name: string;
+  @Column({ name: 'unit_name', type: 'text' })
+  unitName: string;
 
   @Field()
-  @Column('integer')
-  prefab_id: number;
+  @Column({ name: 'prefab_id', type: 'integer' })
+  prefabId: number;
 
   @Field()
-  @Column('integer')
-  motion_type: number;
+  @Column({ name: 'motion_type', type: 'integer' })
+  motionType: number;
 
   @Field()
-  @Column('integer')
-  se_type: number;
+  @Column({ name: 'se_type', type: 'integer' })
+  seType: number;
 
   @Field()
-  @Column('integer')
-  move_speed: number;
+  @Column({ name: 'move_speed', type: 'integer' })
+  moveSpeed: number;
 
   @Field()
-  @Column('integer')
-  search_area_width: number;
+  @Column({ name: 'search_area_width', type: 'integer' })
+  searchAreaWidth: number;
 
   @Field()
-  @Column('integer')
-  atk_type: number;
+  @Column({ name: 'atk_type', type: 'integer' })
+  atkType: number;
 
   @Field()
-  @Column('real')
-  normal_atk_cast_time: number;
+  @Column({ name: 'normal_atk_cast_time', type: 'real' })
+  normalAtkCastTime: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'cutin', type: 'integer' })
   cutin: number;
 
   @Field()
-  @Column('integer')
-  cutin_star6: number;
+  @Column({ name: 'cutin_star6', type: 'integer' })
+  cutinStar6: number;
 
   @Field()
-  @Column('integer')
-  visual_change_flag: number;
+  @Column({ name: 'visual_change_flag', type: 'integer' })
+  visualChangeFlag: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'comment', type: 'text' })
   comment: string;
 
 }

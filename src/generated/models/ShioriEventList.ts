@@ -5,48 +5,48 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'shiori_event_list' })
 export class ShioriEventList extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  event_id: number;
+  @PrimaryColumn({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  condition_story_id: number;
+  @Column({ name: 'condition_story_id', type: 'integer' })
+  conditionStoryId: number;
 
   @Field()
-  @Column('integer')
-  condition_chara_id: number;
+  @Column({ name: 'condition_chara_id', type: 'integer' })
+  conditionCharaId: number;
 
   @Field()
-  @Column('integer')
-  condition_main_quest_id: number;
+  @Column({ name: 'condition_main_quest_id', type: 'integer' })
+  conditionMainQuestId: number;
 
   @Field()
-  @Column('integer')
-  condition_shiori_quest_id: number;
+  @Column({ name: 'condition_shiori_quest_id', type: 'integer' })
+  conditionShioriQuestId: number;
 
   @Field()
-  @Column('integer')
-  original_event_id: number;
+  @Column({ name: 'original_event_id', type: 'integer' })
+  originalEventId: number;
 
   @Field()
-  @Column('text')
-  original_start_time: string;
+  @Column({ name: 'original_start_time', type: 'text' })
+  originalStartTime: string;
 
   @Field()
-  @Column('integer')
-  gojuon_order: number;
+  @Column({ name: 'gojuon_order', type: 'integer' })
+  gojuonOrder: number;
 
   @Field()
-  @Column('text')
-  help_index: string;
+  @Column({ name: 'help_index', type: 'text' })
+  helpIndex: string;
 
 }
 

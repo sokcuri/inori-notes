@@ -5,23 +5,23 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_cost_group' })
 export class ClanCostGroup extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  cost_group_id: number;
+  @Column({ name: 'cost_group_id', type: 'integer' })
+  costGroupId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'difficulty', type: 'integer' })
   difficulty: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'count', type: 'integer' })
   count: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'cost', type: 'integer' })
   cost: number;
 
 }

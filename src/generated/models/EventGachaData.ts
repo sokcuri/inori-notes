@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'event_gacha_data' })
 export class EventGachaData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  gacha_id: number;
+  @PrimaryColumn({ name: 'gacha_id', type: 'integer' })
+  gachaId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('text')
-  gacha_name: string;
+  @Column({ name: 'gacha_name', type: 'text' })
+  gachaName: string;
 
   @Field()
-  @Column('integer')
-  item_type: number;
+  @Column({ name: 'item_type', type: 'integer' })
+  itemType: number;
 
   @Field()
-  @Column('integer')
-  item_id: number;
+  @Column({ name: 'item_id', type: 'integer' })
+  itemId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'cost', type: 'integer' })
   cost: number;
 
   @Field()
-  @Column('integer')
-  repeat_step: number;
+  @Column({ name: 'repeat_step', type: 'integer' })
+  repeatStep: number;
 
 }
 

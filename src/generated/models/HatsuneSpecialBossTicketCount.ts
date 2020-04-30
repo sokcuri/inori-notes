@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_special_boss_ticket_count' })
 export class HatsuneSpecialBossTicketCount extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  challenge_count_from: number;
+  @Column({ name: 'challenge_count_from', type: 'integer' })
+  challengeCountFrom: number;
 
   @Field()
-  @Column('integer')
-  challenge_count_to: number;
+  @Column({ name: 'challenge_count_to', type: 'integer' })
+  challengeCountTo: number;
 
   @Field()
-  @Column('integer')
-  use_ticket_num: number;
+  @Column({ name: 'use_ticket_num', type: 'integer' })
+  useTicketNum: number;
 
 }
 

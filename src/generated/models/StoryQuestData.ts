@@ -5,88 +5,88 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'story_quest_data' })
 export class StoryQuestData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  story_quest_id: number;
+  @PrimaryColumn({ name: 'story_quest_id', type: 'integer' })
+  storyQuestId: number;
 
   @Field()
-  @Column('integer')
-  story_id: number;
+  @Column({ name: 'story_id', type: 'integer' })
+  storyId: number;
 
   @Field()
-  @Column('text')
-  quest_name: string;
+  @Column({ name: 'quest_name', type: 'text' })
+  questName: string;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('integer')
-  background_1: number;
+  @Column({ name: 'background_1', type: 'integer' })
+  background1: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id_1: number;
+  @Column({ name: 'wave_group_id_1', type: 'integer' })
+  waveGroupId1: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_1: string;
+  @Column({ name: 'wave_bgm_sheet_id_1', type: 'text' })
+  waveBgmSheetId1: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_1: string;
+  @Column({ name: 'wave_bgm_que_id_1', type: 'text' })
+  waveBgmQueId1: string;
 
   @Field()
-  @Column('integer')
-  background_2: number;
+  @Column({ name: 'background_2', type: 'integer' })
+  background2: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id_2: number;
+  @Column({ name: 'wave_group_id_2', type: 'integer' })
+  waveGroupId2: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_2: string;
+  @Column({ name: 'wave_bgm_sheet_id_2', type: 'text' })
+  waveBgmSheetId2: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_2: string;
+  @Column({ name: 'wave_bgm_que_id_2', type: 'text' })
+  waveBgmQueId2: string;
 
   @Field()
-  @Column('integer')
-  background_3: number;
+  @Column({ name: 'background_3', type: 'integer' })
+  background3: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id_3: number;
+  @Column({ name: 'wave_group_id_3', type: 'integer' })
+  waveGroupId3: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_3: string;
+  @Column({ name: 'wave_bgm_sheet_id_3', type: 'text' })
+  waveBgmSheetId3: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_3: string;
+  @Column({ name: 'wave_bgm_que_id_3', type: 'text' })
+  waveBgmQueId3: string;
 
   @Field()
-  @Column('integer')
-  guest_unit_1: number;
+  @Column({ name: 'guest_unit_1', type: 'integer' })
+  guestUnit1: number;
 
   @Field()
-  @Column('integer')
-  guest_unit_2: number;
+  @Column({ name: 'guest_unit_2', type: 'integer' })
+  guestUnit2: number;
 
   @Field()
-  @Column('integer')
-  guest_unit_3: number;
+  @Column({ name: 'guest_unit_3', type: 'integer' })
+  guestUnit3: number;
 
   @Field()
-  @Column('integer')
-  guest_unit_4: number;
+  @Column({ name: 'guest_unit_4', type: 'integer' })
+  guestUnit4: number;
 
   @Field()
-  @Column('integer')
-  guest_unit_5: number;
+  @Column({ name: 'guest_unit_5', type: 'integer' })
+  guestUnit5: number;
 
 }
 

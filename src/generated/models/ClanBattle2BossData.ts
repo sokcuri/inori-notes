@@ -5,84 +5,84 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_battle_2_boss_data' })
 export class ClanBattle2BossData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  boss_id: number;
+  @PrimaryColumn({ name: 'boss_id', type: 'integer' })
+  bossId: number;
 
   @Field()
-  @Column('integer')
-  clan_battle_id: number;
+  @Column({ name: 'clan_battle_id', type: 'integer' })
+  clanBattleId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'difficulty', type: 'integer' })
   difficulty: number;
 
   @Field()
-  @Column('integer')
-  order_num: number;
+  @Column({ name: 'order_num', type: 'integer' })
+  orderNum: number;
 
   @Field()
-  @Column('integer')
-  boss_thumb_id: number;
+  @Column({ name: 'boss_thumb_id', type: 'integer' })
+  bossThumbId: number;
 
   @Field()
-  @Column('integer')
-  position_x: number;
+  @Column({ name: 'position_x', type: 'integer' })
+  positionX: number;
 
   @Field()
-  @Column('integer')
-  position_y: number;
+  @Column({ name: 'position_y', type: 'integer' })
+  positionY: number;
 
   @Field()
-  @Column('real')
-  scale_ratio: number;
+  @Column({ name: 'scale_ratio', type: 'real' })
+  scaleRatio: number;
 
   @Field()
-  @Column('integer')
-  map_position_x: number;
+  @Column({ name: 'map_position_x', type: 'integer' })
+  mapPositionX: number;
 
   @Field()
-  @Column('integer')
-  map_position_y: number;
+  @Column({ name: 'map_position_y', type: 'integer' })
+  mapPositionY: number;
 
   @Field()
-  @Column('integer')
-  cursor_position: number;
+  @Column({ name: 'cursor_position', type: 'integer' })
+  cursorPosition: number;
 
   @Field()
-  @Column('integer')
-  result_boss_position_y: number;
+  @Column({ name: 'result_boss_position_y', type: 'integer' })
+  resultBossPositionY: number;
 
   @Field()
-  @Column('integer')
-  quest_detail_bg_id: number;
+  @Column({ name: 'quest_detail_bg_id', type: 'integer' })
+  questDetailBgId: number;
 
   @Field()
-  @Column('integer')
-  quest_detail_bg_position: number;
+  @Column({ name: 'quest_detail_bg_position', type: 'integer' })
+  questDetailBgPosition: number;
 
   @Field()
-  @Column('real')
-  quest_detail_monster_size: number;
+  @Column({ name: 'quest_detail_monster_size', type: 'real' })
+  questDetailMonsterSize: number;
 
   @Field()
-  @Column('integer')
-  quest_detail_monster_height: number;
+  @Column({ name: 'quest_detail_monster_height', type: 'integer' })
+  questDetailMonsterHeight: number;
 
   @Field()
-  @Column('real')
-  battle_report_monster_size: number;
+  @Column({ name: 'battle_report_monster_size', type: 'real' })
+  battleReportMonsterSize: number;
 
   @Field()
-  @Column('integer')
-  battle_report_monster_height: number;
+  @Column({ name: 'battle_report_monster_height', type: 'integer' })
+  battleReportMonsterHeight: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'background', type: 'integer' })
   background: number;
 
   @Field()
-  @Column('text')
-  wave_bgm: string;
+  @Column({ name: 'wave_bgm', type: 'text' })
+  waveBgm: string;
 
 }
 

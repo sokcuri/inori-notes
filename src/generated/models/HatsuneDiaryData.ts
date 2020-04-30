@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_diary_data' })
 export class HatsuneDiaryData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  diary_id: number;
+  @PrimaryColumn({ name: 'diary_id', type: 'integer' })
+  diaryId: number;
 
   @Field()
-  @Column('integer')
-  contents_type: number;
+  @Column({ name: 'contents_type', type: 'integer' })
+  contentsType: number;
 
   @Field()
-  @Column('integer')
-  diary_date: number;
+  @Column({ name: 'diary_date', type: 'integer' })
+  diaryDate: number;
 
   @Field()
-  @Column('text')
-  sub_title: string;
+  @Column({ name: 'sub_title', type: 'text' })
+  subTitle: string;
 
   @Field()
-  @Column('text')
-  forced_release_time: string;
+  @Column({ name: 'forced_release_time', type: 'text' })
+  forcedReleaseTime: string;
 
   @Field()
-  @Column('text')
-  condition_time: string;
+  @Column({ name: 'condition_time', type: 'text' })
+  conditionTime: string;
 
   @Field()
-  @Column('integer')
-  condition_story_id: number;
+  @Column({ name: 'condition_story_id', type: 'integer' })
+  conditionStoryId: number;
 
   @Field()
-  @Column('integer')
-  condition_boss_count: number;
+  @Column({ name: 'condition_boss_count', type: 'integer' })
+  conditionBossCount: number;
 
 }
 

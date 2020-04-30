@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_diary_script' })
 export class HatsuneDiaryScript extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  diary_id: number;
+  @Column({ name: 'diary_id', type: 'integer' })
+  diaryId: number;
 
   @Field()
-  @Column('integer')
-  seq_num: number;
+  @Column({ name: 'seq_num', type: 'integer' })
+  seqNum: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('text')
-  diary_text: string;
+  @Column({ name: 'diary_text', type: 'text' })
+  diaryText: string;
 
   @Field()
-  @Column('integer')
-  text_animation_speed: number;
+  @Column({ name: 'text_animation_speed', type: 'integer' })
+  textAnimationSpeed: number;
 
   @Field()
-  @Column('text')
-  sheet_name: string;
+  @Column({ name: 'sheet_name', type: 'text' })
+  sheetName: string;
 
   @Field()
-  @Column('text')
-  cue_name: string;
+  @Column({ name: 'cue_name', type: 'text' })
+  cueName: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'command', type: 'integer' })
   command: number;
 
   @Field()
-  @Column('real')
-  command_param: number;
+  @Column({ name: 'command_param', type: 'real' })
+  commandParam: number;
 
 }
 

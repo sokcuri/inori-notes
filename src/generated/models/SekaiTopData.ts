@@ -5,76 +5,76 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'sekai_top_data' })
 export class SekaiTopData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  sekai_id: number;
+  @Column({ name: 'sekai_id', type: 'integer' })
+  sekaiId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('integer')
-  top_bg: number;
+  @Column({ name: 'top_bg', type: 'integer' })
+  topBg: number;
 
   @Field()
-  @Column('integer')
-  position_x: number;
+  @Column({ name: 'position_x', type: 'integer' })
+  positionX: number;
 
   @Field()
-  @Column('integer')
-  position_y: number;
+  @Column({ name: 'position_y', type: 'integer' })
+  positionY: number;
 
   @Field()
-  @Column('real')
-  scale_ratio: number;
+  @Column({ name: 'scale_ratio', type: 'real' })
+  scaleRatio: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  que_id: string;
+  @Column({ name: 'que_id', type: 'text' })
+  queId: string;
 
   @Field()
-  @Column('integer')
-  boss_mode: number;
+  @Column({ name: 'boss_mode', type: 'integer' })
+  bossMode: number;
 
   @Field()
-  @Column('integer')
-  sekai_boss_mode_id: number;
+  @Column({ name: 'sekai_boss_mode_id', type: 'integer' })
+  sekaiBossModeId: number;
 
   @Field()
-  @Column('text')
-  boss_hp_from: string;
+  @Column({ name: 'boss_hp_from', type: 'text' })
+  bossHpFrom: string;
 
   @Field()
-  @Column('text')
-  boss_hp_to: string;
+  @Column({ name: 'boss_hp_to', type: 'text' })
+  bossHpTo: string;
 
   @Field()
-  @Column('text')
-  boss_time_from: string;
+  @Column({ name: 'boss_time_from', type: 'text' })
+  bossTimeFrom: string;
 
   @Field()
-  @Column('text')
-  boss_time_to: string;
+  @Column({ name: 'boss_time_to', type: 'text' })
+  bossTimeTo: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'duration', type: 'integer' })
   duration: number;
 
   @Field()
-  @Column('integer')
-  story_id: number;
+  @Column({ name: 'story_id', type: 'integer' })
+  storyId: number;
 
 }
 

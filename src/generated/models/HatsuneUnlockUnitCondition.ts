@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_unlock_unit_condition' })
 export class HatsuneUnlockUnitCondition extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  unit_id: number;
+  @Column({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
-  condition_mission_id: number;
+  @Column({ name: 'condition_mission_id', type: 'integer' })
+  conditionMissionId: number;
 
   @Field()
-  @Column('text')
-  top_description: string;
+  @Column({ name: 'top_description', type: 'text' })
+  topDescription: string;
 
   @Field()
-  @Column('text')
-  description_1: string;
+  @Column({ name: 'description_1', type: 'text' })
+  description1: string;
 
   @Field()
-  @Column('text')
-  description_2: string;
+  @Column({ name: 'description_2', type: 'text' })
+  description2: string;
 
 }
 

@@ -5,40 +5,40 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'pct_result' })
 export class PctResult extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  character_id: number;
+  @Column({ name: 'character_id', type: 'integer' })
+  characterId: number;
 
   @Field()
-  @Column('integer')
-  score_from: number;
+  @Column({ name: 'score_from', type: 'integer' })
+  scoreFrom: number;
 
   @Field()
-  @Column('integer')
-  score_to: number;
+  @Column({ name: 'score_to', type: 'integer' })
+  scoreTo: number;
 
   @Field()
-  @Column('integer')
-  comment_id_1: number;
+  @Column({ name: 'comment_id_1', type: 'integer' })
+  commentId1: number;
 
   @Field()
-  @Column('integer')
-  comment_id_2: number;
+  @Column({ name: 'comment_id_2', type: 'integer' })
+  commentId2: number;
 
   @Field()
-  @Column('integer')
-  comment_id_3: number;
+  @Column({ name: 'comment_id_3', type: 'integer' })
+  commentId3: number;
 
   @Field()
-  @Column('integer')
-  comment_id_4: number;
+  @Column({ name: 'comment_id_4', type: 'integer' })
+  commentId4: number;
 
   @Field()
-  @Column('integer')
-  comment_id_5: number;
+  @Column({ name: 'comment_id_5', type: 'integer' })
+  commentId5: number;
 
 }
 

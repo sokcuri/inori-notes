@@ -5,23 +5,23 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'pct_gaming_motion' })
 export class PctGamingMotion extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  motion_id: number;
+  @PrimaryColumn({ name: 'motion_id', type: 'integer' })
+  motionId: number;
 
   @Field()
-  @Column('integer')
-  perfect_count: number;
+  @Column({ name: 'perfect_count', type: 'integer' })
+  perfectCount: number;
 
   @Field()
-  @Column('integer')
-  good_count: number;
+  @Column({ name: 'good_count', type: 'integer' })
+  goodCount: number;
 
   @Field()
-  @Column('integer')
-  nice_count: number;
+  @Column({ name: 'nice_count', type: 'integer' })
+  niceCount: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'point', type: 'integer' })
   point: number;
 
 }

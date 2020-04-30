@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_battle_hp_reset_cost' })
 export class ClanBattleHpResetCost extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  reset_count_from: number;
+  @Column({ name: 'reset_count_from', type: 'integer' })
+  resetCountFrom: number;
 
   @Field()
-  @Column('integer')
-  reset_count_to: number;
+  @Column({ name: 'reset_count_to', type: 'integer' })
+  resetCountTo: number;
 
   @Field()
-  @Column('integer')
-  cost_num: number;
+  @Column({ name: 'cost_num', type: 'integer' })
+  costNum: number;
 
 }
 

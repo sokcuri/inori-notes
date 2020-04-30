@@ -5,208 +5,208 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'resist_data' })
 export class ResistData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  resist_status_id: number;
+  @PrimaryColumn({ name: 'resist_status_id', type: 'integer' })
+  resistStatusId: number;
 
   @Field()
-  @Column('integer')
-  ailment_1: number;
+  @Column({ name: 'ailment_1', type: 'integer' })
+  ailment1: number;
 
   @Field()
-  @Column('integer')
-  ailment_2: number;
+  @Column({ name: 'ailment_2', type: 'integer' })
+  ailment2: number;
 
   @Field()
-  @Column('integer')
-  ailment_3: number;
+  @Column({ name: 'ailment_3', type: 'integer' })
+  ailment3: number;
 
   @Field()
-  @Column('integer')
-  ailment_4: number;
+  @Column({ name: 'ailment_4', type: 'integer' })
+  ailment4: number;
 
   @Field()
-  @Column('integer')
-  ailment_5: number;
+  @Column({ name: 'ailment_5', type: 'integer' })
+  ailment5: number;
 
   @Field()
-  @Column('integer')
-  ailment_6: number;
+  @Column({ name: 'ailment_6', type: 'integer' })
+  ailment6: number;
 
   @Field()
-  @Column('integer')
-  ailment_7: number;
+  @Column({ name: 'ailment_7', type: 'integer' })
+  ailment7: number;
 
   @Field()
-  @Column('integer')
-  ailment_8: number;
+  @Column({ name: 'ailment_8', type: 'integer' })
+  ailment8: number;
 
   @Field()
-  @Column('integer')
-  ailment_9: number;
+  @Column({ name: 'ailment_9', type: 'integer' })
+  ailment9: number;
 
   @Field()
-  @Column('integer')
-  ailment_10: number;
+  @Column({ name: 'ailment_10', type: 'integer' })
+  ailment10: number;
 
   @Field()
-  @Column('integer')
-  ailment_11: number;
+  @Column({ name: 'ailment_11', type: 'integer' })
+  ailment11: number;
 
   @Field()
-  @Column('integer')
-  ailment_12: number;
+  @Column({ name: 'ailment_12', type: 'integer' })
+  ailment12: number;
 
   @Field()
-  @Column('integer')
-  ailment_13: number;
+  @Column({ name: 'ailment_13', type: 'integer' })
+  ailment13: number;
 
   @Field()
-  @Column('integer')
-  ailment_14: number;
+  @Column({ name: 'ailment_14', type: 'integer' })
+  ailment14: number;
 
   @Field()
-  @Column('integer')
-  ailment_15: number;
+  @Column({ name: 'ailment_15', type: 'integer' })
+  ailment15: number;
 
   @Field()
-  @Column('integer')
-  ailment_16: number;
+  @Column({ name: 'ailment_16', type: 'integer' })
+  ailment16: number;
 
   @Field()
-  @Column('integer')
-  ailment_17: number;
+  @Column({ name: 'ailment_17', type: 'integer' })
+  ailment17: number;
 
   @Field()
-  @Column('integer')
-  ailment_18: number;
+  @Column({ name: 'ailment_18', type: 'integer' })
+  ailment18: number;
 
   @Field()
-  @Column('integer')
-  ailment_19: number;
+  @Column({ name: 'ailment_19', type: 'integer' })
+  ailment19: number;
 
   @Field()
-  @Column('integer')
-  ailment_20: number;
+  @Column({ name: 'ailment_20', type: 'integer' })
+  ailment20: number;
 
   @Field()
-  @Column('integer')
-  ailment_21: number;
+  @Column({ name: 'ailment_21', type: 'integer' })
+  ailment21: number;
 
   @Field()
-  @Column('integer')
-  ailment_22: number;
+  @Column({ name: 'ailment_22', type: 'integer' })
+  ailment22: number;
 
   @Field()
-  @Column('integer')
-  ailment_23: number;
+  @Column({ name: 'ailment_23', type: 'integer' })
+  ailment23: number;
 
   @Field()
-  @Column('integer')
-  ailment_24: number;
+  @Column({ name: 'ailment_24', type: 'integer' })
+  ailment24: number;
 
   @Field()
-  @Column('integer')
-  ailment_25: number;
+  @Column({ name: 'ailment_25', type: 'integer' })
+  ailment25: number;
 
   @Field()
-  @Column('integer')
-  ailment_26: number;
+  @Column({ name: 'ailment_26', type: 'integer' })
+  ailment26: number;
 
   @Field()
-  @Column('integer')
-  ailment_27: number;
+  @Column({ name: 'ailment_27', type: 'integer' })
+  ailment27: number;
 
   @Field()
-  @Column('integer')
-  ailment_28: number;
+  @Column({ name: 'ailment_28', type: 'integer' })
+  ailment28: number;
 
   @Field()
-  @Column('integer')
-  ailment_29: number;
+  @Column({ name: 'ailment_29', type: 'integer' })
+  ailment29: number;
 
   @Field()
-  @Column('integer')
-  ailment_30: number;
+  @Column({ name: 'ailment_30', type: 'integer' })
+  ailment30: number;
 
   @Field()
-  @Column('integer')
-  ailment_31: number;
+  @Column({ name: 'ailment_31', type: 'integer' })
+  ailment31: number;
 
   @Field()
-  @Column('integer')
-  ailment_32: number;
+  @Column({ name: 'ailment_32', type: 'integer' })
+  ailment32: number;
 
   @Field()
-  @Column('integer')
-  ailment_33: number;
+  @Column({ name: 'ailment_33', type: 'integer' })
+  ailment33: number;
 
   @Field()
-  @Column('integer')
-  ailment_34: number;
+  @Column({ name: 'ailment_34', type: 'integer' })
+  ailment34: number;
 
   @Field()
-  @Column('integer')
-  ailment_35: number;
+  @Column({ name: 'ailment_35', type: 'integer' })
+  ailment35: number;
 
   @Field()
-  @Column('integer')
-  ailment_36: number;
+  @Column({ name: 'ailment_36', type: 'integer' })
+  ailment36: number;
 
   @Field()
-  @Column('integer')
-  ailment_37: number;
+  @Column({ name: 'ailment_37', type: 'integer' })
+  ailment37: number;
 
   @Field()
-  @Column('integer')
-  ailment_38: number;
+  @Column({ name: 'ailment_38', type: 'integer' })
+  ailment38: number;
 
   @Field()
-  @Column('integer')
-  ailment_39: number;
+  @Column({ name: 'ailment_39', type: 'integer' })
+  ailment39: number;
 
   @Field()
-  @Column('integer')
-  ailment_40: number;
+  @Column({ name: 'ailment_40', type: 'integer' })
+  ailment40: number;
 
   @Field()
-  @Column('integer')
-  ailment_41: number;
+  @Column({ name: 'ailment_41', type: 'integer' })
+  ailment41: number;
 
   @Field()
-  @Column('integer')
-  ailment_42: number;
+  @Column({ name: 'ailment_42', type: 'integer' })
+  ailment42: number;
 
   @Field()
-  @Column('integer')
-  ailment_43: number;
+  @Column({ name: 'ailment_43', type: 'integer' })
+  ailment43: number;
 
   @Field()
-  @Column('integer')
-  ailment_44: number;
+  @Column({ name: 'ailment_44', type: 'integer' })
+  ailment44: number;
 
   @Field()
-  @Column('integer')
-  ailment_45: number;
+  @Column({ name: 'ailment_45', type: 'integer' })
+  ailment45: number;
 
   @Field()
-  @Column('integer')
-  ailment_46: number;
+  @Column({ name: 'ailment_46', type: 'integer' })
+  ailment46: number;
 
   @Field()
-  @Column('integer')
-  ailment_47: number;
+  @Column({ name: 'ailment_47', type: 'integer' })
+  ailment47: number;
 
   @Field()
-  @Column('integer')
-  ailment_48: number;
+  @Column({ name: 'ailment_48', type: 'integer' })
+  ailment48: number;
 
   @Field()
-  @Column('integer')
-  ailment_49: number;
+  @Column({ name: 'ailment_49', type: 'integer' })
+  ailment49: number;
 
   @Field()
-  @Column('integer')
-  ailment_50: number;
+  @Column({ name: 'ailment_50', type: 'integer' })
+  ailment50: number;
 
 }
 

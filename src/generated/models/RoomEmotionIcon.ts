@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_emotion_icon' })
 export class RoomEmotionIcon extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  enable_auto: number;
+  @Column({ name: 'enable_auto', type: 'integer' })
+  enableAuto: number;
 
   @Field()
-  @Column('integer')
-  enable_tap: number;
+  @Column({ name: 'enable_tap', type: 'integer' })
+  enableTap: number;
 
 }
 

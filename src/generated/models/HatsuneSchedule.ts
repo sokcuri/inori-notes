@@ -5,68 +5,68 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_schedule' })
 export class HatsuneSchedule extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  event_id: number;
+  @PrimaryColumn({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('text')
-  teaser_time: string;
+  @Column({ name: 'teaser_time', type: 'text' })
+  teaserTime: string;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('text')
-  close_time: string;
+  @Column({ name: 'close_time', type: 'text' })
+  closeTime: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'background', type: 'integer' })
   background: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  que_id: string;
+  @Column({ name: 'que_id', type: 'text' })
+  queId: string;
 
   @Field()
-  @Column('integer')
-  banner_unit_id: number;
+  @Column({ name: 'banner_unit_id', type: 'integer' })
+  bannerUnitId: number;
 
   @Field()
-  @Column('text')
-  count_start_time: string;
+  @Column({ name: 'count_start_time', type: 'text' })
+  countStartTime: string;
 
   @Field()
-  @Column('integer')
-  backgroud_size_x: number;
+  @Column({ name: 'backgroud_size_x', type: 'integer' })
+  backgroudSizeX: number;
 
   @Field()
-  @Column('integer')
-  backgroud_size_y: number;
+  @Column({ name: 'backgroud_size_y', type: 'integer' })
+  backgroudSizeY: number;
 
   @Field()
-  @Column('integer')
-  backgroud_pos_x: number;
+  @Column({ name: 'backgroud_pos_x', type: 'integer' })
+  backgroudPosX: number;
 
   @Field()
-  @Column('integer')
-  backgroud_pos_y: number;
+  @Column({ name: 'backgroud_pos_y', type: 'integer' })
+  backgroudPosY: number;
 
   @Field()
-  @Column('integer')
-  original_event_id: number;
+  @Column({ name: 'original_event_id', type: 'integer' })
+  originalEventId: number;
 
   @Field()
-  @Column('integer')
-  series_event_id: number;
+  @Column({ name: 'series_event_id', type: 'integer' })
+  seriesEventId: number;
 
 }
 

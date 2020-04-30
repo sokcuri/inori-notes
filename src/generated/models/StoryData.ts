@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'story_data' })
 export class StoryData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  story_group_id: number;
+  @PrimaryColumn({ name: 'story_group_id', type: 'integer' })
+  storyGroupId: number;
 
   @Field()
-  @Column('integer')
-  story_type: number;
+  @Column({ name: 'story_type', type: 'integer' })
+  storyType: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'value', type: 'integer' })
   value: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'title', type: 'text' })
   title: string;
 
   @Field()
-  @Column('integer')
-  thumbnail_id: number;
+  @Column({ name: 'thumbnail_id', type: 'integer' })
+  thumbnailId: number;
 
   @Field()
-  @Column('integer')
-  disp_order: number;
+  @Column({ name: 'disp_order', type: 'integer' })
+  dispOrder: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'order', type: 'integer' })
   order: number;
 
   @Field()
-  @Column('integer')
-  condition_free_flag: number;
+  @Column({ name: 'condition_free_flag', type: 'integer' })
+  conditionFreeFlag: number;
 
 }
 

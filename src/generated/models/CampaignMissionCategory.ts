@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'campaign_mission_category' })
 export class CampaignMissionCategory extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  campaign_id: number;
+  @Column({ name: 'campaign_id', type: 'integer' })
+  campaignId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('integer')
-  lv_from: number;
+  @Column({ name: 'lv_from', type: 'integer' })
+  lvFrom: number;
 
   @Field()
-  @Column('integer')
-  lv_to: number;
+  @Column({ name: 'lv_to', type: 'integer' })
+  lvTo: number;
 
 }
 

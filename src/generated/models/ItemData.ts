@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'item_data' })
 export class ItemData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  item_id: number;
+  @PrimaryColumn({ name: 'item_id', type: 'integer' })
+  itemId: number;
 
   @Field()
-  @Column('text')
-  item_name: string;
+  @Column({ name: 'item_name', type: 'text' })
+  itemName: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('integer')
-  promotion_level: number;
+  @Column({ name: 'promotion_level', type: 'integer' })
+  promotionLevel: number;
 
   @Field()
-  @Column('integer')
-  item_type: number;
+  @Column({ name: 'item_type', type: 'integer' })
+  itemType: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'value', type: 'integer' })
   value: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'price', type: 'integer' })
   price: number;
 
   @Field()
-  @Column('integer')
-  limit_num: number;
+  @Column({ name: 'limit_num', type: 'integer' })
+  limitNum: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

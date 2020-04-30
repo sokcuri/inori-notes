@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'quest_defeat_notice' })
 export class QuestDefeatNotice extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  image_id: number;
+  @Column({ name: 'image_id', type: 'integer' })
+  imageId: number;
 
   @Field()
-  @Column('integer')
-  required_team_level: number;
+  @Column({ name: 'required_team_level', type: 'integer' })
+  requiredTeamLevel: number;
 
   @Field()
-  @Column('integer')
-  required_quest_id: number;
+  @Column({ name: 'required_quest_id', type: 'integer' })
+  requiredQuestId: number;
 
 }
 

@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'music_content' })
 export class MusicContent extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  music_id: number;
+  @PrimaryColumn({ name: 'music_id', type: 'integer' })
+  musicId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('text')
-  total_playing_time: string;
+  @Column({ name: 'total_playing_time', type: 'text' })
+  totalPlayingTime: string;
 
   @Field()
-  @Column('text')
-  listen_start_time: string;
+  @Column({ name: 'listen_start_time', type: 'text' })
+  listenStartTime: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'detail', type: 'text' })
   detail: string;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  cue_id: string;
+  @Column({ name: 'cue_id', type: 'text' })
+  cueId: string;
 
 }
 

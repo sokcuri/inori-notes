@@ -5,19 +5,19 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'ttk_enemy' })
 export class TtkEnemy extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  enemy_id: number;
+  @PrimaryColumn({ name: 'enemy_id', type: 'integer' })
+  enemyId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'score', type: 'integer' })
   score: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'coin', type: 'integer' })
   coin: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'max', type: 'integer' })
   max: number;
 
 }

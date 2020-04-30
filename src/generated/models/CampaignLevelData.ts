@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'campaign_level_data' })
 export class CampaignLevelData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  level_id: number;
+  @Column({ name: 'level_id', type: 'integer' })
+  levelId: number;
 
   @Field()
-  @Column('integer')
-  lv_from: number;
+  @Column({ name: 'lv_from', type: 'integer' })
+  lvFrom: number;
 
   @Field()
-  @Column('integer')
-  lv_to: number;
+  @Column({ name: 'lv_to', type: 'integer' })
+  lvTo: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'value', type: 'integer' })
   value: number;
 
   @Field()
-  @Column('text')
-  label_color: string;
+  @Column({ name: 'label_color', type: 'text' })
+  labelColor: string;
 
   @Field()
-  @Column('text')
-  frame_color: string;
+  @Column({ name: 'frame_color', type: 'text' })
+  frameColor: string;
 
 }
 

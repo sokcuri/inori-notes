@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'vote_unit' })
 export class VoteUnit extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  vote_id: number;
+  @PrimaryColumn({ name: 'vote_id', type: 'integer' })
+  voteId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
-  unit_rarity: number;
+  @Column({ name: 'unit_rarity', type: 'integer' })
+  unitRarity: number;
 
 }
 

@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'skip_monster_data' })
 export class SkipMonsterData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  quest_id: number;
+  @PrimaryColumn({ name: 'quest_id', type: 'integer' })
+  questId: number;
 
   @Field()
-  @Column('integer')
-  area_id: number;
+  @Column({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('text')
-  quest_name: string;
+  @Column({ name: 'quest_name', type: 'text' })
+  questName: string;
 
   @Field()
-  @Column('integer')
-  wave_group_id_1: number;
+  @Column({ name: 'wave_group_id_1', type: 'integer' })
+  waveGroupId1: number;
 
   @Field()
-  @Column('integer')
-  bg_skip_id: number;
+  @Column({ name: 'bg_skip_id', type: 'integer' })
+  bgSkipId: number;
 
 }
 

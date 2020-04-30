@@ -5,28 +5,28 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'minigame' })
 export class Minigame extends BaseEntity {
   @Field()
-  @Column('integer')
+  @Column({ name: 'id', type: 'integer' })
   id: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  minigame_scheme_id: number;
+  @PrimaryColumn({ name: 'minigame_scheme_id', type: 'integer' })
+  minigameSchemeId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
-  release_conditions_1: number;
+  @Column({ name: 'release_conditions_1', type: 'integer' })
+  releaseConditions1: number;
 
   @Field()
-  @Column('integer')
-  conditions_id_1: number;
+  @Column({ name: 'conditions_id_1', type: 'integer' })
+  conditionsId1: number;
 
   @Field()
-  @Column('integer')
-  first_time_story_id: number;
+  @Column({ name: 'first_time_story_id', type: 'integer' })
+  firstTimeStoryId: number;
 
 }
 

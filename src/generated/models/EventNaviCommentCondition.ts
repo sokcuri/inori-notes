@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'event_navi_comment_condition' })
 export class EventNaviCommentCondition extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  comment_id: number;
+  @PrimaryColumn({ name: 'comment_id', type: 'integer' })
+  commentId: number;
 
   @Field()
-  @Column('integer')
-  condition_type_1: number;
+  @Column({ name: 'condition_type_1', type: 'integer' })
+  conditionType1: number;
 
   @Field()
-  @Column('integer')
-  condition_value_1: number;
+  @Column({ name: 'condition_value_1', type: 'integer' })
+  conditionValue1: number;
 
   @Field()
-  @Column('integer')
-  condition_type_2: number;
+  @Column({ name: 'condition_type_2', type: 'integer' })
+  conditionType2: number;
 
   @Field()
-  @Column('integer')
-  condition_value_2: number;
+  @Column({ name: 'condition_value_2', type: 'integer' })
+  conditionValue2: number;
 
   @Field()
-  @Column('integer')
-  condition_type_3: number;
+  @Column({ name: 'condition_type_3', type: 'integer' })
+  conditionType3: number;
 
   @Field()
-  @Column('integer')
-  condition_value_3: number;
+  @Column({ name: 'condition_value_3', type: 'integer' })
+  conditionValue3: number;
 
 }
 

@@ -5,12 +5,12 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'experience_unit' })
 export class ExperienceUnit extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_level: number;
+  @PrimaryColumn({ name: 'unit_level', type: 'integer' })
+  unitLevel: number;
 
   @Field()
-  @Column('integer')
-  total_exp: number;
+  @Column({ name: 'total_exp', type: 'integer' })
+  totalExp: number;
 
 }
 

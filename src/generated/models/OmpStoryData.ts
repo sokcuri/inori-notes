@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'omp_story_data' })
 export class OmpStoryData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  omp_story_id: number;
+  @PrimaryColumn({ name: 'omp_story_id', type: 'integer' })
+  ompStoryId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
-  condition_quest_id: number;
+  @Column({ name: 'condition_quest_id', type: 'integer' })
+  conditionQuestId: number;
 
   @Field()
-  @Column('integer')
-  condition_boss_id: number;
+  @Column({ name: 'condition_boss_id', type: 'integer' })
+  conditionBossId: number;
 
   @Field()
-  @Column('integer')
-  story_seq: number;
+  @Column({ name: 'story_seq', type: 'integer' })
+  storySeq: number;
 
   @Field()
-  @Column('integer')
-  is_readable_on_result: number;
+  @Column({ name: 'is_readable_on_result', type: 'integer' })
+  isReadableOnResult: number;
 
   @Field()
-  @Column('integer')
-  reward_type: number;
+  @Column({ name: 'reward_type', type: 'integer' })
+  rewardType: number;
 
   @Field()
-  @Column('integer')
-  reward_id: number;
+  @Column({ name: 'reward_id', type: 'integer' })
+  rewardId: number;
 
   @Field()
-  @Column('integer')
-  reward_count: number;
+  @Column({ name: 'reward_count', type: 'integer' })
+  rewardCount: number;
 
   @Field()
-  @Column('text')
-  sub_title: string;
+  @Column({ name: 'sub_title', type: 'text' })
+  subTitle: string;
 
 }
 

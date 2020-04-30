@@ -5,60 +5,60 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'shiori_quest_area' })
 export class ShioriQuestArea extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  area_id: number;
+  @PrimaryColumn({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('integer')
-  event_id: number;
+  @Column({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('text')
-  area_name: string;
+  @Column({ name: 'area_name', type: 'text' })
+  areaName: string;
 
   @Field()
-  @Column('integer')
-  map_type: number;
+  @Column({ name: 'map_type', type: 'integer' })
+  mapType: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  que_id: string;
+  @Column({ name: 'que_id', type: 'text' })
+  queId: string;
 
   @Field()
-  @Column('integer')
-  area_disp: number;
+  @Column({ name: 'area_disp', type: 'integer' })
+  areaDisp: number;
 
   @Field()
-  @Column('integer')
-  map_id: number;
+  @Column({ name: 'map_id', type: 'integer' })
+  mapId: number;
 
   @Field()
-  @Column('integer')
-  scroll_width: number;
+  @Column({ name: 'scroll_width', type: 'integer' })
+  scrollWidth: number;
 
   @Field()
-  @Column('integer')
-  scroll_height: number;
+  @Column({ name: 'scroll_height', type: 'integer' })
+  scrollHeight: number;
 
   @Field()
-  @Column('integer')
-  open_tutorial_id: number;
+  @Column({ name: 'open_tutorial_id', type: 'integer' })
+  openTutorialId: number;
 
   @Field()
-  @Column('text')
-  tutorial_param_1: string;
+  @Column({ name: 'tutorial_param_1', type: 'text' })
+  tutorialParam1: string;
 
   @Field()
-  @Column('text')
-  tutorial_param_2: string;
+  @Column({ name: 'tutorial_param_2', type: 'text' })
+  tutorialParam2: string;
 
   @Field()
-  @Column('integer')
-  additional_effect: number;
+  @Column({ name: 'additional_effect', type: 'integer' })
+  additionalEffect: number;
 
 }
 

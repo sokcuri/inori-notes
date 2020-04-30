@@ -5,12 +5,12 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_motion_list' })
 export class UnitMotionList extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
-  sp_motion: number;
+  @Column({ name: 'sp_motion', type: 'integer' })
+  spMotion: number;
 
 }
 

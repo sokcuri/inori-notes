@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_skin_color' })
 export class RoomSkinColor extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  skin_color_id: number;
+  @PrimaryColumn({ name: 'skin_color_id', type: 'integer' })
+  skinColorId: number;
 
   @Field()
-  @Column('integer')
-  color_red: number;
+  @Column({ name: 'color_red', type: 'integer' })
+  colorRed: number;
 
   @Field()
-  @Column('integer')
-  color_green: number;
+  @Column({ name: 'color_green', type: 'integer' })
+  colorGreen: number;
 
   @Field()
-  @Column('integer')
-  color_blue: number;
+  @Column({ name: 'color_blue', type: 'integer' })
+  colorBlue: number;
 
 }
 

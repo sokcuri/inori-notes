@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'pct_system' })
 export class PctSystem extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  pct_base_speed: number;
+  @Column({ name: 'pct_base_speed', type: 'integer' })
+  pctBaseSpeed: number;
 
   @Field()
-  @Column('integer')
-  fever_point_max: number;
+  @Column({ name: 'fever_point_max', type: 'integer' })
+  feverPointMax: number;
 
   @Field()
-  @Column('integer')
-  fever_time: number;
+  @Column({ name: 'fever_time', type: 'integer' })
+  feverTime: number;
 
   @Field()
-  @Column('integer')
-  fever_revention_time: number;
+  @Column({ name: 'fever_revention_time', type: 'integer' })
+  feverReventionTime: number;
 
   @Field()
-  @Column('integer')
-  pct_time: number;
+  @Column({ name: 'pct_time', type: 'integer' })
+  pctTime: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'chara1', type: 'integer' })
   chara1: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'chara2', type: 'integer' })
   chara2: number;
 
   @Field()
-  @Column('integer')
-  chara1_gauge_choice: number;
+  @Column({ name: 'chara1_gauge_choice', type: 'integer' })
+  chara1GaugeChoice: number;
 
   @Field()
-  @Column('integer')
-  chara2_gauge_choice: number;
+  @Column({ name: 'chara2_gauge_choice', type: 'integer' })
+  chara2GaugeChoice: number;
 
 }
 

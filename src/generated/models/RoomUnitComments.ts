@@ -5,40 +5,40 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_unit_comments' })
 export class RoomUnitComments extends BaseEntity {
   @Field()
-  @Column('integer')
+  @Column({ name: 'id', type: 'integer' })
   id: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'trigger', type: 'integer' })
   trigger: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  voice_id: number;
+  @PrimaryColumn({ name: 'voice_id', type: 'integer' })
+  voiceId: number;
 
   @Field()
-  @Column('integer')
-  beloved_step: number;
+  @Column({ name: 'beloved_step', type: 'integer' })
+  belovedStep: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'time', type: 'integer' })
   time: number;
 
   @Field()
-  @Column('integer')
-  face_id: number;
+  @Column({ name: 'face_id', type: 'integer' })
+  faceId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('integer')
-  insert_word_type: number;
+  @Column({ name: 'insert_word_type', type: 'integer' })
+  insertWordType: number;
 
 }
 

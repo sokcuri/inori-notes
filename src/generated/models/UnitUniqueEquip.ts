@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_unique_equip' })
 export class UnitUniqueEquip extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
-  equip_slot: number;
+  @Column({ name: 'equip_slot', type: 'integer' })
+  equipSlot: number;
 
   @Field()
-  @Column('integer')
-  equip_id: number;
+  @Column({ name: 'equip_id', type: 'integer' })
+  equipId: number;
 
 }
 

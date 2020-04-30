@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'pct_tap_speed' })
 export class PctTapSpeed extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  combo_count: number;
+  @Column({ name: 'combo_count', type: 'integer' })
+  comboCount: number;
 
   @Field()
-  @Column('integer')
-  speed_magnification: number;
+  @Column({ name: 'speed_magnification', type: 'integer' })
+  speedMagnification: number;
 
 }
 

@@ -5,64 +5,64 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'season_pack' })
 export class SeasonPack extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  mission_id: number;
+  @Column({ name: 'mission_id', type: 'integer' })
+  missionId: number;
 
   @Field()
-  @Column('integer')
-  disp_order: number;
+  @Column({ name: 'disp_order', type: 'integer' })
+  dispOrder: number;
 
   @Field()
-  @Column('integer')
-  category_icon: number;
+  @Column({ name: 'category_icon', type: 'integer' })
+  categoryIcon: number;
 
   @Field()
-  @Column('text')
-  receive_text: string;
+  @Column({ name: 'receive_text', type: 'text' })
+  receiveText: string;
 
   @Field()
-  @Column('text')
-  after_text: string;
+  @Column({ name: 'after_text', type: 'text' })
+  afterText: string;
 
   @Field()
-  @Column('integer')
-  gift_message_id: number;
+  @Column({ name: 'gift_message_id', type: 'integer' })
+  giftMessageId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'term', type: 'integer' })
   term: number;
 
   @Field()
-  @Column('integer')
-  repurchase_day: number;
+  @Column({ name: 'repurchase_day', type: 'integer' })
+  repurchaseDay: number;
 
   @Field()
-  @Column('integer')
-  group_id: number;
+  @Column({ name: 'group_id', type: 'integer' })
+  groupId: number;
 
   @Field()
-  @Column('integer')
-  system_id_1: number;
+  @Column({ name: 'system_id_1', type: 'integer' })
+  systemId1: number;
 
   @Field()
-  @Column('integer')
-  add_num_1: number;
+  @Column({ name: 'add_num_1', type: 'integer' })
+  addNum1: number;
 
   @Field()
-  @Column('integer')
-  item_record_id: number;
+  @Column({ name: 'item_record_id', type: 'integer' })
+  itemRecordId: number;
 
   @Field()
-  @Column('integer')
-  condition_flg: number;
+  @Column({ name: 'condition_flg', type: 'integer' })
+  conditionFlg: number;
 
   @Field()
-  @Column('integer')
-  reward_rate_1: number;
+  @Column({ name: 'reward_rate_1', type: 'integer' })
+  rewardRate1: number;
 
 }
 

@@ -5,36 +5,36 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'quest_area_data' })
 export class QuestAreaData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  area_id: number;
+  @PrimaryColumn({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('text')
-  area_name: string;
+  @Column({ name: 'area_name', type: 'text' })
+  areaName: string;
 
   @Field()
-  @Column('text')
-  area_display_name: string;
+  @Column({ name: 'area_display_name', type: 'text' })
+  areaDisplayName: string;
 
   @Field()
-  @Column('integer')
-  map_type: number;
+  @Column({ name: 'map_type', type: 'integer' })
+  mapType: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  que_id: string;
+  @Column({ name: 'que_id', type: 'text' })
+  queId: string;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

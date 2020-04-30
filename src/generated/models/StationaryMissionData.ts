@@ -5,100 +5,100 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'stationary_mission_data' })
 export class StationaryMissionData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  stationary_mission_id: number;
+  @PrimaryColumn({ name: 'stationary_mission_id', type: 'integer' })
+  stationaryMissionId: number;
 
   @Field()
-  @Column('integer')
-  disp_group: number;
+  @Column({ name: 'disp_group', type: 'integer' })
+  dispGroup: number;
 
   @Field()
-  @Column('integer')
-  category_icon: number;
+  @Column({ name: 'category_icon', type: 'integer' })
+  categoryIcon: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('integer')
-  mission_condition: number;
+  @Column({ name: 'mission_condition', type: 'integer' })
+  missionCondition: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_1?: number;
+  @Column({ name: 'condition_value_1', type: 'integer', nullable: true })
+  conditionValue1: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_2?: number;
+  @Column({ name: 'condition_value_2', type: 'integer', nullable: true })
+  conditionValue2: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_3?: number;
+  @Column({ name: 'condition_value_3', type: 'integer', nullable: true })
+  conditionValue3: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_4?: number;
+  @Column({ name: 'condition_value_4', type: 'integer', nullable: true })
+  conditionValue4: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_5?: number;
+  @Column({ name: 'condition_value_5', type: 'integer', nullable: true })
+  conditionValue5: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_6?: number;
+  @Column({ name: 'condition_value_6', type: 'integer', nullable: true })
+  conditionValue6: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_7?: number;
+  @Column({ name: 'condition_value_7', type: 'integer', nullable: true })
+  conditionValue7: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_8?: number;
+  @Column({ name: 'condition_value_8', type: 'integer', nullable: true })
+  conditionValue8: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_9?: number;
+  @Column({ name: 'condition_value_9', type: 'integer', nullable: true })
+  conditionValue9: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  condition_value_10?: number;
+  @Column({ name: 'condition_value_10', type: 'integer', nullable: true })
+  conditionValue10: number;
 
   @Field()
-  @Column('integer')
-  condition_num: number;
+  @Column({ name: 'condition_num', type: 'integer' })
+  conditionNum: number;
 
   @Field()
-  @Column('integer')
-  mission_reward_id: number;
+  @Column({ name: 'mission_reward_id', type: 'integer' })
+  missionRewardId: number;
 
   @Field()
-  @Column({ nullable: true, type: 'integer' })
-  system_id?: number;
+  @Column({ name: 'system_id', type: 'integer', nullable: true })
+  systemId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  min_level: number;
+  @Column({ name: 'min_level', type: 'integer' })
+  minLevel: number;
 
   @Field()
-  @Column('integer')
-  max_level: number;
+  @Column({ name: 'max_level', type: 'integer' })
+  maxLevel: number;
 
   @Field()
-  @Column('integer')
-  title_color_id: number;
+  @Column({ name: 'title_color_id', type: 'integer' })
+  titleColorId: number;
 
   @Field()
-  @Column('integer')
-  visible_flag: number;
+  @Column({ name: 'visible_flag', type: 'integer' })
+  visibleFlag: number;
 
 }
 

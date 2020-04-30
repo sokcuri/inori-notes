@@ -5,160 +5,160 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_rarity' })
 export class UnitRarity extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'rarity', type: 'integer' })
   rarity: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'hp', type: 'real' })
   hp: number;
 
   @Field()
-  @Column('real')
-  hp_growth: number;
+  @Column({ name: 'hp_growth', type: 'real' })
+  hpGrowth: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'atk', type: 'real' })
   atk: number;
 
   @Field()
-  @Column('real')
-  atk_growth: number;
+  @Column({ name: 'atk_growth', type: 'real' })
+  atkGrowth: number;
 
   @Field()
-  @Column('real')
-  magic_str: number;
+  @Column({ name: 'magic_str', type: 'real' })
+  magicStr: number;
 
   @Field()
-  @Column('real')
-  magic_str_growth: number;
+  @Column({ name: 'magic_str_growth', type: 'real' })
+  magicStrGrowth: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'def', type: 'real' })
   def: number;
 
   @Field()
-  @Column('real')
-  def_growth: number;
+  @Column({ name: 'def_growth', type: 'real' })
+  defGrowth: number;
 
   @Field()
-  @Column('real')
-  magic_def: number;
+  @Column({ name: 'magic_def', type: 'real' })
+  magicDef: number;
 
   @Field()
-  @Column('real')
-  magic_def_growth: number;
+  @Column({ name: 'magic_def_growth', type: 'real' })
+  magicDefGrowth: number;
 
   @Field()
-  @Column('real')
-  physical_critical: number;
+  @Column({ name: 'physical_critical', type: 'real' })
+  physicalCritical: number;
 
   @Field()
-  @Column('real')
-  physical_critical_growth: number;
+  @Column({ name: 'physical_critical_growth', type: 'real' })
+  physicalCriticalGrowth: number;
 
   @Field()
-  @Column('real')
-  magic_critical: number;
+  @Column({ name: 'magic_critical', type: 'real' })
+  magicCritical: number;
 
   @Field()
-  @Column('real')
-  magic_critical_growth: number;
+  @Column({ name: 'magic_critical_growth', type: 'real' })
+  magicCriticalGrowth: number;
 
   @Field()
-  @Column('real')
-  wave_hp_recovery: number;
+  @Column({ name: 'wave_hp_recovery', type: 'real' })
+  waveHpRecovery: number;
 
   @Field()
-  @Column('real')
-  wave_hp_recovery_growth: number;
+  @Column({ name: 'wave_hp_recovery_growth', type: 'real' })
+  waveHpRecoveryGrowth: number;
 
   @Field()
-  @Column('real')
-  wave_energy_recovery: number;
+  @Column({ name: 'wave_energy_recovery', type: 'real' })
+  waveEnergyRecovery: number;
 
   @Field()
-  @Column('real')
-  wave_energy_recovery_growth: number;
+  @Column({ name: 'wave_energy_recovery_growth', type: 'real' })
+  waveEnergyRecoveryGrowth: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'dodge', type: 'real' })
   dodge: number;
 
   @Field()
-  @Column('real')
-  dodge_growth: number;
+  @Column({ name: 'dodge_growth', type: 'real' })
+  dodgeGrowth: number;
 
   @Field()
-  @Column('real')
-  physical_penetrate: number;
+  @Column({ name: 'physical_penetrate', type: 'real' })
+  physicalPenetrate: number;
 
   @Field()
-  @Column('real')
-  physical_penetrate_growth: number;
+  @Column({ name: 'physical_penetrate_growth', type: 'real' })
+  physicalPenetrateGrowth: number;
 
   @Field()
-  @Column('real')
-  magic_penetrate: number;
+  @Column({ name: 'magic_penetrate', type: 'real' })
+  magicPenetrate: number;
 
   @Field()
-  @Column('real')
-  magic_penetrate_growth: number;
+  @Column({ name: 'magic_penetrate_growth', type: 'real' })
+  magicPenetrateGrowth: number;
 
   @Field()
-  @Column('real')
-  life_steal: number;
+  @Column({ name: 'life_steal', type: 'real' })
+  lifeSteal: number;
 
   @Field()
-  @Column('real')
-  life_steal_growth: number;
+  @Column({ name: 'life_steal_growth', type: 'real' })
+  lifeStealGrowth: number;
 
   @Field()
-  @Column('real')
-  hp_recovery_rate: number;
+  @Column({ name: 'hp_recovery_rate', type: 'real' })
+  hpRecoveryRate: number;
 
   @Field()
-  @Column('real')
-  hp_recovery_rate_growth: number;
+  @Column({ name: 'hp_recovery_rate_growth', type: 'real' })
+  hpRecoveryRateGrowth: number;
 
   @Field()
-  @Column('real')
-  energy_recovery_rate: number;
+  @Column({ name: 'energy_recovery_rate', type: 'real' })
+  energyRecoveryRate: number;
 
   @Field()
-  @Column('real')
-  energy_recovery_rate_growth: number;
+  @Column({ name: 'energy_recovery_rate_growth', type: 'real' })
+  energyRecoveryRateGrowth: number;
 
   @Field()
-  @Column('real')
-  energy_reduce_rate: number;
+  @Column({ name: 'energy_reduce_rate', type: 'real' })
+  energyReduceRate: number;
 
   @Field()
-  @Column('real')
-  energy_reduce_rate_growth: number;
+  @Column({ name: 'energy_reduce_rate_growth', type: 'real' })
+  energyReduceRateGrowth: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id: number;
+  @Column({ name: 'unit_material_id', type: 'integer' })
+  unitMaterialId: number;
 
   @Field()
-  @Column('integer')
-  consume_num: number;
+  @Column({ name: 'consume_num', type: 'integer' })
+  consumeNum: number;
 
   @Field()
-  @Column('integer')
-  consume_gold: number;
+  @Column({ name: 'consume_gold', type: 'integer' })
+  consumeGold: number;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'accuracy', type: 'real' })
   accuracy: number;
 
   @Field()
-  @Column('real')
-  accuracy_growth: number;
+  @Column({ name: 'accuracy_growth', type: 'real' })
+  accuracyGrowth: number;
 
 }
 

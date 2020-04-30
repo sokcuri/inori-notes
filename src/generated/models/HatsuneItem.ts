@@ -5,56 +5,56 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_item' })
 export class HatsuneItem extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  event_id: number;
+  @PrimaryColumn({ name: 'event_id', type: 'integer' })
+  eventId: number;
 
   @Field()
-  @Column('integer')
-  boss_ticket_id: number;
+  @Column({ name: 'boss_ticket_id', type: 'integer' })
+  bossTicketId: number;
 
   @Field()
-  @Column('integer')
-  gacha_ticket_id: number;
+  @Column({ name: 'gacha_ticket_id', type: 'integer' })
+  gachaTicketId: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_1: number;
+  @Column({ name: 'unit_material_id_1', type: 'integer' })
+  unitMaterialId1: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_2: number;
+  @Column({ name: 'unit_material_id_2', type: 'integer' })
+  unitMaterialId2: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_3: number;
+  @Column({ name: 'unit_material_id_3', type: 'integer' })
+  unitMaterialId3: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_4: number;
+  @Column({ name: 'unit_material_id_4', type: 'integer' })
+  unitMaterialId4: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_5: number;
+  @Column({ name: 'unit_material_id_5', type: 'integer' })
+  unitMaterialId5: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_6: number;
+  @Column({ name: 'unit_material_id_6', type: 'integer' })
+  unitMaterialId6: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_7: number;
+  @Column({ name: 'unit_material_id_7', type: 'integer' })
+  unitMaterialId7: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_8: number;
+  @Column({ name: 'unit_material_id_8', type: 'integer' })
+  unitMaterialId8: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_9: number;
+  @Column({ name: 'unit_material_id_9', type: 'integer' })
+  unitMaterialId9: number;
 
   @Field()
-  @Column('integer')
-  unit_material_id_10: number;
+  @Column({ name: 'unit_material_id_10', type: 'integer' })
+  unitMaterialId10: number;
 
 }
 

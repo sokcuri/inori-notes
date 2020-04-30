@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'campaign_mission_schedule' })
 export class CampaignMissionSchedule extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  campaign_id: number;
+  @PrimaryColumn({ name: 'campaign_id', type: 'integer' })
+  campaignId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('text')
-  close_time: string;
+  @Column({ name: 'close_time', type: 'text' })
+  closeTime: string;
 
 }
 

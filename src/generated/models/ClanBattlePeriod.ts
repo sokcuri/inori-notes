@@ -5,84 +5,84 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_battle_period' })
 export class ClanBattlePeriod extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  clan_battle_id: number;
+  @PrimaryColumn({ name: 'clan_battle_id', type: 'integer' })
+  clanBattleId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'period', type: 'integer' })
   period: number;
 
   @Field()
-  @Column('text')
-  period_detail: string;
+  @Column({ name: 'period_detail', type: 'text' })
+  periodDetail: string;
 
   @Field()
-  @Column('integer')
-  period_detail_bg: number;
+  @Column({ name: 'period_detail_bg', type: 'integer' })
+  periodDetailBg: number;
 
   @Field()
-  @Column('text')
-  period_detail_s: string;
+  @Column({ name: 'period_detail_s', type: 'text' })
+  periodDetailS: string;
 
   @Field()
-  @Column('integer')
-  period_detail_bg_s: number;
+  @Column({ name: 'period_detail_bg_s', type: 'integer' })
+  periodDetailBgS: number;
 
   @Field()
-  @Column('integer')
-  period_detail_bg_position: number;
+  @Column({ name: 'period_detail_bg_position', type: 'integer' })
+  periodDetailBgPosition: number;
 
   @Field()
-  @Column('integer')
-  period_detail_boss_position_x: number;
+  @Column({ name: 'period_detail_boss_position_x', type: 'integer' })
+  periodDetailBossPositionX: number;
 
   @Field()
-  @Column('integer')
-  period_detail_boss_position_y: number;
+  @Column({ name: 'period_detail_boss_position_y', type: 'integer' })
+  periodDetailBossPositionY: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('text')
-  interval_start: string;
+  @Column({ name: 'interval_start', type: 'text' })
+  intervalStart: string;
 
   @Field()
-  @Column('text')
-  interval_end: string;
+  @Column({ name: 'interval_end', type: 'text' })
+  intervalEnd: string;
 
   @Field()
-  @Column('text')
-  calc_start: string;
+  @Column({ name: 'calc_start', type: 'text' })
+  calcStart: string;
 
   @Field()
-  @Column('text')
-  result_start: string;
+  @Column({ name: 'result_start', type: 'text' })
+  resultStart: string;
 
   @Field()
-  @Column('text')
-  result_end: string;
+  @Column({ name: 'result_end', type: 'text' })
+  resultEnd: string;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('integer')
-  chest_id: number;
+  @Column({ name: 'chest_id', type: 'integer' })
+  chestId: number;
 
   @Field()
-  @Column('integer')
-  quest_detail_rehearsal_label_height: number;
+  @Column({ name: 'quest_detail_rehearsal_label_height', type: 'integer' })
+  questDetailRehearsalLabelHeight: number;
 
   @Field()
-  @Column('integer')
-  min_carry_over_time: number;
+  @Column({ name: 'min_carry_over_time', type: 'integer' })
+  minCarryOverTime: number;
 
 }
 

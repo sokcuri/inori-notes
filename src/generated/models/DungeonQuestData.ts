@@ -5,76 +5,76 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'dungeon_quest_data' })
 export class DungeonQuestData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  quest_id: number;
+  @PrimaryColumn({ name: 'quest_id', type: 'integer' })
+  questId: number;
 
   @Field()
-  @Column('integer')
-  dungeon_area_id: number;
+  @Column({ name: 'dungeon_area_id', type: 'integer' })
+  dungeonAreaId: number;
 
   @Field()
-  @Column('integer')
-  floor_num: number;
+  @Column({ name: 'floor_num', type: 'integer' })
+  floorNum: number;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('real')
-  matching_coefficient: number;
+  @Column({ name: 'matching_coefficient', type: 'real' })
+  matchingCoefficient: number;
 
   @Field()
-  @Column('integer')
-  reward_image_1: number;
+  @Column({ name: 'reward_image_1', type: 'integer' })
+  rewardImage1: number;
 
   @Field()
-  @Column('integer')
-  reward_image_2: number;
+  @Column({ name: 'reward_image_2', type: 'integer' })
+  rewardImage2: number;
 
   @Field()
-  @Column('integer')
-  reward_image_3: number;
+  @Column({ name: 'reward_image_3', type: 'integer' })
+  rewardImage3: number;
 
   @Field()
-  @Column('integer')
-  reward_coin: number;
+  @Column({ name: 'reward_coin', type: 'integer' })
+  rewardCoin: number;
 
   @Field()
-  @Column('integer')
-  chest_id: number;
+  @Column({ name: 'chest_id', type: 'integer' })
+  chestId: number;
 
   @Field()
-  @Column('integer')
-  odds_group_id: number;
+  @Column({ name: 'odds_group_id', type: 'integer' })
+  oddsGroupId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'background', type: 'integer' })
   background: number;
 
   @Field()
-  @Column('integer')
-  dungeon_quest_detail_bg_id: number;
+  @Column({ name: 'dungeon_quest_detail_bg_id', type: 'integer' })
+  dungeonQuestDetailBgId: number;
 
   @Field()
-  @Column('integer')
-  dungeon_quest_detail_bg_position: number;
+  @Column({ name: 'dungeon_quest_detail_bg_position', type: 'integer' })
+  dungeonQuestDetailBgPosition: number;
 
   @Field()
-  @Column('real')
-  dungeon_quest_detail_monster_size: number;
+  @Column({ name: 'dungeon_quest_detail_monster_size', type: 'real' })
+  dungeonQuestDetailMonsterSize: number;
 
   @Field()
-  @Column('real')
-  dungeon_quest_detail_monster_height: number;
+  @Column({ name: 'dungeon_quest_detail_monster_height', type: 'real' })
+  dungeonQuestDetailMonsterHeight: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_1: string;
+  @Column({ name: 'wave_bgm_sheet_id_1', type: 'text' })
+  waveBgmSheetId1: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_1: string;
+  @Column({ name: 'wave_bgm_que_id_1', type: 'text' })
+  waveBgmQueId1: string;
 
 }
 

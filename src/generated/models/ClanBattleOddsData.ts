@@ -5,56 +5,56 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_battle_odds_data' })
 export class ClanBattleOddsData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  odds_group_id: number;
+  @PrimaryColumn({ name: 'odds_group_id', type: 'integer' })
+  oddsGroupId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  team_level_from: number;
+  @PrimaryColumn({ name: 'team_level_from', type: 'integer' })
+  teamLevelFrom: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  team_level_to: number;
+  @PrimaryColumn({ name: 'team_level_to', type: 'integer' })
+  teamLevelTo: number;
 
   @Field()
-  @Column('text')
-  odds_csv_1: string;
+  @Column({ name: 'odds_csv_1', type: 'text' })
+  oddsCsv1: string;
 
   @Field()
-  @Column('text')
-  odds_csv_2: string;
+  @Column({ name: 'odds_csv_2', type: 'text' })
+  oddsCsv2: string;
 
   @Field()
-  @Column('text')
-  odds_csv_3: string;
+  @Column({ name: 'odds_csv_3', type: 'text' })
+  oddsCsv3: string;
 
   @Field()
-  @Column('text')
-  odds_csv_4: string;
+  @Column({ name: 'odds_csv_4', type: 'text' })
+  oddsCsv4: string;
 
   @Field()
-  @Column('text')
-  odds_csv_5: string;
+  @Column({ name: 'odds_csv_5', type: 'text' })
+  oddsCsv5: string;
 
   @Field()
-  @Column('text')
-  odds_csv_6: string;
+  @Column({ name: 'odds_csv_6', type: 'text' })
+  oddsCsv6: string;
 
   @Field()
-  @Column('text')
-  odds_csv_7: string;
+  @Column({ name: 'odds_csv_7', type: 'text' })
+  oddsCsv7: string;
 
   @Field()
-  @Column('text')
-  odds_csv_8: string;
+  @Column({ name: 'odds_csv_8', type: 'text' })
+  oddsCsv8: string;
 
   @Field()
-  @Column('text')
-  odds_csv_9: string;
+  @Column({ name: 'odds_csv_9', type: 'text' })
+  oddsCsv9: string;
 
   @Field()
-  @Column('text')
-  odds_csv_10: string;
+  @Column({ name: 'odds_csv_10', type: 'text' })
+  oddsCsv10: string;
 
 }
 

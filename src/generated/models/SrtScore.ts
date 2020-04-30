@@ -5,48 +5,48 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'srt_score' })
 export class SrtScore extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  difficulty_level: number;
+  @PrimaryColumn({ name: 'difficulty_level', type: 'integer' })
+  difficultyLevel: number;
 
   @Field()
-  @Column('integer')
-  coefficient_read_type_1: number;
+  @Column({ name: 'coefficient_read_type_1', type: 'integer' })
+  coefficientReadType1: number;
 
   @Field()
-  @Column('integer')
-  coefficient_read_type_2: number;
+  @Column({ name: 'coefficient_read_type_2', type: 'integer' })
+  coefficientReadType2: number;
 
   @Field()
-  @Column('integer')
-  coefficient_read_type_3: number;
+  @Column({ name: 'coefficient_read_type_3', type: 'integer' })
+  coefficientReadType3: number;
 
   @Field()
-  @Column('integer')
-  coefficient_count_priconne_panel: number;
+  @Column({ name: 'coefficient_count_priconne_panel', type: 'integer' })
+  coefficientCountPriconnePanel: number;
 
   @Field()
-  @Column('integer')
-  coefficient_fever: number;
+  @Column({ name: 'coefficient_fever', type: 'integer' })
+  coefficientFever: number;
 
   @Field()
-  @Column('integer')
-  constant_turn_bonus: number;
+  @Column({ name: 'constant_turn_bonus', type: 'integer' })
+  constantTurnBonus: number;
 
   @Field()
-  @Column('integer')
-  coefficient_turn_bonus: number;
+  @Column({ name: 'coefficient_turn_bonus', type: 'integer' })
+  coefficientTurnBonus: number;
 
   @Field()
-  @Column('integer')
-  coefficient_avg_answer_time: number;
+  @Column({ name: 'coefficient_avg_answer_time', type: 'integer' })
+  coefficientAvgAnswerTime: number;
 
   @Field()
-  @Column('integer')
-  constant_wrong_num: number;
+  @Column({ name: 'constant_wrong_num', type: 'integer' })
+  constantWrongNum: number;
 
   @Field()
-  @Column('integer')
-  coefficient_wrong_num: number;
+  @Column({ name: 'coefficient_wrong_num', type: 'integer' })
+  coefficientWrongNum: number;
 
 }
 

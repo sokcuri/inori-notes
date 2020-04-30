@@ -5,27 +5,27 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'event_enemy_reward_group' })
 export class EventEnemyRewardGroup extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  reward_group_id: number;
+  @Column({ name: 'reward_group_id', type: 'integer' })
+  rewardGroupId: number;
 
   @Field()
-  @Column('integer')
-  reward_type: number;
+  @Column({ name: 'reward_type', type: 'integer' })
+  rewardType: number;
 
   @Field()
-  @Column('integer')
-  reward_id: number;
+  @Column({ name: 'reward_id', type: 'integer' })
+  rewardId: number;
 
   @Field()
-  @Column('integer')
-  reward_num: number;
+  @Column({ name: 'reward_num', type: 'integer' })
+  rewardNum: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'odds', type: 'integer' })
   odds: number;
 
 }

@@ -5,140 +5,140 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'kaiser_quest_data' })
 export class KaiserQuestData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  kaiser_boss_id: number;
+  @PrimaryColumn({ name: 'kaiser_boss_id', type: 'integer' })
+  kaiserBossId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('integer')
-  map_type: number;
+  @Column({ name: 'map_type', type: 'integer' })
+  mapType: number;
 
   @Field()
-  @Column('integer')
-  battle_start_story_id: number;
+  @Column({ name: 'battle_start_story_id', type: 'integer' })
+  battleStartStoryId: number;
 
   @Field()
-  @Column('integer')
-  battle_finish_story_id: number;
+  @Column({ name: 'battle_finish_story_id', type: 'integer' })
+  battleFinishStoryId: number;
 
   @Field()
-  @Column('integer')
-  disappearance_story_id: number;
+  @Column({ name: 'disappearance_story_id', type: 'integer' })
+  disappearanceStoryId: number;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('integer')
-  restriction_group_id: number;
+  @Column({ name: 'restriction_group_id', type: 'integer' })
+  restrictionGroupId: number;
 
   @Field()
-  @Column('integer')
-  reward_image_1: number;
+  @Column({ name: 'reward_image_1', type: 'integer' })
+  rewardImage1: number;
 
   @Field()
-  @Column('integer')
-  reward_count_1: number;
+  @Column({ name: 'reward_count_1', type: 'integer' })
+  rewardCount1: number;
 
   @Field()
-  @Column('integer')
-  reward_image_2: number;
+  @Column({ name: 'reward_image_2', type: 'integer' })
+  rewardImage2: number;
 
   @Field()
-  @Column('integer')
-  reward_count_2: number;
+  @Column({ name: 'reward_count_2', type: 'integer' })
+  rewardCount2: number;
 
   @Field()
-  @Column('integer')
-  reward_image_3: number;
+  @Column({ name: 'reward_image_3', type: 'integer' })
+  rewardImage3: number;
 
   @Field()
-  @Column('integer')
-  reward_count_3: number;
+  @Column({ name: 'reward_count_3', type: 'integer' })
+  rewardCount3: number;
 
   @Field()
-  @Column('integer')
-  reward_image_4: number;
+  @Column({ name: 'reward_image_4', type: 'integer' })
+  rewardImage4: number;
 
   @Field()
-  @Column('integer')
-  reward_count_4: number;
+  @Column({ name: 'reward_count_4', type: 'integer' })
+  rewardCount4: number;
 
   @Field()
-  @Column('integer')
-  reward_image_5: number;
+  @Column({ name: 'reward_image_5', type: 'integer' })
+  rewardImage5: number;
 
   @Field()
-  @Column('integer')
-  reward_count_5: number;
+  @Column({ name: 'reward_count_5', type: 'integer' })
+  rewardCount5: number;
 
   @Field()
-  @Column('integer')
-  fix_reward_group_id: number;
+  @Column({ name: 'fix_reward_group_id', type: 'integer' })
+  fixRewardGroupId: number;
 
   @Field()
-  @Column('text')
-  odds_group_id: string;
+  @Column({ name: 'odds_group_id', type: 'text' })
+  oddsGroupId: string;
 
   @Field()
-  @Column('integer')
-  chest_id: number;
+  @Column({ name: 'chest_id', type: 'integer' })
+  chestId: number;
 
   @Field()
-  @Column('integer')
-  extermination_reward_group: number;
+  @Column({ name: 'extermination_reward_group', type: 'integer' })
+  exterminationRewardGroup: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'background', type: 'integer' })
   background: number;
 
   @Field()
-  @Column('integer')
-  bg_position: number;
+  @Column({ name: 'bg_position', type: 'integer' })
+  bgPosition: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id: number;
+  @Column({ name: 'wave_group_id', type: 'integer' })
+  waveGroupId: number;
 
   @Field()
-  @Column('integer')
-  enemy_position_x: number;
+  @Column({ name: 'enemy_position_x', type: 'integer' })
+  enemyPositionX: number;
 
   @Field()
-  @Column('integer')
-  enemy_local_position_y: number;
+  @Column({ name: 'enemy_local_position_y', type: 'integer' })
+  enemyLocalPositionY: number;
 
   @Field()
-  @Column('real')
-  enemy_size_1: number;
+  @Column({ name: 'enemy_size_1', type: 'real' })
+  enemySize1: number;
 
   @Field()
-  @Column('real')
-  result_boss_position_y: number;
+  @Column({ name: 'result_boss_position_y', type: 'real' })
+  resultBossPositionY: number;
 
   @Field()
-  @Column('text')
-  wave_bgm: string;
+  @Column({ name: 'wave_bgm', type: 'text' })
+  waveBgm: string;
 
   @Field()
-  @Column('real')
-  reward_gold_coefficient: number;
+  @Column({ name: 'reward_gold_coefficient', type: 'real' })
+  rewardGoldCoefficient: number;
 
   @Field()
-  @Column('integer')
-  limited_mana: number;
+  @Column({ name: 'limited_mana', type: 'integer' })
+  limitedMana: number;
 
   @Field()
-  @Column('integer')
-  clear_story_id_1: number;
+  @Column({ name: 'clear_story_id_1', type: 'integer' })
+  clearStoryId1: number;
 
   @Field()
-  @Column('integer')
-  clear_story_id_2: number;
+  @Column({ name: 'clear_story_id_2', type: 'integer' })
+  clearStoryId2: number;
 
 }
 

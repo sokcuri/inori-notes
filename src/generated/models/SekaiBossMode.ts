@@ -5,64 +5,64 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'sekai_boss_mode' })
 export class SekaiBossMode extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  sekai_boss_mode_id: number;
+  @PrimaryColumn({ name: 'sekai_boss_mode_id', type: 'integer' })
+  sekaiBossModeId: number;
 
   @Field()
-  @Column('integer')
-  sekai_enemy_id: number;
+  @Column({ name: 'sekai_enemy_id', type: 'integer' })
+  sekaiEnemyId: number;
 
   @Field()
-  @Column('text')
-  sekai_enemy_level: string;
+  @Column({ name: 'sekai_enemy_level', type: 'text' })
+  sekaiEnemyLevel: string;
 
   @Field()
-  @Column('integer')
-  quest_detail_bg_id: number;
+  @Column({ name: 'quest_detail_bg_id', type: 'integer' })
+  questDetailBgId: number;
 
   @Field()
-  @Column('integer')
-  quest_detail_bg_position: number;
+  @Column({ name: 'quest_detail_bg_position', type: 'integer' })
+  questDetailBgPosition: number;
 
   @Field()
-  @Column('real')
-  quest_detail_monster_size: number;
+  @Column({ name: 'quest_detail_monster_size', type: 'real' })
+  questDetailMonsterSize: number;
 
   @Field()
-  @Column('integer')
-  quest_detail_monster_height: number;
+  @Column({ name: 'quest_detail_monster_height', type: 'integer' })
+  questDetailMonsterHeight: number;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'background', type: 'integer' })
   background: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  que_id: string;
+  @Column({ name: 'que_id', type: 'text' })
+  queId: string;
 
   @Field()
-  @Column('integer')
-  result_boss_position_y: number;
+  @Column({ name: 'result_boss_position_y', type: 'integer' })
+  resultBossPositionY: number;
 
   @Field()
-  @Column('integer')
-  reward_gold_coefficient: number;
+  @Column({ name: 'reward_gold_coefficient', type: 'integer' })
+  rewardGoldCoefficient: number;
 
   @Field()
-  @Column('integer')
-  limited_mana: number;
+  @Column({ name: 'limited_mana', type: 'integer' })
+  limitedMana: number;
 
   @Field()
-  @Column('integer')
-  score_coefficient: number;
+  @Column({ name: 'score_coefficient', type: 'integer' })
+  scoreCoefficient: number;
 
 }
 

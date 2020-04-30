@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'pct_combo_coefficient' })
 export class PctComboCoefficient extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  combo_min: number;
+  @Column({ name: 'combo_min', type: 'integer' })
+  comboMin: number;
 
   @Field()
-  @Column('integer')
-  combo_max: number;
+  @Column({ name: 'combo_max', type: 'integer' })
+  comboMax: number;
 
   @Field()
-  @Column('integer')
-  combo_coefficient: number;
+  @Column({ name: 'combo_coefficient', type: 'integer' })
+  comboCoefficient: number;
 
 }
 

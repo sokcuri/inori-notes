@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_relay_data' })
 export class HatsuneRelayData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  relay_story_id: number;
+  @PrimaryColumn({ name: 'relay_story_id', type: 'integer' })
+  relayStoryId: number;
 
   @Field()
-  @Column('integer')
-  is_enable_read: number;
+  @Column({ name: 'is_enable_read', type: 'integer' })
+  isEnableRead: number;
 
   @Field()
-  @Column('integer')
-  condition_quest_id: number;
+  @Column({ name: 'condition_quest_id', type: 'integer' })
+  conditionQuestId: number;
 
   @Field()
-  @Column('integer')
-  story_seq: number;
+  @Column({ name: 'story_seq', type: 'integer' })
+  storySeq: number;
 
   @Field()
-  @Column('text')
-  sub_title: string;
+  @Column({ name: 'sub_title', type: 'text' })
+  subTitle: string;
 
 }
 

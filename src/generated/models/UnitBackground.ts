@@ -5,28 +5,28 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_background' })
 export class UnitBackground extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('text')
-  unit_name: string;
+  @Column({ name: 'unit_name', type: 'text' })
+  unitName: string;
 
   @Field()
-  @Column('integer')
-  bg_id: number;
+  @Column({ name: 'bg_id', type: 'integer' })
+  bgId: number;
 
   @Field()
-  @Column('text')
-  bg_name: string;
+  @Column({ name: 'bg_name', type: 'text' })
+  bgName: string;
 
   @Field()
-  @Column('real')
+  @Column({ name: 'position', type: 'real' })
   position: number;
 
   @Field()
-  @Column('integer')
-  face_type: number;
+  @Column({ name: 'face_type', type: 'integer' })
+  faceType: number;
 
 }
 

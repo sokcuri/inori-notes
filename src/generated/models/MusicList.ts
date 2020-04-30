@@ -5,56 +5,56 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'music_list' })
 export class MusicList extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  music_id: number;
+  @PrimaryColumn({ name: 'music_id', type: 'integer' })
+  musicId: number;
 
   @Field()
-  @Column('text')
-  list_name: string;
+  @Column({ name: 'list_name', type: 'text' })
+  listName: string;
 
   @Field()
-  @Column('real')
-  font_size: number;
+  @Column({ name: 'font_size', type: 'real' })
+  fontSize: number;
 
   @Field()
-  @Column('text')
-  pre_shop_start: string;
+  @Column({ name: 'pre_shop_start', type: 'text' })
+  preShopStart: string;
 
   @Field()
-  @Column('text')
-  shop_start: string;
+  @Column({ name: 'shop_start', type: 'text' })
+  shopStart: string;
 
   @Field()
-  @Column('text')
-  shop_end: string;
+  @Column({ name: 'shop_end', type: 'text' })
+  shopEnd: string;
 
   @Field()
-  @Column('integer')
-  story_id: number;
+  @Column({ name: 'story_id', type: 'integer' })
+  storyId: number;
 
   @Field()
-  @Column('integer')
-  cost_item_num: number;
+  @Column({ name: 'cost_item_num', type: 'integer' })
+  costItemNum: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'sort', type: 'integer' })
   sort: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'kana', type: 'text' })
   kana: string;
 
   @Field()
-  @Column('text')
-  ios_url: string;
+  @Column({ name: 'ios_url', type: 'text' })
+  iosUrl: string;
 
   @Field()
-  @Column('text')
-  android_url: string;
+  @Column({ name: 'android_url', type: 'text' })
+  androidUrl: string;
 
   @Field()
-  @Column('text')
-  dmm_url: string;
+  @Column({ name: 'dmm_url', type: 'text' })
+  dmmUrl: string;
 
 }
 

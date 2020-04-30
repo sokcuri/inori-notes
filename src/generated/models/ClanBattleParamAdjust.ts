@@ -5,100 +5,100 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_battle_param_adjust' })
 export class ClanBattleParamAdjust extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  param_adjust_id: number;
+  @PrimaryColumn({ name: 'param_adjust_id', type: 'integer' })
+  paramAdjustId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'level', type: 'integer' })
   level: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'hp', type: 'integer' })
   hp: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'atk', type: 'integer' })
   atk: number;
 
   @Field()
-  @Column('integer')
-  magic_str: number;
+  @Column({ name: 'magic_str', type: 'integer' })
+  magicStr: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'def', type: 'integer' })
   def: number;
 
   @Field()
-  @Column('integer')
-  magic_def: number;
+  @Column({ name: 'magic_def', type: 'integer' })
+  magicDef: number;
 
   @Field()
-  @Column('integer')
-  physical_critical: number;
+  @Column({ name: 'physical_critical', type: 'integer' })
+  physicalCritical: number;
 
   @Field()
-  @Column('integer')
-  magic_critical: number;
+  @Column({ name: 'magic_critical', type: 'integer' })
+  magicCritical: number;
 
   @Field()
-  @Column('integer')
-  energy_recovery_rate: number;
+  @Column({ name: 'energy_recovery_rate', type: 'integer' })
+  energyRecoveryRate: number;
 
   @Field()
-  @Column('integer')
-  union_burst_level: number;
+  @Column({ name: 'union_burst_level', type: 'integer' })
+  unionBurstLevel: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_1: number;
+  @Column({ name: 'main_skill_lv_1', type: 'integer' })
+  mainSkillLv1: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_2: number;
+  @Column({ name: 'main_skill_lv_2', type: 'integer' })
+  mainSkillLv2: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_3: number;
+  @Column({ name: 'main_skill_lv_3', type: 'integer' })
+  mainSkillLv3: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_4: number;
+  @Column({ name: 'main_skill_lv_4', type: 'integer' })
+  mainSkillLv4: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_5: number;
+  @Column({ name: 'main_skill_lv_5', type: 'integer' })
+  mainSkillLv5: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_6: number;
+  @Column({ name: 'main_skill_lv_6', type: 'integer' })
+  mainSkillLv6: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_7: number;
+  @Column({ name: 'main_skill_lv_7', type: 'integer' })
+  mainSkillLv7: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_8: number;
+  @Column({ name: 'main_skill_lv_8', type: 'integer' })
+  mainSkillLv8: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_9: number;
+  @Column({ name: 'main_skill_lv_9', type: 'integer' })
+  mainSkillLv9: number;
 
   @Field()
-  @Column('integer')
-  main_skill_lv_10: number;
+  @Column({ name: 'main_skill_lv_10', type: 'integer' })
+  mainSkillLv10: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'accuracy', type: 'integer' })
   accuracy: number;
 
   @Field()
-  @Column('integer')
-  normal_atk_cast_time: number;
+  @Column({ name: 'normal_atk_cast_time', type: 'integer' })
+  normalAtkCastTime: number;
 
   @Field()
-  @Column('integer')
-  score_coefficient: number;
+  @Column({ name: 'score_coefficient', type: 'integer' })
+  scoreCoefficient: number;
 
 }
 

@@ -5,16 +5,16 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'clan_grade' })
 export class ClanGrade extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  clan_grade_id: number;
+  @PrimaryColumn({ name: 'clan_grade_id', type: 'integer' })
+  clanGradeId: number;
 
   @Field()
-  @Column('integer')
-  rank_from: number;
+  @Column({ name: 'rank_from', type: 'integer' })
+  rankFrom: number;
 
   @Field()
-  @Column('integer')
-  rank_to: number;
+  @Column({ name: 'rank_to', type: 'integer' })
+  rankTo: number;
 
 }
 

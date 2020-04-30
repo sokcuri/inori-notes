@@ -5,19 +5,19 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'kaiser_add_times_data' })
 export class KaiserAddTimesData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  add_times: number;
+  @Column({ name: 'add_times', type: 'integer' })
+  addTimes: number;
 
   @Field()
-  @Column('text')
-  add_times_time: string;
+  @Column({ name: 'add_times_time', type: 'text' })
+  addTimesTime: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'duration', type: 'integer' })
   duration: number;
 
 }

@@ -5,23 +5,23 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_effect' })
 export class RoomEffect extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  reward_get: number;
+  @Column({ name: 'reward_get', type: 'integer' })
+  rewardGet: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'jukebox', type: 'integer' })
   jukebox: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'nebbia', type: 'integer' })
   nebbia: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'arcade', type: 'integer' })
   arcade: number;
 
 }

@@ -5,44 +5,44 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'goldset_data_2' })
 export class GoldsetData2 extends BaseEntity {
   @Field()
-  @Column('integer')
+  @Column({ name: 'id', type: 'integer' })
   id: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  buy_count: number;
+  @PrimaryColumn({ name: 'buy_count', type: 'integer' })
+  buyCount: number;
 
   @Field()
-  @Column('integer')
-  use_jewel_count: number;
+  @Column({ name: 'use_jewel_count', type: 'integer' })
+  useJewelCount: number;
 
   @Field()
-  @Column('integer')
-  get_gold_count: number;
+  @Column({ name: 'get_gold_count', type: 'integer' })
+  getGoldCount: number;
 
   @Field()
-  @Column('integer')
-  goldset_odds_1: number;
+  @Column({ name: 'goldset_odds_1', type: 'integer' })
+  goldsetOdds1: number;
 
   @Field()
-  @Column('integer')
-  goldset_odds_2: number;
+  @Column({ name: 'goldset_odds_2', type: 'integer' })
+  goldsetOdds2: number;
 
   @Field()
-  @Column('integer')
-  goldset_odds_3: number;
+  @Column({ name: 'goldset_odds_3', type: 'integer' })
+  goldsetOdds3: number;
 
   @Field()
-  @Column('integer')
-  additional_gold_min_rate: number;
+  @Column({ name: 'additional_gold_min_rate', type: 'integer' })
+  additionalGoldMinRate: number;
 
   @Field()
-  @Column('integer')
-  additional_gold_max_rate: number;
+  @Column({ name: 'additional_gold_max_rate', type: 'integer' })
+  additionalGoldMaxRate: number;
 
   @Field()
-  @Column('integer')
-  training_quest_count: number;
+  @Column({ name: 'training_quest_count', type: 'integer' })
+  trainingQuestCount: number;
 
 }
 

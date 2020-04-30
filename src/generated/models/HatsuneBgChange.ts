@@ -5,28 +5,28 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_bg_change' })
 export class HatsuneBgChange extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  area_id: number;
+  @PrimaryColumn({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('integer')
-  quest_id_1: number;
+  @Column({ name: 'quest_id_1', type: 'integer' })
+  questId1: number;
 
   @Field()
-  @Column('integer')
-  quest_id_2: number;
+  @Column({ name: 'quest_id_2', type: 'integer' })
+  questId2: number;
 
   @Field()
-  @Column('integer')
-  quest_id_3: number;
+  @Column({ name: 'quest_id_3', type: 'integer' })
+  questId3: number;
 
   @Field()
-  @Column('integer')
-  quest_id_4: number;
+  @Column({ name: 'quest_id_4', type: 'integer' })
+  questId4: number;
 
   @Field()
-  @Column('integer')
-  quest_id_5: number;
+  @Column({ name: 'quest_id_5', type: 'integer' })
+  questId5: number;
 
 }
 

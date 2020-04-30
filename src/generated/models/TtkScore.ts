@@ -5,24 +5,24 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'ttk_score' })
 export class TtkScore extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  difficulty_level: number;
+  @PrimaryColumn({ name: 'difficulty_level', type: 'integer' })
+  difficultyLevel: number;
 
   @Field()
-  @Column('integer')
-  coefficient_difficulty: number;
+  @Column({ name: 'coefficient_difficulty', type: 'integer' })
+  coefficientDifficulty: number;
 
   @Field()
-  @Column('integer')
-  coefficient_coin_score: number;
+  @Column({ name: 'coefficient_coin_score', type: 'integer' })
+  coefficientCoinScore: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'life', type: 'integer' })
   life: number;
 
   @Field()
-  @Column('integer')
-  coefficient_wrong_num: number;
+  @Column({ name: 'coefficient_wrong_num', type: 'integer' })
+  coefficientWrongNum: number;
 
 }
 

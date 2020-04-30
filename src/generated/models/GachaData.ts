@@ -5,132 +5,132 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'gacha_data' })
 export class GachaData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  gacha_id: number;
+  @PrimaryColumn({ name: 'gacha_id', type: 'integer' })
+  gachaId: number;
 
   @Field()
-  @Column('text')
-  gacha_name: string;
+  @Column({ name: 'gacha_name', type: 'text' })
+  gachaName: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('text')
-  description_2: string;
+  @Column({ name: 'description_2', type: 'text' })
+  description2: string;
 
   @Field()
-  @Column('text')
-  description_sp: string;
+  @Column({ name: 'description_sp', type: 'text' })
+  descriptionSp: string;
 
   @Field()
-  @Column('integer')
-  gacha_detail: number;
+  @Column({ name: 'gacha_detail', type: 'integer' })
+  gachaDetail: number;
 
   @Field()
-  @Column('integer')
-  gacha_cost_type: number;
+  @Column({ name: 'gacha_cost_type', type: 'integer' })
+  gachaCostType: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'price', type: 'integer' })
   price: number;
 
   @Field()
-  @Column('integer')
-  free_gacha_type: number;
+  @Column({ name: 'free_gacha_type', type: 'integer' })
+  freeGachaType: number;
 
   @Field()
-  @Column('integer')
-  free_gacha_interval_time: number;
+  @Column({ name: 'free_gacha_interval_time', type: 'integer' })
+  freeGachaIntervalTime: number;
 
   @Field()
-  @Column('integer')
-  free_gacha_count: number;
+  @Column({ name: 'free_gacha_count', type: 'integer' })
+  freeGachaCount: number;
 
   @Field()
-  @Column('integer')
-  discount_price: number;
+  @Column({ name: 'discount_price', type: 'integer' })
+  discountPrice: number;
 
   @Field()
-  @Column('text')
-  gacha_odds: string;
+  @Column({ name: 'gacha_odds', type: 'text' })
+  gachaOdds: string;
 
   @Field()
-  @Column('text')
-  gacha_odds_star2: string;
+  @Column({ name: 'gacha_odds_star2', type: 'text' })
+  gachaOddsStar2: string;
 
   @Field()
-  @Column('integer')
-  gacha_type: number;
+  @Column({ name: 'gacha_type', type: 'integer' })
+  gachaType: number;
 
   @Field()
-  @Column('integer')
-  movie_id: number;
+  @Column({ name: 'movie_id', type: 'integer' })
+  movieId: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
   @Field()
-  @Column('integer')
-  ticket_id: number;
+  @Column({ name: 'ticket_id', type: 'integer' })
+  ticketId: number;
 
   @Field()
-  @Column('integer')
-  special_id: number;
+  @Column({ name: 'special_id', type: 'integer' })
+  specialId: number;
 
   @Field()
-  @Column('integer')
-  exchange_id: number;
+  @Column({ name: 'exchange_id', type: 'integer' })
+  exchangeId: number;
 
   @Field()
-  @Column('integer')
-  ticket_id_10: number;
+  @Column({ name: 'ticket_id_10', type: 'integer' })
+  ticketId10: number;
 
   @Field()
-  @Column('text')
-  rarity_odds: string;
+  @Column({ name: 'rarity_odds', type: 'text' })
+  rarityOdds: string;
 
   @Field()
-  @Column('text')
-  chara_odds_star1: string;
+  @Column({ name: 'chara_odds_star1', type: 'text' })
+  charaOddsStar1: string;
 
   @Field()
-  @Column('text')
-  chara_odds_star2: string;
+  @Column({ name: 'chara_odds_star2', type: 'text' })
+  charaOddsStar2: string;
 
   @Field()
-  @Column('text')
-  chara_odds_star3: string;
+  @Column({ name: 'chara_odds_star3', type: 'text' })
+  charaOddsStar3: string;
 
   @Field()
-  @Column('text')
-  gacha10_special_odds_star1: string;
+  @Column({ name: 'gacha10_special_odds_star1', type: 'text' })
+  gacha10SpecialOddsStar1: string;
 
   @Field()
-  @Column('text')
-  gacha10_special_odds_star2: string;
+  @Column({ name: 'gacha10_special_odds_star2', type: 'text' })
+  gacha10SpecialOddsStar2: string;
 
   @Field()
-  @Column('text')
-  gacha10_special_odds_star3: string;
+  @Column({ name: 'gacha10_special_odds_star3', type: 'text' })
+  gacha10SpecialOddsStar3: string;
 
   @Field()
-  @Column('integer')
-  prizegacha_id: number;
+  @Column({ name: 'prizegacha_id', type: 'integer' })
+  prizegachaId: number;
 
   @Field()
-  @Column('integer')
-  gacha_bonus_id: number;
+  @Column({ name: 'gacha_bonus_id', type: 'integer' })
+  gachaBonusId: number;
 
   @Field()
-  @Column('integer')
-  gacha_times_limit10: number;
+  @Column({ name: 'gacha_times_limit10', type: 'integer' })
+  gachaTimesLimit10: number;
 
 }
 

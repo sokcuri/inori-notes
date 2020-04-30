@@ -5,15 +5,15 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'ttk_weapon' })
 export class TtkWeapon extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  ttk_weapon_id: number;
+  @PrimaryColumn({ name: 'ttk_weapon_id', type: 'integer' })
+  ttkWeaponId: number;
 
   @Field()
-  @Column('integer')
-  ttk_score: number;
+  @Column({ name: 'ttk_score', type: 'integer' })
+  ttkScore: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
 }

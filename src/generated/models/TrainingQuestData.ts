@@ -5,156 +5,156 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'training_quest_data' })
 export class TrainingQuestData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  quest_id: number;
+  @PrimaryColumn({ name: 'quest_id', type: 'integer' })
+  questId: number;
 
   @Field()
-  @Column('integer')
-  area_id: number;
+  @Column({ name: 'area_id', type: 'integer' })
+  areaId: number;
 
   @Field()
-  @Column('text')
-  quest_name: string;
+  @Column({ name: 'quest_name', type: 'text' })
+  questName: string;
 
   @Field()
-  @Column('integer')
-  limit_team_level: number;
+  @Column({ name: 'limit_team_level', type: 'integer' })
+  limitTeamLevel: number;
 
   @Field()
-  @Column('integer')
-  unlock_quest_id_1: number;
+  @Column({ name: 'unlock_quest_id_1', type: 'integer' })
+  unlockQuestId1: number;
 
   @Field()
-  @Column('integer')
-  unlock_quest_id_2: number;
+  @Column({ name: 'unlock_quest_id_2', type: 'integer' })
+  unlockQuestId2: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'stamina', type: 'integer' })
   stamina: number;
 
   @Field()
-  @Column('integer')
-  stamina_start: number;
+  @Column({ name: 'stamina_start', type: 'integer' })
+  staminaStart: number;
 
   @Field()
-  @Column('integer')
-  team_exp: number;
+  @Column({ name: 'team_exp', type: 'integer' })
+  teamExp: number;
 
   @Field()
-  @Column('integer')
-  unit_exp: number;
+  @Column({ name: 'unit_exp', type: 'integer' })
+  unitExp: number;
 
   @Field()
-  @Column('integer')
-  limit_time: number;
+  @Column({ name: 'limit_time', type: 'integer' })
+  limitTime: number;
 
   @Field()
-  @Column('integer')
-  rank_reward_group: number;
+  @Column({ name: 'rank_reward_group', type: 'integer' })
+  rankRewardGroup: number;
 
   @Field()
-  @Column('integer')
-  background_1: number;
+  @Column({ name: 'background_1', type: 'integer' })
+  background1: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id_1: number;
+  @Column({ name: 'wave_group_id_1', type: 'integer' })
+  waveGroupId1: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_1: string;
+  @Column({ name: 'wave_bgm_sheet_id_1', type: 'text' })
+  waveBgmSheetId1: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_1: string;
+  @Column({ name: 'wave_bgm_que_id_1', type: 'text' })
+  waveBgmQueId1: string;
 
   @Field()
-  @Column('integer')
-  background_2: number;
+  @Column({ name: 'background_2', type: 'integer' })
+  background2: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id_2: number;
+  @Column({ name: 'wave_group_id_2', type: 'integer' })
+  waveGroupId2: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_2: string;
+  @Column({ name: 'wave_bgm_sheet_id_2', type: 'text' })
+  waveBgmSheetId2: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_2: string;
+  @Column({ name: 'wave_bgm_que_id_2', type: 'text' })
+  waveBgmQueId2: string;
 
   @Field()
-  @Column('integer')
-  background_3: number;
+  @Column({ name: 'background_3', type: 'integer' })
+  background3: number;
 
   @Field()
-  @Column('integer')
-  wave_group_id_3: number;
+  @Column({ name: 'wave_group_id_3', type: 'integer' })
+  waveGroupId3: number;
 
   @Field()
-  @Column('text')
-  wave_bgm_sheet_id_3: string;
+  @Column({ name: 'wave_bgm_sheet_id_3', type: 'text' })
+  waveBgmSheetId3: string;
 
   @Field()
-  @Column('text')
-  wave_bgm_que_id_3: string;
+  @Column({ name: 'wave_bgm_que_id_3', type: 'text' })
+  waveBgmQueId3: string;
 
   @Field()
-  @Column('integer')
-  enemy_image_1: number;
+  @Column({ name: 'enemy_image_1', type: 'integer' })
+  enemyImage1: number;
 
   @Field()
-  @Column('integer')
-  enemy_image_2: number;
+  @Column({ name: 'enemy_image_2', type: 'integer' })
+  enemyImage2: number;
 
   @Field()
-  @Column('integer')
-  enemy_image_3: number;
+  @Column({ name: 'enemy_image_3', type: 'integer' })
+  enemyImage3: number;
 
   @Field()
-  @Column('integer')
-  enemy_image_4: number;
+  @Column({ name: 'enemy_image_4', type: 'integer' })
+  enemyImage4: number;
 
   @Field()
-  @Column('integer')
-  enemy_image_5: number;
+  @Column({ name: 'enemy_image_5', type: 'integer' })
+  enemyImage5: number;
 
   @Field()
-  @Column('integer')
-  reward_image_1: number;
+  @Column({ name: 'reward_image_1', type: 'integer' })
+  rewardImage1: number;
 
   @Field()
-  @Column('integer')
-  reward_image_2: number;
+  @Column({ name: 'reward_image_2', type: 'integer' })
+  rewardImage2: number;
 
   @Field()
-  @Column('integer')
-  reward_image_3: number;
+  @Column({ name: 'reward_image_3', type: 'integer' })
+  rewardImage3: number;
 
   @Field()
-  @Column('integer')
-  reward_image_4: number;
+  @Column({ name: 'reward_image_4', type: 'integer' })
+  rewardImage4: number;
 
   @Field()
-  @Column('integer')
-  reward_image_5: number;
+  @Column({ name: 'reward_image_5', type: 'integer' })
+  rewardImage5: number;
 
   @Field()
-  @Column('integer')
-  training_quest_detail_bg_id: number;
+  @Column({ name: 'training_quest_detail_bg_id', type: 'integer' })
+  trainingQuestDetailBgId: number;
 
   @Field()
-  @Column('integer')
-  training_quest_detail_bg_position: number;
+  @Column({ name: 'training_quest_detail_bg_position', type: 'integer' })
+  trainingQuestDetailBgPosition: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

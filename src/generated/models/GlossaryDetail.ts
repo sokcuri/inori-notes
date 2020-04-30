@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'glossary_detail' })
 export class GlossaryDetail extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  glossary_id: number;
+  @PrimaryColumn({ name: 'glossary_id', type: 'integer' })
+  glossaryId: number;
 
   @Field()
-  @Column('integer')
-  glossary_category_id: number;
+  @Column({ name: 'glossary_category_id', type: 'integer' })
+  glossaryCategoryId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'title', type: 'text' })
   title: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('integer')
-  unlock_story_id: number;
+  @Column({ name: 'unlock_story_id', type: 'integer' })
+  unlockStoryId: number;
 
   @Field()
-  @Column('integer')
-  category_type: number;
+  @Column({ name: 'category_type', type: 'integer' })
+  categoryType: number;
 
   @Field()
-  @Column('integer')
-  disp_order: number;
+  @Column({ name: 'disp_order', type: 'integer' })
+  dispOrder: number;
 
 }
 

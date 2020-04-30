@@ -5,28 +5,28 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'nyx_drama_data' })
 export class NyxDramaData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  drama_id: number;
+  @PrimaryColumn({ name: 'drama_id', type: 'integer' })
+  dramaId: number;
 
   @Field()
-  @Column('integer')
-  story_phase: number;
+  @Column({ name: 'story_phase', type: 'integer' })
+  storyPhase: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'title', type: 'text' })
   title: string;
 
   @Field()
-  @Column('text')
-  sub_title: string;
+  @Column({ name: 'sub_title', type: 'text' })
+  subTitle: string;
 
   @Field()
-  @Column('integer')
-  condition_unlocked_story_id: number;
+  @Column({ name: 'condition_unlocked_story_id', type: 'integer' })
+  conditionUnlockedStoryId: number;
 
   @Field()
-  @Column('integer')
-  condition_locked_story_id: number;
+  @Column({ name: 'condition_locked_story_id', type: 'integer' })
+  conditionLockedStoryId: number;
 
 }
 

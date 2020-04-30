@@ -5,92 +5,92 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_data' })
 export class UnitData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('text')
-  unit_name: string;
+  @Column({ name: 'unit_name', type: 'text' })
+  unitName: string;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'kana', type: 'text' })
   kana: string;
 
   @Field()
-  @Column('integer')
-  prefab_id: number;
+  @Column({ name: 'prefab_id', type: 'integer' })
+  prefabId: number;
 
   @Field()
-  @Column('integer')
-  is_limited: number;
+  @Column({ name: 'is_limited', type: 'integer' })
+  isLimited: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'rarity', type: 'integer' })
   rarity: number;
 
   @Field()
-  @Column('integer')
-  motion_type: number;
+  @Column({ name: 'motion_type', type: 'integer' })
+  motionType: number;
 
   @Field()
-  @Column('integer')
-  se_type: number;
+  @Column({ name: 'se_type', type: 'integer' })
+  seType: number;
 
   @Field()
-  @Column('integer')
-  move_speed: number;
+  @Column({ name: 'move_speed', type: 'integer' })
+  moveSpeed: number;
 
   @Field()
-  @Column('integer')
-  search_area_width: number;
+  @Column({ name: 'search_area_width', type: 'integer' })
+  searchAreaWidth: number;
 
   @Field()
-  @Column('integer')
-  atk_type: number;
+  @Column({ name: 'atk_type', type: 'integer' })
+  atkType: number;
 
   @Field()
-  @Column('real')
-  normal_atk_cast_time: number;
+  @Column({ name: 'normal_atk_cast_time', type: 'real' })
+  normalAtkCastTime: number;
 
   @Field()
-  @Column('integer')
-  cutin_1: number;
+  @Column({ name: 'cutin_1', type: 'integer' })
+  cutin1: number;
 
   @Field()
-  @Column('integer')
-  cutin_2: number;
+  @Column({ name: 'cutin_2', type: 'integer' })
+  cutin2: number;
 
   @Field()
-  @Column('integer')
-  cutin1_star6: number;
+  @Column({ name: 'cutin1_star6', type: 'integer' })
+  cutin1Star6: number;
 
   @Field()
-  @Column('integer')
-  cutin2_star6: number;
+  @Column({ name: 'cutin2_star6', type: 'integer' })
+  cutin2Star6: number;
 
   @Field()
-  @Column('integer')
-  guild_id: number;
+  @Column({ name: 'guild_id', type: 'integer' })
+  guildId: number;
 
   @Field()
-  @Column('integer')
-  exskill_display: number;
+  @Column({ name: 'exskill_display', type: 'integer' })
+  exskillDisplay: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'comment', type: 'text' })
   comment: string;
 
   @Field()
-  @Column('integer')
-  only_disp_owned: number;
+  @Column({ name: 'only_disp_owned', type: 'integer' })
+  onlyDispOwned: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 

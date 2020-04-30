@@ -5,27 +5,27 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_map_event' })
 export class HatsuneMapEvent extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  target_event_id: number;
+  @Column({ name: 'target_event_id', type: 'integer' })
+  targetEventId: number;
 
   @Field()
-  @Column('integer')
-  event_type: number;
+  @Column({ name: 'event_type', type: 'integer' })
+  eventType: number;
 
   @Field()
-  @Column('integer')
-  condition_id: number;
+  @Column({ name: 'condition_id', type: 'integer' })
+  conditionId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'param1', type: 'integer' })
   param1: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'param2', type: 'integer' })
   param2: number;
 
 }

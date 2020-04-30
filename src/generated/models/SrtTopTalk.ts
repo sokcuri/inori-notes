@@ -5,31 +5,31 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'srt_top_talk' })
 export class SrtTopTalk extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  talk_id: number;
+  @Column({ name: 'talk_id', type: 'integer' })
+  talkId: number;
 
   @Field()
-  @Column('integer')
-  chara_index: number;
+  @Column({ name: 'chara_index', type: 'integer' })
+  charaIndex: number;
 
   @Field()
-  @Column('text')
-  talk_text: string;
+  @Column({ name: 'talk_text', type: 'text' })
+  talkText: string;
 
   @Field()
-  @Column('text')
-  sheet_name: string;
+  @Column({ name: 'sheet_name', type: 'text' })
+  sheetName: string;
 
   @Field()
-  @Column('text')
-  cue_name: string;
+  @Column({ name: 'cue_name', type: 'text' })
+  cueName: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'direction', type: 'integer' })
   direction: number;
 
 }

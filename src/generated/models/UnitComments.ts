@@ -5,35 +5,35 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'unit_comments' })
 export class UnitComments extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  unit_id: number;
+  @Column({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('integer')
-  use_type: number;
+  @Column({ name: 'use_type', type: 'integer' })
+  useType: number;
 
   @Field()
-  @Column('integer')
-  voice_id: number;
+  @Column({ name: 'voice_id', type: 'integer' })
+  voiceId: number;
 
   @Field()
-  @Column('integer')
-  face_id: number;
+  @Column({ name: 'face_id', type: 'integer' })
+  faceId: number;
 
   @Field()
-  @Column('real')
-  change_time: number;
+  @Column({ name: 'change_time', type: 'real' })
+  changeTime: number;
 
   @Field()
-  @Column('integer')
-  change_face: number;
+  @Column({ name: 'change_face', type: 'integer' })
+  changeFace: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
 }

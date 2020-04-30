@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'actual_unit_background' })
 export class ActualUnitBackground extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  unit_id: number;
+  @PrimaryColumn({ name: 'unit_id', type: 'integer' })
+  unitId: number;
 
   @Field()
-  @Column('text')
-  unit_name: string;
+  @Column({ name: 'unit_name', type: 'text' })
+  unitName: string;
 
   @Field()
-  @Column('integer')
-  bg_id: number;
+  @Column({ name: 'bg_id', type: 'integer' })
+  bgId: number;
 
   @Field()
-  @Column('integer')
-  face_type: number;
+  @Column({ name: 'face_type', type: 'integer' })
+  faceType: number;
 
 }
 

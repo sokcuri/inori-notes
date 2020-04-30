@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'nyx_phase_data' })
 export class NyxPhaseData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  story_phase: number;
+  @PrimaryColumn({ name: 'story_phase', type: 'integer' })
+  storyPhase: number;
 
   @Field()
-  @Column('text')
-  phase_title: string;
+  @Column({ name: 'phase_title', type: 'text' })
+  phaseTitle: string;
 
   @Field()
-  @Column('integer')
-  condition_quest_id: number;
+  @Column({ name: 'condition_quest_id', type: 'integer' })
+  conditionQuestId: number;
 
   @Field()
-  @Column('integer')
-  condition_quest_boss: number;
+  @Column({ name: 'condition_quest_boss', type: 'integer' })
+  conditionQuestBoss: number;
 
 }
 

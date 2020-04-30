@@ -5,20 +5,20 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'quest_annihilation' })
 export class QuestAnnihilation extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  system_id: number;
+  @PrimaryColumn({ name: 'system_id', type: 'integer' })
+  systemId: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  quest_id: number;
+  @PrimaryColumn({ name: 'quest_id', type: 'integer' })
+  questId: number;
 
   @Field()
-  @Column('integer')
-  effect_type: number;
+  @Column({ name: 'effect_type', type: 'integer' })
+  effectType: number;
 
   @Field()
-  @Column('integer')
-  quest_effect_position: number;
+  @Column({ name: 'quest_effect_position', type: 'integer' })
+  questEffectPosition: number;
 
 }
 

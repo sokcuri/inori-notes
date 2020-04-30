@@ -5,12 +5,12 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'uek_spine_anim_link' })
 export class UekSpineAnimLink extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  spine_id: number;
+  @PrimaryColumn({ name: 'spine_id', type: 'integer' })
+  spineId: number;
 
   @Field()
-  @Column('integer')
-  anim_num: number;
+  @Column({ name: 'anim_num', type: 'integer' })
+  animNum: number;
 
 }
 

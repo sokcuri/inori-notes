@@ -5,35 +5,35 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'arcade_list' })
 export class ArcadeList extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  arcade_id: number;
+  @PrimaryColumn({ name: 'arcade_id', type: 'integer' })
+  arcadeId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'title', type: 'text' })
   title: string;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'price', type: 'integer' })
   price: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  cue_id: string;
+  @Column({ name: 'cue_id', type: 'text' })
+  cueId: string;
 
   @Field()
-  @Column('integer')
-  where_type: number;
+  @Column({ name: 'where_type', type: 'integer' })
+  whereType: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
 }

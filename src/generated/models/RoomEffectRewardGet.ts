@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_effect_reward_get' })
 export class RoomEffectRewardGet extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'level', type: 'integer' })
   level: number;
 
   @Field()
-  @Column('integer')
-  reward_type: number;
+  @Column({ name: 'reward_type', type: 'integer' })
+  rewardType: number;
 
   @Field()
-  @Column('integer')
-  reward_id: number;
+  @Column({ name: 'reward_id', type: 'integer' })
+  rewardId: number;
 
   @Field()
-  @Column('integer')
-  max_count: number;
+  @Column({ name: 'max_count', type: 'integer' })
+  maxCount: number;
 
   @Field()
-  @Column('integer')
-  inc_step: number;
+  @Column({ name: 'inc_step', type: 'integer' })
+  incStep: number;
 
   @Field()
-  @Column('integer')
-  interval_second: number;
+  @Column({ name: 'interval_second', type: 'integer' })
+  intervalSecond: number;
 
 }
 

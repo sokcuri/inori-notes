@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'hatsune_multi_route_parameter' })
 export class HatsuneMultiRouteParameter extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field()
-  @Column('integer')
-  quest_id: number;
+  @Column({ name: 'quest_id', type: 'integer' })
+  questId: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'type', type: 'integer' })
   type: number;
 
   @Field()
-  @Column('integer')
-  param_1: number;
+  @Column({ name: 'param_1', type: 'integer' })
+  param1: number;
 
   @Field()
-  @Column('integer')
-  param_2: number;
+  @Column({ name: 'param_2', type: 'integer' })
+  param2: number;
 
   @Field()
-  @Column('integer')
-  param_3: number;
+  @Column({ name: 'param_3', type: 'integer' })
+  param3: number;
 
   @Field()
-  @Column('text')
-  text_1: string;
+  @Column({ name: 'text_1', type: 'text' })
+  text1: string;
 
 }
 

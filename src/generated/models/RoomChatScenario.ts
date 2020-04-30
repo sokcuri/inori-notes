@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'room_chat_scenario' })
 export class RoomChatScenario extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  scenario_idx: number;
+  @PrimaryColumn({ name: 'scenario_idx', type: 'integer' })
+  scenarioIdx: number;
 
   @Field()
-  @Column('integer')
-  unit_pos_no: number;
+  @Column({ name: 'unit_pos_no', type: 'integer' })
+  unitPosNo: number;
 
   @Field()
-  @Column('integer')
+  @Column({ name: 'delay', type: 'integer' })
   delay: number;
 
   @Field()
-  @Column('integer')
-  affect_type: number;
+  @Column({ name: 'affect_type', type: 'integer' })
+  affectType: number;
 
   @Field()
-  @Column('integer')
-  anime_id: number;
+  @Column({ name: 'anime_id', type: 'integer' })
+  animeId: number;
 
   @Field()
-  @Column('integer')
-  icon_id: number;
+  @Column({ name: 'icon_id', type: 'integer' })
+  iconId: number;
 
 }
 

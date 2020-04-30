@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'vote_data' })
 export class VoteData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  vote_id: number;
+  @PrimaryColumn({ name: 'vote_id', type: 'integer' })
+  voteId: number;
 
   @Field()
-  @Column('text')
-  vote_start_time: string;
+  @Column({ name: 'vote_start_time', type: 'text' })
+  voteStartTime: string;
 
   @Field()
-  @Column('text')
-  vote_end_time: string;
+  @Column({ name: 'vote_end_time', type: 'text' })
+  voteEndTime: string;
 
   @Field()
-  @Column('text')
-  result_start_time: string;
+  @Column({ name: 'result_start_time', type: 'text' })
+  resultStartTime: string;
 
   @Field()
-  @Column('text')
-  result_end_time: string;
+  @Column({ name: 'result_end_time', type: 'text' })
+  resultEndTime: string;
 
   @Field()
-  @Column('integer')
-  start_story_id: number;
+  @Column({ name: 'start_story_id', type: 'integer' })
+  startStoryId: number;
 
   @Field()
-  @Column('integer')
-  result_story_id: number;
+  @Column({ name: 'result_story_id', type: 'integer' })
+  resultStoryId: number;
 
 }
 

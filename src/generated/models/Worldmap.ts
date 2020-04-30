@@ -5,32 +5,32 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'worldmap' })
 export class Worldmap extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  course_id: number;
+  @PrimaryColumn({ name: 'course_id', type: 'integer' })
+  courseId: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'name', type: 'text' })
   name: string;
 
   @Field()
-  @Column('integer')
-  map_id: number;
+  @Column({ name: 'map_id', type: 'integer' })
+  mapId: number;
 
   @Field()
-  @Column('text')
-  sheet_id: string;
+  @Column({ name: 'sheet_id', type: 'text' })
+  sheetId: string;
 
   @Field()
-  @Column('text')
-  que_id: string;
+  @Column({ name: 'que_id', type: 'text' })
+  queId: string;
 
   @Field()
-  @Column('integer')
-  start_area_id: number;
+  @Column({ name: 'start_area_id', type: 'integer' })
+  startAreaId: number;
 
   @Field()
-  @Column('integer')
-  end_area_id: number;
+  @Column({ name: 'end_area_id', type: 'integer' })
+  endAreaId: number;
 
 }
 

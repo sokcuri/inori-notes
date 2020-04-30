@@ -5,60 +5,60 @@ import { ObjectType, Field, ID } from 'type-graphql';
 @Entity({ name: 'emblem_mission_data' })
 export class EmblemMissionData extends BaseEntity {
   @Field(type => ID)
-  @PrimaryColumn('integer')
-  mission_id: number;
+  @PrimaryColumn({ name: 'mission_id', type: 'integer' })
+  missionId: number;
 
   @Field()
-  @Column('integer')
-  disp_group: number;
+  @Column({ name: 'disp_group', type: 'integer' })
+  dispGroup: number;
 
   @Field()
-  @Column('integer')
-  category_icon: number;
+  @Column({ name: 'category_icon', type: 'integer' })
+  categoryIcon: number;
 
   @Field()
-  @Column('text')
+  @Column({ name: 'description', type: 'text' })
   description: string;
 
   @Field()
-  @Column('integer')
-  mission_condition: number;
+  @Column({ name: 'mission_condition', type: 'integer' })
+  missionCondition: number;
 
   @Field()
-  @Column('integer')
-  condition_value_1: number;
+  @Column({ name: 'condition_value_1', type: 'integer' })
+  conditionValue1: number;
 
   @Field()
-  @Column('integer')
-  condition_value_2: number;
+  @Column({ name: 'condition_value_2', type: 'integer' })
+  conditionValue2: number;
 
   @Field()
-  @Column('integer')
-  condition_value_3: number;
+  @Column({ name: 'condition_value_3', type: 'integer' })
+  conditionValue3: number;
 
   @Field()
-  @Column('integer')
-  condition_num: number;
+  @Column({ name: 'condition_num', type: 'integer' })
+  conditionNum: number;
 
   @Field()
-  @Column('integer')
-  mission_reward_id: number;
+  @Column({ name: 'mission_reward_id', type: 'integer' })
+  missionRewardId: number;
 
   @Field()
-  @Column('integer')
-  system_id: number;
+  @Column({ name: 'system_id', type: 'integer' })
+  systemId: number;
 
   @Field()
-  @Column('integer')
-  visible_flag: number;
+  @Column({ name: 'visible_flag', type: 'integer' })
+  visibleFlag: number;
 
   @Field()
-  @Column('text')
-  start_time: string;
+  @Column({ name: 'start_time', type: 'text' })
+  startTime: string;
 
   @Field()
-  @Column('text')
-  end_time: string;
+  @Column({ name: 'end_time', type: 'text' })
+  endTime: string;
 
 }
 
