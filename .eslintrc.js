@@ -11,14 +11,13 @@ module.exports = {
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/interface-name-prefix": "off",
       "semi": "off",
-      "@typescript-eslint/semi": ["error"],
-      "@typescript-eslint/camelcase": "off"
+      "@typescript-eslint/semi": ["error"]
       // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
       // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },
     overrides: [
       {
-        files: ['**/models/*.ts'],
+        files: ['**/models/*.ts', '**/resolvers/*.ts'],
         rules: {
           '@typescript-eslint/no-unused-vars': 'off',
         }
