@@ -6,13 +6,16 @@
   "scripts": {
     "start": "cross-env node src/index.ts",
     "watch": "cross-env ts-node-dev --respawn src/index.ts",
+    "generate-models": "cross-env ts-node-dev --respawn scripts/generate-models",
     "lint": "eslint . --ext ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "fs-extra": "^9.0.0",
     "graphql": "^14.6.0",
+    "handlebars": "^4.7.6",
     "pug": "^2.0.4",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^4.2.0",
@@ -23,7 +26,10 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
+    "@types/fs-extra": "^8.1.0",
     "@types/node": "^13.13.4",
+    "@types/pug": "^2.0.4",
+    "@types/sqlite3": "^3.1.6",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "apollo-server": "^2.12.0",
