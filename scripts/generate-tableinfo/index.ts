@@ -99,6 +99,21 @@ function toTypeORMType(type: string): string {
   }
 }
 
+function toGraphQLType(type: string): string {
+  switch(type) {
+    case 'INTEGER':
+      return 'Int';
+    case 'REAL':
+      return 'Float';
+    case 'TEXT':
+      return 'String';
+    case 'BLOB':
+      return 'String';
+    default:
+      return 'String';
+  }
+}
+
 async function getTableInfo(db: sqlite3.Database, name: string) {
   return new Promise<TableInfo>((resolve, reject) => {
     db.all(`PRAGMA table_info(${name});`, (err, fields: TableField[]) => {
@@ -121,10 +136,10 @@ async function getTableInfo(db: sqlite3.Database, name: string) {
           cf.column = `@PrimaryColumn({ name: '${x.name}', type: '${toTypeORMType(x.type)}' })`;
         } else if (x.notnull === 0) {
           cf.name += '?';
-          cf.field = `@Field()`;
+          cf.field = `@Field(type => ${toGraphQLType(x.type)})`;
           cf.column = `@Column({ name: '${x.name}', type: '${toTypeORMType(x.type)}', nullable: true })`;
         } else {
-          cf.field = `@Field()`;
+          cf.field = `@Field(type => ${toGraphQLType(x.type)})`;
           cf.column = `@Column({ name: '${x.name}', type: '${toTypeORMType(x.type)}' })`;
         }
         classFields.push(cf);
