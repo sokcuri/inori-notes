@@ -5,6 +5,6 @@
   "synchronize": false,
   "logging": true,
   "entities": [
-    "src/generated/models/*.ts"
+    "src/generated/entities/*.ts"
   ]
 }

@@ -1,11 +1,11 @@
 import { createConnection, Connection, getRepository } from "typeorm";
 import { ApolloServer } from 'apollo-server';
 import { buildSchema } from "type-graphql";
-import * as models from './generated/models';
+import * as entities from './generated/entities';
 import * as resolvers from './generated/resolvers';
 
 async function getUnitData() {
-  const repository = getRepository(models.UnitData);
+  const repository = getRepository(entities.UnitData);
   const item = await repository.find({ unitName: 'ヒヨリ' });
   console.log(item);
 }

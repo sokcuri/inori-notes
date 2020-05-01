@@ -147,12 +147,12 @@ async function getTableArray() {
 }
 
 
-async function makeModel(tableInfo: TableInfo) {
-  const str = fs.readFileSync(__dirname + '/template/model.handlebars').toString();
+async function makeEntity(tableInfo: TableInfo) {
+  const str = fs.readFileSync(__dirname + '/template/entity.handlebars').toString();
   const compiled = Handlebars.compile(str);
   const result = compiled(tableInfo);
 
-  fs.outputFileSync('./src/generated/models/' + tableInfo.className + '.ts', result);
+  fs.outputFileSync('./src/generated/entities/' + tableInfo.className + '.ts', result);
 }
 
 async function makeResolver(tableInfo: TableInfo) {
@@ -163,9 +163,9 @@ async function makeResolver(tableInfo: TableInfo) {
   fs.outputFileSync('./src/generated/resolvers/' + tableInfo.className + 'Resolver.ts', result);
 }
 
-async function createModelIndex(tables: TableInfo[]) {
+async function createEntityIndex(tables: TableInfo[]) {
   const content = tables.map(x => `export * from './${x.className}';`).join('\n');
-  fs.outputFileSync('./src/generated/models/index.ts', content);
+  fs.outputFileSync('./src/generated/entities/index.ts', content);
 }
 
 async function createResolverIndex(tables: TableInfo[]) {
@@ -176,11 +176,11 @@ async function createResolverIndex(tables: TableInfo[]) {
 async function main() {
   const tables = await getTableArray();
   for (const table of tables) {
-    await makeModel(table);
+    await makeEntity(table);
     await makeResolver(table);
   }
 
-  await createModelIndex(tables);
+  await createEntityIndex(tables);
   await createResolverIndex(tables);
 
   db.close();
