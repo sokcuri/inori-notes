@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'event_bg_data' })
@@ -8,15 +8,15 @@ export class EventBgData extends BaseEntity {
   @PrimaryColumn({ name: 'event_id', type: 'integer' })
   eventId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'bg_id', type: 'integer' })
   bgId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_date', type: 'text' })
   startDate: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_date', type: 'text' })
   endDate: string;
 

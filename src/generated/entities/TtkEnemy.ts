@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'ttk_enemy' })
@@ -8,15 +8,15 @@ export class TtkEnemy extends BaseEntity {
   @PrimaryColumn({ name: 'enemy_id', type: 'integer' })
   enemyId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'score', type: 'integer' })
   score: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'coin', type: 'integer' })
   coin: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'max', type: 'integer' })
   max: number;
 

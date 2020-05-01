@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'notif_data' })
@@ -12,7 +12,7 @@ export class NotifData extends BaseEntity {
   @PrimaryColumn({ name: 'notif_type', type: 'integer' })
   notifType: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'comment', type: 'text' })
   comment: string;
 

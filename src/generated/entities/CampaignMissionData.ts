@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'campaign_mission_data' })
@@ -8,107 +8,107 @@ export class CampaignMissionData extends BaseEntity {
   @PrimaryColumn({ name: 'mission_id', type: 'integer' })
   missionId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'campaign_id', type: 'integer' })
   campaignId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'type', type: 'integer' })
   type: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'disp_group', type: 'integer' })
   dispGroup: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'category_icon', type: 'integer' })
   categoryIcon: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'description', type: 'text' })
   description: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'mission_condition', type: 'integer' })
   missionCondition: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_1', type: 'integer', nullable: true })
   conditionValue1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_2', type: 'integer', nullable: true })
   conditionValue2: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_3', type: 'integer', nullable: true })
   conditionValue3: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_4', type: 'integer', nullable: true })
   conditionValue4: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_5', type: 'integer', nullable: true })
   conditionValue5: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_6', type: 'integer', nullable: true })
   conditionValue6: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_7', type: 'integer', nullable: true })
   conditionValue7: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_8', type: 'integer', nullable: true })
   conditionValue8: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_9', type: 'integer', nullable: true })
   conditionValue9: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_10', type: 'integer', nullable: true })
   conditionValue10: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_num', type: 'integer' })
   conditionNum: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'campaign_mission_reward_id', type: 'integer' })
   campaignMissionRewardId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'system_id', type: 'integer', nullable: true })
   systemId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'min_level', type: 'integer' })
   minLevel: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'max_level', type: 'integer' })
   maxLevel: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'title_color_id', type: 'integer' })
   titleColorId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'visible_flag', type: 'integer' })
   visibleFlag: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'mark_flag', type: 'integer' })
   markFlag: number;
 

@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'equipment_enhance_data' })
@@ -12,11 +12,11 @@ export class EquipmentEnhanceData extends BaseEntity {
   @PrimaryColumn({ name: 'equipment_enhance_level', type: 'integer' })
   equipmentEnhanceLevel: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'needed_point', type: 'integer' })
   neededPoint: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'total_point', type: 'integer' })
   totalPoint: number;
 

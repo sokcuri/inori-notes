@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'room_emotion_icon' })
@@ -8,11 +8,11 @@ export class RoomEmotionIcon extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'enable_auto', type: 'integer' })
   enableAuto: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'enable_tap', type: 'integer' })
   enableTap: number;
 

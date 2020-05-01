@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'vote_unit' })
@@ -12,7 +12,7 @@ export class VoteUnit extends BaseEntity {
   @PrimaryColumn({ name: 'unit_id', type: 'integer' })
   unitId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'unit_rarity', type: 'integer' })
   unitRarity: number;
 

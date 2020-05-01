@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'event_gacha_data' })
@@ -8,27 +8,27 @@ export class EventGachaData extends BaseEntity {
   @PrimaryColumn({ name: 'gacha_id', type: 'integer' })
   gachaId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'event_id', type: 'integer' })
   eventId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'gacha_name', type: 'text' })
   gachaName: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'item_type', type: 'integer' })
   itemType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'item_id', type: 'integer' })
   itemId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'cost', type: 'integer' })
   cost: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'repeat_step', type: 'integer' })
   repeatStep: number;
 

@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'stamp' })
@@ -8,19 +8,19 @@ export class Stamp extends BaseEntity {
   @PrimaryColumn({ name: 'stamp_id', type: 'integer' })
   stampId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'disp_order', type: 'integer' })
   dispOrder: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'description', type: 'text' })
   description: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_date', type: 'text' })
   startDate: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_date', type: 'text' })
   endDate: string;
 

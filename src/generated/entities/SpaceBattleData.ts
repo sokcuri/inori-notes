@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'space_battle_data' })
@@ -8,43 +8,43 @@ export class SpaceBattleData extends BaseEntity {
   @PrimaryColumn({ name: 'space_battle_id', type: 'integer' })
   spaceBattleId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'space_enemy_id', type: 'integer' })
   spaceEnemyId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'limit_time', type: 'integer' })
   limitTime: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'clear_reward_group', type: 'integer' })
   clearRewardGroup: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'background', type: 'integer' })
   background: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'sheet_id', type: 'text' })
   sheetId: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'que_id', type: 'text' })
   queId: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'result_boss_position_y', type: 'integer' })
   resultBossPositionY: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_detail_bg_id', type: 'integer' })
   questDetailBgId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_detail_bg_position', type: 'integer' })
   questDetailBgPosition: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'quest_name', type: 'text' })
   questName: string;
 

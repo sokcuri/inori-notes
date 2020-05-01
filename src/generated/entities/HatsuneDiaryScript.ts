@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'hatsune_diary_script' })
@@ -8,39 +8,39 @@ export class HatsuneDiaryScript extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'diary_id', type: 'integer' })
   diaryId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'seq_num', type: 'integer' })
   seqNum: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'type', type: 'integer' })
   type: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'diary_text', type: 'text' })
   diaryText: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'text_animation_speed', type: 'integer' })
   textAnimationSpeed: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'sheet_name', type: 'text' })
   sheetName: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'cue_name', type: 'text' })
   cueName: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'command', type: 'integer' })
   command: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'command_param', type: 'real' })
   commandParam: number;
 

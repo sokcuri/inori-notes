@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'login_bonus_data' })
@@ -8,43 +8,43 @@ export class LoginBonusData extends BaseEntity {
   @PrimaryColumn({ name: 'login_bonus_id', type: 'integer' })
   loginBonusId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'name', type: 'text' })
   name: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'login_bonus_type', type: 'integer' })
   loginBonusType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'count_num', type: 'integer' })
   countNum: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'bg_id', type: 'integer' })
   bgId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'stamp_id', type: 'integer' })
   stampId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'odds_group_id', type: 'integer' })
   oddsGroupId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'adv_play_type', type: 'integer' })
   advPlayType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'count_type', type: 'integer' })
   countType: number;
 

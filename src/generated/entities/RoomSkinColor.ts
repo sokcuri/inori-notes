@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'room_skin_color' })
@@ -8,15 +8,15 @@ export class RoomSkinColor extends BaseEntity {
   @PrimaryColumn({ name: 'skin_color_id', type: 'integer' })
   skinColorId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'color_red', type: 'integer' })
   colorRed: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'color_green', type: 'integer' })
   colorGreen: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'color_blue', type: 'integer' })
   colorBlue: number;
 

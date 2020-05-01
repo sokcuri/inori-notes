@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'unit_mypage_pos' })
@@ -8,15 +8,15 @@ export class UnitMypagePos extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'pos_x', type: 'real' })
   posX: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'pos_y', type: 'real' })
   posY: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'scale', type: 'real' })
   scale: number;
 

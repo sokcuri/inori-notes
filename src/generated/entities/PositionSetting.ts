@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'position_setting' })
@@ -8,11 +8,11 @@ export class PositionSetting extends BaseEntity {
   @PrimaryColumn({ name: 'position_setting_id', type: 'integer' })
   positionSettingId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'front', type: 'integer' })
   front: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'middle', type: 'integer' })
   middle: number;
 

@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'srt_panel' })
@@ -8,19 +8,19 @@ export class SrtPanel extends BaseEntity {
   @PrimaryColumn({ name: 'reading_id', type: 'integer' })
   readingId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'reading', type: 'text' })
   reading: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'read_type', type: 'integer' })
   readType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'panel_id', type: 'integer' })
   panelId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'detail_text', type: 'text' })
   detailText: string;
 

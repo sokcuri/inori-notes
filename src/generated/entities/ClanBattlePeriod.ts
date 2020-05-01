@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'clan_battle_period' })
@@ -12,75 +12,75 @@ export class ClanBattlePeriod extends BaseEntity {
   @PrimaryColumn({ name: 'period', type: 'integer' })
   period: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'period_detail', type: 'text' })
   periodDetail: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'period_detail_bg', type: 'integer' })
   periodDetailBg: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'period_detail_s', type: 'text' })
   periodDetailS: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'period_detail_bg_s', type: 'integer' })
   periodDetailBgS: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'period_detail_bg_position', type: 'integer' })
   periodDetailBgPosition: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'period_detail_boss_position_x', type: 'integer' })
   periodDetailBossPositionX: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'period_detail_boss_position_y', type: 'integer' })
   periodDetailBossPositionY: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'interval_start', type: 'text' })
   intervalStart: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'interval_end', type: 'text' })
   intervalEnd: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'calc_start', type: 'text' })
   calcStart: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'result_start', type: 'text' })
   resultStart: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'result_end', type: 'text' })
   resultEnd: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'limit_time', type: 'integer' })
   limitTime: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'chest_id', type: 'integer' })
   chestId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_detail_rehearsal_label_height', type: 'integer' })
   questDetailRehearsalLabelHeight: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'min_carry_over_time', type: 'integer' })
   minCarryOverTime: number;
 

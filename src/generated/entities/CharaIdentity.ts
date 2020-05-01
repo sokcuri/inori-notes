@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'chara_identity' })
@@ -8,7 +8,7 @@ export class CharaIdentity extends BaseEntity {
   @PrimaryColumn({ name: 'unit_id', type: 'integer' })
   unitId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'chara_type', type: 'integer' })
   charaType: number;
 

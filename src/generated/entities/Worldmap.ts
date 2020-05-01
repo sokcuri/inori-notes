@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'worldmap' })
@@ -8,27 +8,27 @@ export class Worldmap extends BaseEntity {
   @PrimaryColumn({ name: 'course_id', type: 'integer' })
   courseId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'name', type: 'text' })
   name: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'map_id', type: 'integer' })
   mapId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'sheet_id', type: 'text' })
   sheetId: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'que_id', type: 'text' })
   queId: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'start_area_id', type: 'integer' })
   startAreaId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'end_area_id', type: 'integer' })
   endAreaId: number;
 

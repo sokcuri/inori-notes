@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'visual_customize' })
@@ -8,39 +8,39 @@ export class VisualCustomize extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'title_prefab', type: 'integer' })
   titlePrefab: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'title_movie', type: 'integer' })
   titleMovie: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'title_voice', type: 'integer' })
   titleVoice: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_top_movie', type: 'integer' })
   storyTopMovie: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_top_movie', type: 'integer' })
   questTopMovie: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'profile_logo', type: 'integer' })
   profileLogo: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'watched_story_id', type: 'integer' })
   watchedStoryId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 

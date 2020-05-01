@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'content_release_data' })
@@ -8,19 +8,19 @@ export class ContentReleaseData extends BaseEntity {
   @PrimaryColumn({ name: 'system_id', type: 'integer' })
   systemId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'team_level', type: 'integer' })
   teamLevel: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_id', type: 'integer' })
   storyId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_id', type: 'integer' })
   questId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'dialog', type: 'text' })
   dialog: string;
 

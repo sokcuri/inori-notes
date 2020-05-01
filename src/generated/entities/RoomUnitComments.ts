@@ -1,10 +1,10 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'room_unit_comments' })
 export class RoomUnitComments extends BaseEntity {
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'id', type: 'integer' })
   id: number;
 
@@ -20,7 +20,7 @@ export class RoomUnitComments extends BaseEntity {
   @PrimaryColumn({ name: 'voice_id', type: 'integer' })
   voiceId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'beloved_step', type: 'integer' })
   belovedStep: number;
 
@@ -28,15 +28,15 @@ export class RoomUnitComments extends BaseEntity {
   @PrimaryColumn({ name: 'time', type: 'integer' })
   time: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'face_id', type: 'integer' })
   faceId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'description', type: 'text' })
   description: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'insert_word_type', type: 'integer' })
   insertWordType: number;
 

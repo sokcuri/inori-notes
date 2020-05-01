@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'unit_motion_list' })
@@ -8,7 +8,7 @@ export class UnitMotionList extends BaseEntity {
   @PrimaryColumn({ name: 'unit_id', type: 'integer' })
   unitId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'sp_motion', type: 'integer' })
   spMotion: number;
 

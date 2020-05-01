@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'unlock_rarity_6' })
@@ -16,91 +16,91 @@ export class UnlockRarity6 extends BaseEntity {
   @PrimaryColumn({ name: 'unlock_level', type: 'integer' })
   unlockLevel: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'unlock_flag', type: 'integer' })
   unlockFlag: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'consume_gold', type: 'integer' })
   consumeGold: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'material_type', type: 'integer' })
   materialType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'material_id', type: 'integer' })
   materialId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'material_count', type: 'integer' })
   materialCount: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'hp', type: 'integer' })
   hp: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'atk', type: 'integer' })
   atk: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'magic_str', type: 'integer' })
   magicStr: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'def', type: 'integer' })
   def: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'magic_def', type: 'integer' })
   magicDef: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'physical_critical', type: 'integer' })
   physicalCritical: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'magic_critical', type: 'integer' })
   magicCritical: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'wave_hp_recovery', type: 'integer' })
   waveHpRecovery: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'wave_energy_recovery', type: 'integer' })
   waveEnergyRecovery: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'dodge', type: 'integer' })
   dodge: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'physical_penetrate', type: 'integer' })
   physicalPenetrate: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'magic_penetrate', type: 'integer' })
   magicPenetrate: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'life_steal', type: 'integer' })
   lifeSteal: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'hp_recovery_rate', type: 'integer' })
   hpRecoveryRate: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'energy_recovery_rate', type: 'integer' })
   energyRecoveryRate: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'energy_reduce_rate', type: 'integer' })
   energyReduceRate: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'accuracy', type: 'integer' })
   accuracy: number;
 

@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'unit_background' })
@@ -8,23 +8,23 @@ export class UnitBackground extends BaseEntity {
   @PrimaryColumn({ name: 'unit_id', type: 'integer' })
   unitId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'unit_name', type: 'text' })
   unitName: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'bg_id', type: 'integer' })
   bgId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'bg_name', type: 'text' })
   bgName: string;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'position', type: 'real' })
   position: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'face_type', type: 'integer' })
   faceType: number;
 

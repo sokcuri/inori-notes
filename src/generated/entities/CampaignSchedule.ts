@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'campaign_schedule' })
@@ -8,35 +8,35 @@ export class CampaignSchedule extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'campaign_category', type: 'integer' })
   campaignCategory: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'value', type: 'real' })
   value: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'system_id', type: 'integer' })
   systemId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'icon_image', type: 'integer' })
   iconImage: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'level_id', type: 'integer' })
   levelId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'shiori_group_id', type: 'integer' })
   shioriGroupId: number;
 

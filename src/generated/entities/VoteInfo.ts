@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'vote_info' })
@@ -12,11 +12,11 @@ export class VoteInfo extends BaseEntity {
   @PrimaryColumn({ name: 'vote_help_index', type: 'integer' })
   voteHelpIndex: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'vote_title', type: 'text' })
   voteTitle: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'vote_help', type: 'text' })
   voteHelp: string;
 

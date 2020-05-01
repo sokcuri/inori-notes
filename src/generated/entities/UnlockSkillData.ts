@@ -1,10 +1,10 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'unlock_skill_data' })
 export class UnlockSkillData extends BaseEntity {
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'promotion_level', type: 'integer' })
   promotionLevel: number;
 

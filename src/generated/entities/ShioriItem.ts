@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'shiori_item' })
@@ -8,11 +8,11 @@ export class ShioriItem extends BaseEntity {
   @PrimaryColumn({ name: 'event_id', type: 'integer' })
   eventId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'unit_material_id_1', type: 'integer' })
   unitMaterialId1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'unit_material_id_2', type: 'integer' })
   unitMaterialId2: number;
 

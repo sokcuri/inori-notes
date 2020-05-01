@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'skill_cost' })
@@ -8,7 +8,7 @@ export class SkillCost extends BaseEntity {
   @PrimaryColumn({ name: 'target_level', type: 'integer' })
   targetLevel: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'cost', type: 'integer' })
   cost: number;
 

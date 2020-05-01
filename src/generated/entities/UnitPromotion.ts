@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'unit_promotion' })
@@ -12,27 +12,27 @@ export class UnitPromotion extends BaseEntity {
   @PrimaryColumn({ name: 'promotion_level', type: 'integer' })
   promotionLevel: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'equip_slot_1', type: 'integer' })
   equipSlot1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'equip_slot_2', type: 'integer' })
   equipSlot2: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'equip_slot_3', type: 'integer' })
   equipSlot3: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'equip_slot_4', type: 'integer' })
   equipSlot4: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'equip_slot_5', type: 'integer' })
   equipSlot5: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'equip_slot_6', type: 'integer' })
   equipSlot6: number;
 

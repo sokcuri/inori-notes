@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'sd_navi_comment' })
@@ -8,31 +8,31 @@ export class SdNaviComment extends BaseEntity {
   @PrimaryColumn({ name: 'comment_id', type: 'integer' })
   commentId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'where_type', type: 'integer' })
   whereType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'character_id', type: 'integer' })
   characterId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'motion_type', type: 'integer' })
   motionType: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'description', type: 'text', nullable: true })
   description: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'voice_id', type: 'integer' })
   voiceId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 

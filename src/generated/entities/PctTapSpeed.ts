@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'pct_tap_speed' })
@@ -8,11 +8,11 @@ export class PctTapSpeed extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'combo_count', type: 'integer' })
   comboCount: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'speed_magnification', type: 'integer' })
   speedMagnification: number;
 

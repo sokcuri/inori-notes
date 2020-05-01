@@ -1,10 +1,10 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'minigame' })
 export class Minigame extends BaseEntity {
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'id', type: 'integer' })
   id: number;
 
@@ -12,19 +12,19 @@ export class Minigame extends BaseEntity {
   @PrimaryColumn({ name: 'minigame_scheme_id', type: 'integer' })
   minigameSchemeId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'event_id', type: 'integer' })
   eventId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'release_conditions_1', type: 'integer' })
   releaseConditions1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'conditions_id_1', type: 'integer' })
   conditionsId1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'first_time_story_id', type: 'integer' })
   firstTimeStoryId: number;
 

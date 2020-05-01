@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'event_effect_setting' })
@@ -12,7 +12,7 @@ export class EventEffectSetting extends BaseEntity {
   @PrimaryColumn({ name: 'type', type: 'integer' })
   type: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'value', type: 'integer' })
   value: number;
 

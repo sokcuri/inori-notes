@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'unit_promotion_status' })
@@ -12,71 +12,71 @@ export class UnitPromotionStatus extends BaseEntity {
   @PrimaryColumn({ name: 'promotion_level', type: 'integer' })
   promotionLevel: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'hp', type: 'real' })
   hp: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'atk', type: 'real' })
   atk: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'magic_str', type: 'real' })
   magicStr: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'def', type: 'real' })
   def: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'magic_def', type: 'real' })
   magicDef: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'physical_critical', type: 'real' })
   physicalCritical: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'magic_critical', type: 'real' })
   magicCritical: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'wave_hp_recovery', type: 'real' })
   waveHpRecovery: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'wave_energy_recovery', type: 'real' })
   waveEnergyRecovery: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'dodge', type: 'real' })
   dodge: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'physical_penetrate', type: 'real' })
   physicalPenetrate: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'magic_penetrate', type: 'real' })
   magicPenetrate: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'life_steal', type: 'real' })
   lifeSteal: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'hp_recovery_rate', type: 'real' })
   hpRecoveryRate: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'energy_recovery_rate', type: 'real' })
   energyRecoveryRate: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'energy_reduce_rate', type: 'real' })
   energyReduceRate: number;
 
-  @Field()
+  @Field(type => Float)
   @Column({ name: 'accuracy', type: 'real' })
   accuracy: number;
 

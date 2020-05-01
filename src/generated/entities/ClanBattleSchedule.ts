@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'clan_battle_schedule' })
@@ -8,39 +8,39 @@ export class ClanBattleSchedule extends BaseEntity {
   @PrimaryColumn({ name: 'clan_battle_id', type: 'integer' })
   clanBattleId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'release_month', type: 'integer' })
   releaseMonth: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'last_clan_battle_id', type: 'integer' })
   lastClanBattleId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'point_per_stamina', type: 'integer' })
   pointPerStamina: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'cost_group_id', type: 'integer' })
   costGroupId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'cost_group_id_s', type: 'integer' })
   costGroupIdS: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'map_bgm', type: 'text' })
   mapBgm: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'resource_id', type: 'integer' })
   resourceId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 

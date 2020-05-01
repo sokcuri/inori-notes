@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'chara_fortune_schedule' })
@@ -8,15 +8,15 @@ export class CharaFortuneSchedule extends BaseEntity {
   @PrimaryColumn({ name: 'fortune_id', type: 'integer' })
   fortuneId: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'name', type: 'text' })
   name: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 

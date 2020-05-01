@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'hatsune_emblem_mission' })
@@ -8,59 +8,59 @@ export class HatsuneEmblemMission extends BaseEntity {
   @PrimaryColumn({ name: 'mission_id', type: 'integer' })
   missionId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'disp_group', type: 'integer' })
   dispGroup: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'category_icon', type: 'integer' })
   categoryIcon: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'description', type: 'text' })
   description: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'mission_condition', type: 'integer' })
   missionCondition: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_1', type: 'integer' })
   conditionValue1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_2', type: 'integer' })
   conditionValue2: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_value_3', type: 'integer' })
   conditionValue3: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'condition_num', type: 'integer' })
   conditionNum: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'mission_reward_id', type: 'integer' })
   missionRewardId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'system_id', type: 'integer' })
   systemId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'event_id', type: 'integer' })
   eventId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'visible_flag', type: 'integer' })
   visibleFlag: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 

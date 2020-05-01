@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'pct_itempoint' })
@@ -8,11 +8,11 @@ export class PctItempoint extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'item_id', type: 'integer' })
   itemId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'pct_point_coefficient', type: 'integer' })
   pctPointCoefficient: number;
 

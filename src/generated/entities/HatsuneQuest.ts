@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'hatsune_quest' })
@@ -8,159 +8,159 @@ export class HatsuneQuest extends BaseEntity {
   @PrimaryColumn({ name: 'quest_id', type: 'integer' })
   questId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'event_id', type: 'integer' })
   eventId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'area_id', type: 'integer' })
   areaId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_seq', type: 'integer' })
   questSeq: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'quest_name', type: 'text' })
   questName: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'position_x', type: 'integer' })
   positionX: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'position_y', type: 'integer' })
   positionY: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'icon_id', type: 'integer' })
   iconId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'stamina', type: 'integer' })
   stamina: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'stamina_start', type: 'integer' })
   staminaStart: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'team_exp', type: 'integer' })
   teamExp: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'unit_exp', type: 'integer' })
   unitExp: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'love', type: 'integer' })
   love: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'limit_time', type: 'integer' })
   limitTime: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'daily_limit', type: 'integer' })
   dailyLimit: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'clear_reward_group', type: 'integer' })
   clearRewardGroup: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'rank_reward_group', type: 'integer' })
   rankRewardGroup: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'drop_reward_type', type: 'integer' })
   dropRewardType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'drop_reward_id', type: 'integer' })
   dropRewardId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'drop_reward_num', type: 'integer' })
   dropRewardNum: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'drop_reward_odds', type: 'integer' })
   dropRewardOdds: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'background_1', type: 'integer' })
   background1: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'wave_bgm_sheet_id_1', type: 'text' })
   waveBgmSheetId1: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'wave_bgm_que_id_1', type: 'text' })
   waveBgmQueId1: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_id_wavestart_1', type: 'integer' })
   storyIdWavestart1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_id_waveend_1', type: 'integer' })
   storyIdWaveend1: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'background_2', type: 'integer' })
   background2: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'wave_bgm_sheet_id_2', type: 'text' })
   waveBgmSheetId2: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'wave_bgm_que_id_2', type: 'text' })
   waveBgmQueId2: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_id_wavestart_2', type: 'integer' })
   storyIdWavestart2: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_id_waveend_2', type: 'integer' })
   storyIdWaveend2: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'background_3', type: 'integer' })
   background3: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'wave_bgm_sheet_id_3', type: 'text' })
   waveBgmSheetId3: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'wave_bgm_que_id_3', type: 'text' })
   waveBgmQueId3: string;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_id_wavestart_3', type: 'integer' })
   storyIdWavestart3: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'story_id_waveend_3', type: 'integer' })
   storyIdWaveend3: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_detail_bg_id', type: 'integer' })
   questDetailBgId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'quest_detail_bg_position', type: 'integer' })
   questDetailBgPosition: number;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;
 
-  @Field()
+  @Field(type => String)
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 

@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'hatsune_special_enemy' })
@@ -8,23 +8,23 @@ export class HatsuneSpecialEnemy extends BaseEntity {
   @PrimaryColumn({ name: 'enemy_id', type: 'integer' })
   enemyId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'event_id', type: 'integer' })
   eventId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'mode', type: 'integer' })
   mode: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'enemy_point', type: 'integer' })
   enemyPoint: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'initial_position', type: 'integer' })
   initialPosition: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'order', type: 'integer' })
   order: number;
 

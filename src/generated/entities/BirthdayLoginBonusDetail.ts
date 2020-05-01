@@ -1,5 +1,5 @@
 import { Entity, BaseEntity, PrimaryColumn, Column } from 'typeorm';
-import { ObjectType, Field, ID } from 'type-graphql';
+import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 
 @ObjectType()
 @Entity({ name: 'birthday_login_bonus_detail' })
@@ -8,19 +8,19 @@ export class BirthdayLoginBonusDetail extends BaseEntity {
   @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'login_bonus_id', type: 'integer' })
   loginBonusId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'reward_type', type: 'integer' })
   rewardType: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'reward_id', type: 'integer' })
   rewardId: number;
 
-  @Field()
+  @Field(type => Int)
   @Column({ name: 'reward_num', type: 'integer' })
   rewardNum: number;
 
