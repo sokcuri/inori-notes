@@ -187,20 +187,20 @@ async function make(type: string, param: TableInfo | TableInfo[]) {
   }
 }
 
-async function makeEntity(tableInfo: TableInfo) {
-  await make('Entity', tableInfo);
+function makeEntity(tableInfo: TableInfo) {
+  return make('Entity', tableInfo);
 }
 
-async function makeResolver(tableInfo: TableInfo) {
-  await make('Resolver', tableInfo);
+function makeResolver(tableInfo: TableInfo) {
+  return make('Resolver', tableInfo);
 }
 
-async function makeEntityIndex(tables: TableInfo[]) {
-  await make('EntityIndex', tables);
+function makeEntityIndex(tables: TableInfo[]) {
+  return make('EntityIndex', tables);
 }
 
-async function makeResolverIndex(tables: TableInfo[]) {
-  await make('ResolverIndex', tables);
+function makeResolverIndex(tables: TableInfo[]) {
+  return make('ResolverIndex', tables);
 }
 
 async function main() {
