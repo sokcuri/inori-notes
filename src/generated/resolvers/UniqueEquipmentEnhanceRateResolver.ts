@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UniqueEquipmentEnhanceRate } from '../models/UniqueEquipmentEnhanceRate';
+import { UniqueEquipmentEnhanceRate } from '../entities/UniqueEquipmentEnhanceRate';
 
 @Resolver()
 export class UniqueEquipmentEnhanceRateResolver {

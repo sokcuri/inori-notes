@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomUnitComments } from '../models/RoomUnitComments';
+import { RoomUnitComments } from '../entities/RoomUnitComments';
 
 @Resolver()
 export class RoomUnitCommentsResolver {

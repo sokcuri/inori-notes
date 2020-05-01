@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { DungeonAreaData } from '../models/DungeonAreaData';
+import { DungeonAreaData } from '../entities/DungeonAreaData';
 
 @Resolver()
 export class DungeonAreaDataResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { QuestAreaData } from '../models/QuestAreaData';
+import { QuestAreaData } from '../entities/QuestAreaData';
 
 @Resolver()
 export class QuestAreaDataResolver {

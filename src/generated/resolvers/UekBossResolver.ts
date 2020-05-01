@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UekBoss } from '../models/UekBoss';
+import { UekBoss } from '../entities/UekBoss';
 
 @Resolver()
 export class UekBossResolver {

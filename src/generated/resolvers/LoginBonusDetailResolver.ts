@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { LoginBonusDetail } from '../models/LoginBonusDetail';
+import { LoginBonusDetail } from '../entities/LoginBonusDetail';
 
 @Resolver()
 export class LoginBonusDetailResolver {

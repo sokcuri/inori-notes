@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { FixLineupGroupSet } from '../models/FixLineupGroupSet';
+import { FixLineupGroupSet } from '../entities/FixLineupGroupSet';
 
 @Resolver()
 export class FixLineupGroupSetResolver {

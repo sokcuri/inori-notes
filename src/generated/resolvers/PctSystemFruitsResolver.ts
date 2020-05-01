@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { PctSystemFruits } from '../models/PctSystemFruits';
+import { PctSystemFruits } from '../entities/PctSystemFruits';
 
 @Resolver()
 export class PctSystemFruitsResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneBgChangeData } from '../models/HatsuneBgChangeData';
+import { HatsuneBgChangeData } from '../entities/HatsuneBgChangeData';
 
 @Resolver()
 export class HatsuneBgChangeDataResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShioriStationaryMissionData } from '../models/ShioriStationaryMissionData';
+import { ShioriStationaryMissionData } from '../entities/ShioriStationaryMissionData';
 
 @Resolver()
 export class ShioriStationaryMissionDataResolver {

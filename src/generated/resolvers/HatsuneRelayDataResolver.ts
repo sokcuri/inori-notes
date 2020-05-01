@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneRelayData } from '../models/HatsuneRelayData';
+import { HatsuneRelayData } from '../entities/HatsuneRelayData';
 
 @Resolver()
 export class HatsuneRelayDataResolver {

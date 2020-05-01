@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SekaiTopStoryData } from '../models/SekaiTopStoryData';
+import { SekaiTopStoryData } from '../entities/SekaiTopStoryData';
 
 @Resolver()
 export class SekaiTopStoryDataResolver {

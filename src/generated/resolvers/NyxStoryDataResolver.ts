@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { NyxStoryData } from '../models/NyxStoryData';
+import { NyxStoryData } from '../entities/NyxStoryData';
 
 @Resolver()
 export class NyxStoryDataResolver {

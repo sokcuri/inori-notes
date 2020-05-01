@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { PctItempoint } from '../models/PctItempoint';
+import { PctItempoint } from '../entities/PctItempoint';
 
 @Resolver()
 export class PctItempointResolver {

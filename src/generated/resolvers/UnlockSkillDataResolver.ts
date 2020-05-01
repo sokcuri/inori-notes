@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnlockSkillData } from '../models/UnlockSkillData';
+import { UnlockSkillData } from '../entities/UnlockSkillData';
 
 @Resolver()
 export class UnlockSkillDataResolver {

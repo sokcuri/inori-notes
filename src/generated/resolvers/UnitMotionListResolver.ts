@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitMotionList } from '../models/UnitMotionList';
+import { UnitMotionList } from '../entities/UnitMotionList';
 
 @Resolver()
 export class UnitMotionListResolver {

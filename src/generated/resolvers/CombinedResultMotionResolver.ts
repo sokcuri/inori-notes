@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CombinedResultMotion } from '../models/CombinedResultMotion';
+import { CombinedResultMotion } from '../entities/CombinedResultMotion';
 
 @Resolver()
 export class CombinedResultMotionResolver {

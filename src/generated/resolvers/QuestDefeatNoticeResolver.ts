@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { QuestDefeatNotice } from '../models/QuestDefeatNotice';
+import { QuestDefeatNotice } from '../entities/QuestDefeatNotice';
 
 @Resolver()
 export class QuestDefeatNoticeResolver {

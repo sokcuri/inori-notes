@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventEnemyRewardGroup } from '../models/EventEnemyRewardGroup';
+import { EventEnemyRewardGroup } from '../entities/EventEnemyRewardGroup';
 
 @Resolver()
 export class EventEnemyRewardGroupResolver {

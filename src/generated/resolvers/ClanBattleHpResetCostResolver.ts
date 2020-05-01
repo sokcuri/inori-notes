@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ClanBattleHpResetCost } from '../models/ClanBattleHpResetCost';
+import { ClanBattleHpResetCost } from '../entities/ClanBattleHpResetCost';
 
 @Resolver()
 export class ClanBattleHpResetCostResolver {

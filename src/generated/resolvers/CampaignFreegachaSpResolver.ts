@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CampaignFreegachaSp } from '../models/CampaignFreegachaSp';
+import { CampaignFreegachaSp } from '../entities/CampaignFreegachaSp';
 
 @Resolver()
 export class CampaignFreegachaSpResolver {

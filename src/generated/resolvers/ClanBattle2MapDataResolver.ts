@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ClanBattle2MapData } from '../models/ClanBattle2MapData';
+import { ClanBattle2MapData } from '../entities/ClanBattle2MapData';
 
 @Resolver()
 export class ClanBattle2MapDataResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneMultiRouteParameter } from '../models/HatsuneMultiRouteParameter';
+import { HatsuneMultiRouteParameter } from '../entities/HatsuneMultiRouteParameter';
 
 @Resolver()
 export class HatsuneMultiRouteParameterResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventBossTreasureContent } from '../models/EventBossTreasureContent';
+import { EventBossTreasureContent } from '../entities/EventBossTreasureContent';
 
 @Resolver()
 export class EventBossTreasureContentResolver {

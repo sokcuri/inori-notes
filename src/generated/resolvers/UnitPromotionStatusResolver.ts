@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitPromotionStatus } from '../models/UnitPromotionStatus';
+import { UnitPromotionStatus } from '../entities/UnitPromotionStatus';
 
 @Resolver()
 export class UnitPromotionStatusResolver {

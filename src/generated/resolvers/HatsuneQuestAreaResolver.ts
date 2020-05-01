@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneQuestArea } from '../models/HatsuneQuestArea';
+import { HatsuneQuestArea } from '../entities/HatsuneQuestArea';
 
 @Resolver()
 export class HatsuneQuestAreaResolver {

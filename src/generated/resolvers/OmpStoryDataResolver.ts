@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { OmpStoryData } from '../models/OmpStoryData';
+import { OmpStoryData } from '../entities/OmpStoryData';
 
 @Resolver()
 export class OmpStoryDataResolver {

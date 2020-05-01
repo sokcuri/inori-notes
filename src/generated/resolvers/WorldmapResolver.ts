@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { Worldmap } from '../models/Worldmap';
+import { Worldmap } from '../entities/Worldmap';
 
 @Resolver()
 export class WorldmapResolver {

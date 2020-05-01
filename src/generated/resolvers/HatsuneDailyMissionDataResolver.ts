@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneDailyMissionData } from '../models/HatsuneDailyMissionData';
+import { HatsuneDailyMissionData } from '../entities/HatsuneDailyMissionData';
 
 @Resolver()
 export class HatsuneDailyMissionDataResolver {

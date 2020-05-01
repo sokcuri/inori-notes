@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventGachaData } from '../models/EventGachaData';
+import { EventGachaData } from '../entities/EventGachaData';
 
 @Resolver()
 export class EventGachaDataResolver {

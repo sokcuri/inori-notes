@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SrtPanel } from '../models/SrtPanel';
+import { SrtPanel } from '../entities/SrtPanel';
 
 @Resolver()
 export class SrtPanelResolver {

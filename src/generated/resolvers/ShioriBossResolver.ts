@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShioriBoss } from '../models/ShioriBoss';
+import { ShioriBoss } from '../entities/ShioriBoss';
 
 @Resolver()
 export class ShioriBossResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { NotifData } from '../models/NotifData';
+import { NotifData } from '../entities/NotifData';
 
 @Resolver()
 export class NotifDataResolver {

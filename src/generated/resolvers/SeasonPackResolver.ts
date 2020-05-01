@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SeasonPack } from '../models/SeasonPack';
+import { SeasonPack } from '../entities/SeasonPack';
 
 @Resolver()
 export class SeasonPackResolver {

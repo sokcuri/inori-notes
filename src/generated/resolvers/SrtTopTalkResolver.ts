@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SrtTopTalk } from '../models/SrtTopTalk';
+import { SrtTopTalk } from '../entities/SrtTopTalk';
 
 @Resolver()
 export class SrtTopTalkResolver {

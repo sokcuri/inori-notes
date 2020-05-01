@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TtkWeapon } from '../models/TtkWeapon';
+import { TtkWeapon } from '../entities/TtkWeapon';
 
 @Resolver()
 export class TtkWeaponResolver {

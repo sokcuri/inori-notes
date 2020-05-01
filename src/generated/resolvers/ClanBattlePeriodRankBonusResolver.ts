@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ClanBattlePeriodRankBonus } from '../models/ClanBattlePeriodRankBonus';
+import { ClanBattlePeriodRankBonus } from '../entities/ClanBattlePeriodRankBonus';
 
 @Resolver()
 export class ClanBattlePeriodRankBonusResolver {

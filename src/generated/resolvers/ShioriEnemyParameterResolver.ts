@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShioriEnemyParameter } from '../models/ShioriEnemyParameter';
+import { ShioriEnemyParameter } from '../entities/ShioriEnemyParameter';
 
 @Resolver()
 export class ShioriEnemyParameterResolver {

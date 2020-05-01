@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { FkeReward } from '../models/FkeReward';
+import { FkeReward } from '../entities/FkeReward';
 
 @Resolver()
 export class FkeRewardResolver {

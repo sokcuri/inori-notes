@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { StoryCharacterMask } from '../models/StoryCharacterMask';
+import { StoryCharacterMask } from '../entities/StoryCharacterMask';
 
 @Resolver()
 export class StoryCharacterMaskResolver {

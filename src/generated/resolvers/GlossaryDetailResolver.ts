@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { GlossaryDetail } from '../models/GlossaryDetail';
+import { GlossaryDetail } from '../entities/GlossaryDetail';
 
 @Resolver()
 export class GlossaryDetailResolver {

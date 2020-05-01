@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TtkEnemy } from '../models/TtkEnemy';
+import { TtkEnemy } from '../entities/TtkEnemy';
 
 @Resolver()
 export class TtkEnemyResolver {

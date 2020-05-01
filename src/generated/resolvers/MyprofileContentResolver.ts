@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { MyprofileContent } from '../models/MyprofileContent';
+import { MyprofileContent } from '../entities/MyprofileContent';
 
 @Resolver()
 export class MyprofileContentResolver {

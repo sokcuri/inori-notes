@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnlockUnitCondition } from '../models/UnlockUnitCondition';
+import { UnlockUnitCondition } from '../entities/UnlockUnitCondition';
 
 @Resolver()
 export class UnlockUnitConditionResolver {

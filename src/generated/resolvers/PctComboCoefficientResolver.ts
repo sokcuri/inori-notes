@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { PctComboCoefficient } from '../models/PctComboCoefficient';
+import { PctComboCoefficient } from '../entities/PctComboCoefficient';
 
 @Resolver()
 export class PctComboCoefficientResolver {

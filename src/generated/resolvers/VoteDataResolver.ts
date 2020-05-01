@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { VoteData } from '../models/VoteData';
+import { VoteData } from '../entities/VoteData';
 
 @Resolver()
 export class VoteDataResolver {

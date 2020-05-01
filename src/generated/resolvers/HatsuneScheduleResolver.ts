@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneSchedule } from '../models/HatsuneSchedule';
+import { HatsuneSchedule } from '../entities/HatsuneSchedule';
 
 @Resolver()
 export class HatsuneScheduleResolver {

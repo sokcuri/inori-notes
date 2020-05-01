@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitAttackPattern } from '../models/UnitAttackPattern';
+import { UnitAttackPattern } from '../entities/UnitAttackPattern';
 
 @Resolver()
 export class UnitAttackPatternResolver {

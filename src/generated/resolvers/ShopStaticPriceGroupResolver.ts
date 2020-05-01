@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShopStaticPriceGroup } from '../models/ShopStaticPriceGroup';
+import { ShopStaticPriceGroup } from '../entities/ShopStaticPriceGroup';
 
 @Resolver()
 export class ShopStaticPriceGroupResolver {

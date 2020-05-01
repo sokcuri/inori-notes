@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventNaviComment } from '../models/EventNaviComment';
+import { EventNaviComment } from '../entities/EventNaviComment';
 
 @Resolver()
 export class EventNaviCommentResolver {

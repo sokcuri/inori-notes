@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { KaiserQuestData } from '../models/KaiserQuestData';
+import { KaiserQuestData } from '../entities/KaiserQuestData';
 
 @Resolver()
 export class KaiserQuestDataResolver {

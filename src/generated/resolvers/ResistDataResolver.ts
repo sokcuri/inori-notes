@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ResistData } from '../models/ResistData';
+import { ResistData } from '../entities/ResistData';
 
 @Resolver()
 export class ResistDataResolver {

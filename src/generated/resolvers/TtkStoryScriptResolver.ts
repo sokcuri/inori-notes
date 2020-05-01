@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TtkStoryScript } from '../models/TtkStoryScript';
+import { TtkStoryScript } from '../entities/TtkStoryScript';
 
 @Resolver()
 export class TtkStoryScriptResolver {

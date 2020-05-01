@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomSkinColor } from '../models/RoomSkinColor';
+import { RoomSkinColor } from '../entities/RoomSkinColor';
 
 @Resolver()
 export class RoomSkinColorResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TrainingQuestData } from '../models/TrainingQuestData';
+import { TrainingQuestData } from '../entities/TrainingQuestData';
 
 @Resolver()
 export class TrainingQuestDataResolver {

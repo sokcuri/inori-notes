@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UekSpineAnimLink } from '../models/UekSpineAnimLink';
+import { UekSpineAnimLink } from '../entities/UekSpineAnimLink';
 
 @Resolver()
 export class UekSpineAnimLinkResolver {

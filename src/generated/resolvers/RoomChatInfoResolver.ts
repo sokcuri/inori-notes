@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomChatInfo } from '../models/RoomChatInfo';
+import { RoomChatInfo } from '../entities/RoomChatInfo';
 
 @Resolver()
 export class RoomChatInfoResolver {

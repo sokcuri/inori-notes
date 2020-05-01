@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneQuizCondition } from '../models/HatsuneQuizCondition';
+import { HatsuneQuizCondition } from '../entities/HatsuneQuizCondition';
 
 @Resolver()
 export class HatsuneQuizConditionResolver {

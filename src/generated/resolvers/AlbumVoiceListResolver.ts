@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { AlbumVoiceList } from '../models/AlbumVoiceList';
+import { AlbumVoiceList } from '../entities/AlbumVoiceList';
 
 @Resolver()
 export class AlbumVoiceListResolver {

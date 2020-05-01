@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShioriEventList } from '../models/ShioriEventList';
+import { ShioriEventList } from '../entities/ShioriEventList';
 
 @Resolver()
 export class ShioriEventListResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CampaignShioriGroup } from '../models/CampaignShioriGroup';
+import { CampaignShioriGroup } from '../entities/CampaignShioriGroup';
 
 @Resolver()
 export class CampaignShioriGroupResolver {

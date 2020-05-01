@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitStatusCoefficient } from '../models/UnitStatusCoefficient';
+import { UnitStatusCoefficient } from '../entities/UnitStatusCoefficient';
 
 @Resolver()
 export class UnitStatusCoefficientResolver {

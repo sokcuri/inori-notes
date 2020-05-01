@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SekaiBossFixReward } from '../models/SekaiBossFixReward';
+import { SekaiBossFixReward } from '../entities/SekaiBossFixReward';
 
 @Resolver()
 export class SekaiBossFixRewardResolver {

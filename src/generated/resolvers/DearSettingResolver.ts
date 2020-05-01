@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { DearSetting } from '../models/DearSetting';
+import { DearSetting } from '../entities/DearSetting';
 
 @Resolver()
 export class DearSettingResolver {

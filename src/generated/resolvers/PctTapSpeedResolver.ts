@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { PctTapSpeed } from '../models/PctTapSpeed';
+import { PctTapSpeed } from '../entities/PctTapSpeed';
 
 @Resolver()
 export class PctTapSpeedResolver {

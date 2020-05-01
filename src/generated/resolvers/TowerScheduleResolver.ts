@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TowerSchedule } from '../models/TowerSchedule';
+import { TowerSchedule } from '../entities/TowerSchedule';
 
 @Resolver()
 export class TowerScheduleResolver {

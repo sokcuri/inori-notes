@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomEmotionIcon } from '../models/RoomEmotionIcon';
+import { RoomEmotionIcon } from '../entities/RoomEmotionIcon';
 
 @Resolver()
 export class RoomEmotionIconResolver {

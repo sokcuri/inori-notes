@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ContentReleaseData } from '../models/ContentReleaseData';
+import { ContentReleaseData } from '../entities/ContentReleaseData';
 
 @Resolver()
 export class ContentReleaseDataResolver {

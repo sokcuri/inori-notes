@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { MusicContent } from '../models/MusicContent';
+import { MusicContent } from '../entities/MusicContent';
 
 @Resolver()
 export class MusicContentResolver {

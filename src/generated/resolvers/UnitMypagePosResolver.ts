@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitMypagePos } from '../models/UnitMypagePos';
+import { UnitMypagePos } from '../entities/UnitMypagePos';
 
 @Resolver()
 export class UnitMypagePosResolver {

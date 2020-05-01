@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SekaiSchedule } from '../models/SekaiSchedule';
+import { SekaiSchedule } from '../entities/SekaiSchedule';
 
 @Resolver()
 export class SekaiScheduleResolver {

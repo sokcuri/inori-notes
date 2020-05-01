@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitComments } from '../models/UnitComments';
+import { UnitComments } from '../entities/UnitComments';
 
 @Resolver()
 export class UnitCommentsResolver {

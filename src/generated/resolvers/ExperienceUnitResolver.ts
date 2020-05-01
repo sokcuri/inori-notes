@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ExperienceUnit } from '../models/ExperienceUnit';
+import { ExperienceUnit } from '../entities/ExperienceUnit';
 
 @Resolver()
 export class ExperienceUnitResolver {

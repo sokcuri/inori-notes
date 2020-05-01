@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { QuestAnnihilation } from '../models/QuestAnnihilation';
+import { QuestAnnihilation } from '../entities/QuestAnnihilation';
 
 @Resolver()
 export class QuestAnnihilationResolver {

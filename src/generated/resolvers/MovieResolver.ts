@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { Movie } from '../models/Movie';
+import { Movie } from '../entities/Movie';
 
 @Resolver()
 export class MovieResolver {

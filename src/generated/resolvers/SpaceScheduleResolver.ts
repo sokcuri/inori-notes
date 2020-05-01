@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SpaceSchedule } from '../models/SpaceSchedule';
+import { SpaceSchedule } from '../entities/SpaceSchedule';
 
 @Resolver()
 export class SpaceScheduleResolver {

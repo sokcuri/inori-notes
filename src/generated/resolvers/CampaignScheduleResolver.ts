@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CampaignSchedule } from '../models/CampaignSchedule';
+import { CampaignSchedule } from '../entities/CampaignSchedule';
 
 @Resolver()
 export class CampaignScheduleResolver {

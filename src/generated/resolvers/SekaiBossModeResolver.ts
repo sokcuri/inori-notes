@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SekaiBossMode } from '../models/SekaiBossMode';
+import { SekaiBossMode } from '../entities/SekaiBossMode';
 
 @Resolver()
 export class SekaiBossModeResolver {

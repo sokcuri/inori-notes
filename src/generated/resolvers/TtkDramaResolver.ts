@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TtkDrama } from '../models/TtkDrama';
+import { TtkDrama } from '../entities/TtkDrama';
 
 @Resolver()
 export class TtkDramaResolver {

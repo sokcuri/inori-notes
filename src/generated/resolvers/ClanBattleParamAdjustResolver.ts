@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ClanBattleParamAdjust } from '../models/ClanBattleParamAdjust';
+import { ClanBattleParamAdjust } from '../entities/ClanBattleParamAdjust';
 
 @Resolver()
 export class ClanBattleParamAdjustResolver {

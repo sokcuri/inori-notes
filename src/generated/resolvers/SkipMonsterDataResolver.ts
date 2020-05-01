@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SkipMonsterData } from '../models/SkipMonsterData';
+import { SkipMonsterData } from '../entities/SkipMonsterData';
 
 @Resolver()
 export class SkipMonsterDataResolver {

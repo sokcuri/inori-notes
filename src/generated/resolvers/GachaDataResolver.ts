@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { GachaData } from '../models/GachaData';
+import { GachaData } from '../entities/GachaData';
 
 @Resolver()
 export class GachaDataResolver {

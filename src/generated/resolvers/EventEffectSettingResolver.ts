@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventEffectSetting } from '../models/EventEffectSetting';
+import { EventEffectSetting } from '../entities/EventEffectSetting';
 
 @Resolver()
 export class EventEffectSettingResolver {

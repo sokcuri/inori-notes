@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventStoryDetail } from '../models/EventStoryDetail';
+import { EventStoryDetail } from '../entities/EventStoryDetail';
 
 @Resolver()
 export class EventStoryDetailResolver {

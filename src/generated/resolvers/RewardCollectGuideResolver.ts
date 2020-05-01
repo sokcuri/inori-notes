@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RewardCollectGuide } from '../models/RewardCollectGuide';
+import { RewardCollectGuide } from '../entities/RewardCollectGuide';
 
 @Resolver()
 export class RewardCollectGuideResolver {

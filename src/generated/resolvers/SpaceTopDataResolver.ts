@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SpaceTopData } from '../models/SpaceTopData';
+import { SpaceTopData } from '../entities/SpaceTopData';
 
 @Resolver()
 export class SpaceTopDataResolver {

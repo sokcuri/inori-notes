@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SrtReward } from '../models/SrtReward';
+import { SrtReward } from '../entities/SrtReward';
 
 @Resolver()
 export class SrtRewardResolver {

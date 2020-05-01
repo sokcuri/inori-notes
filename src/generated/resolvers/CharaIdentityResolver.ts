@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CharaIdentity } from '../models/CharaIdentity';
+import { CharaIdentity } from '../entities/CharaIdentity';
 
 @Resolver()
 export class CharaIdentityResolver {

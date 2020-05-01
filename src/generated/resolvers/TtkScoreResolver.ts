@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TtkScore } from '../models/TtkScore';
+import { TtkScore } from '../entities/TtkScore';
 
 @Resolver()
 export class TtkScoreResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TowerWaveGroupData } from '../models/TowerWaveGroupData';
+import { TowerWaveGroupData } from '../entities/TowerWaveGroupData';
 
 @Resolver()
 export class TowerWaveGroupDataResolver {

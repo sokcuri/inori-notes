@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UekDrama } from '../models/UekDrama';
+import { UekDrama } from '../entities/UekDrama';
 
 @Resolver()
 export class UekDramaResolver {

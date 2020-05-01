@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CharaFortuneReward } from '../models/CharaFortuneReward';
+import { CharaFortuneReward } from '../entities/CharaFortuneReward';
 
 @Resolver()
 export class CharaFortuneRewardResolver {

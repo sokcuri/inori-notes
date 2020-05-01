@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ReturnSpecialfesBanner } from '../models/ReturnSpecialfesBanner';
+import { ReturnSpecialfesBanner } from '../entities/ReturnSpecialfesBanner';
 
 @Resolver()
 export class ReturnSpecialfesBannerResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShioriQuestCondition } from '../models/ShioriQuestCondition';
+import { ShioriQuestCondition } from '../entities/ShioriQuestCondition';
 
 @Resolver()
 export class ShioriQuestConditionResolver {

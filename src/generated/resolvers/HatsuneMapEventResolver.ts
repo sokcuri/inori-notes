@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneMapEvent } from '../models/HatsuneMapEvent';
+import { HatsuneMapEvent } from '../entities/HatsuneMapEvent';
 
 @Resolver()
 export class HatsuneMapEventResolver {

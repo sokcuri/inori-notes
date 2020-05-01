@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { HatsuneSpecialBossTicketCount } from '../models/HatsuneSpecialBossTicketCount';
+import { HatsuneSpecialBossTicketCount } from '../entities/HatsuneSpecialBossTicketCount';
 
 @Resolver()
 export class HatsuneSpecialBossTicketCountResolver {

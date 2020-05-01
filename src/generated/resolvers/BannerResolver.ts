@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { Banner } from '../models/Banner';
+import { Banner } from '../entities/Banner';
 
 @Resolver()
 export class BannerResolver {

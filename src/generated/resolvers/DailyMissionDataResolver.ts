@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { DailyMissionData } from '../models/DailyMissionData';
+import { DailyMissionData } from '../entities/DailyMissionData';
 
 @Resolver()
 export class DailyMissionDataResolver {

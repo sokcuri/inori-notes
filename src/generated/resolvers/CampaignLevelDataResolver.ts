@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CampaignLevelData } from '../models/CampaignLevelData';
+import { CampaignLevelData } from '../entities/CampaignLevelData';
 
 @Resolver()
 export class CampaignLevelDataResolver {

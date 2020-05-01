@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ClanInviteLevelGroup } from '../models/ClanInviteLevelGroup';
+import { ClanInviteLevelGroup } from '../entities/ClanInviteLevelGroup';
 
 @Resolver()
 export class ClanInviteLevelGroupResolver {

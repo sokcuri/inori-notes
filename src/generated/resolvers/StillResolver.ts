@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { Still } from '../models/Still';
+import { Still } from '../entities/Still';
 
 @Resolver()
 export class StillResolver {

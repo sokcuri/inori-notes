@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { GoldsetData2 } from '../models/GoldsetData2';
+import { GoldsetData2 } from '../entities/GoldsetData2';
 
 @Resolver()
 export class GoldsetData2Resolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { Guild } from '../models/Guild';
+import { Guild } from '../entities/Guild';
 
 @Resolver()
 export class GuildResolver {

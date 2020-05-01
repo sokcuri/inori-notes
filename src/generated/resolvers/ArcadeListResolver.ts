@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ArcadeList } from '../models/ArcadeList';
+import { ArcadeList } from '../entities/ArcadeList';
 
 @Resolver()
 export class ArcadeListResolver {

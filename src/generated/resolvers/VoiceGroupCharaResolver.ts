@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { VoiceGroupChara } from '../models/VoiceGroupChara';
+import { VoiceGroupChara } from '../entities/VoiceGroupChara';
 
 @Resolver()
 export class VoiceGroupCharaResolver {

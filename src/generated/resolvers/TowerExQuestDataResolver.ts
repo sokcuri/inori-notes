@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TowerExQuestData } from '../models/TowerExQuestData';
+import { TowerExQuestData } from '../entities/TowerExQuestData';
 
 @Resolver()
 export class TowerExQuestDataResolver {

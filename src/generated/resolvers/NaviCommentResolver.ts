@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { NaviComment } from '../models/NaviComment';
+import { NaviComment } from '../entities/NaviComment';
 
 @Resolver()
 export class NaviCommentResolver {

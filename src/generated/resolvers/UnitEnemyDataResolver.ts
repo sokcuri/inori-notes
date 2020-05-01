@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitEnemyData } from '../models/UnitEnemyData';
+import { UnitEnemyData } from '../entities/UnitEnemyData';
 
 @Resolver()
 export class UnitEnemyDataResolver {

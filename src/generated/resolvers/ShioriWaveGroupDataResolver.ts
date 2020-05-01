@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShioriWaveGroupData } from '../models/ShioriWaveGroupData';
+import { ShioriWaveGroupData } from '../entities/ShioriWaveGroupData';
 
 @Resolver()
 export class ShioriWaveGroupDataResolver {

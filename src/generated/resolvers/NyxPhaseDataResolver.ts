@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { NyxPhaseData } from '../models/NyxPhaseData';
+import { NyxPhaseData } from '../entities/NyxPhaseData';
 
 @Resolver()
 export class NyxPhaseDataResolver {

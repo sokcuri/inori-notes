@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ArenaDailyRankReward } from '../models/ArenaDailyRankReward';
+import { ArenaDailyRankReward } from '../entities/ArenaDailyRankReward';
 
 @Resolver()
 export class ArenaDailyRankRewardResolver {

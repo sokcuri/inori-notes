@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ProfileFrame } from '../models/ProfileFrame';
+import { ProfileFrame } from '../entities/ProfileFrame';
 
 @Resolver()
 export class ProfileFrameResolver {

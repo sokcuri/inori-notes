@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EnemyMParts } from '../models/EnemyMParts';
+import { EnemyMParts } from '../entities/EnemyMParts';
 
 @Resolver()
 export class EnemyMPartsResolver {

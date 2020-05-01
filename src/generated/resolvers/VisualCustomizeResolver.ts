@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { VisualCustomize } from '../models/VisualCustomize';
+import { VisualCustomize } from '../entities/VisualCustomize';
 
 @Resolver()
 export class VisualCustomizeResolver {

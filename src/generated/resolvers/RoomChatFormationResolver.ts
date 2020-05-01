@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomChatFormation } from '../models/RoomChatFormation';
+import { RoomChatFormation } from '../entities/RoomChatFormation';
 
 @Resolver()
 export class RoomChatFormationResolver {

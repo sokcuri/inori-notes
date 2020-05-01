@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventWaveGroupData } from '../models/EventWaveGroupData';
+import { EventWaveGroupData } from '../entities/EventWaveGroupData';
 
 @Resolver()
 export class EventWaveGroupDataResolver {

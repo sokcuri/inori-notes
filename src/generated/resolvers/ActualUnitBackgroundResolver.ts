@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ActualUnitBackground } from '../models/ActualUnitBackground';
+import { ActualUnitBackground } from '../entities/ActualUnitBackground';
 
 @Resolver()
 export class ActualUnitBackgroundResolver {

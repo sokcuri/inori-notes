@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { UnitPromotion } from '../models/UnitPromotion';
+import { UnitPromotion } from '../entities/UnitPromotion';
 
 @Resolver()
 export class UnitPromotionResolver {

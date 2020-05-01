@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SrtAction } from '../models/SrtAction';
+import { SrtAction } from '../entities/SrtAction';
 
 @Resolver()
 export class SrtActionResolver {

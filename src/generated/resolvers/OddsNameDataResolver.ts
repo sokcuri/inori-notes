@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { OddsNameData } from '../models/OddsNameData';
+import { OddsNameData } from '../entities/OddsNameData';
 
 @Resolver()
 export class OddsNameDataResolver {

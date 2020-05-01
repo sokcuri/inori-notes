@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { KaiserRestrictionGroup } from '../models/KaiserRestrictionGroup';
+import { KaiserRestrictionGroup } from '../entities/KaiserRestrictionGroup';
 
 @Resolver()
 export class KaiserRestrictionGroupResolver {

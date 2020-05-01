@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SkillCost } from '../models/SkillCost';
+import { SkillCost } from '../entities/SkillCost';
 
 @Resolver()
 export class SkillCostResolver {

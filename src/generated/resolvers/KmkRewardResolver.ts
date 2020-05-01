@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { KmkReward } from '../models/KmkReward';
+import { KmkReward } from '../entities/KmkReward';
 
 @Resolver()
 export class KmkRewardResolver {

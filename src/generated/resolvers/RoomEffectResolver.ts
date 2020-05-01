@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomEffect } from '../models/RoomEffect';
+import { RoomEffect } from '../entities/RoomEffect';
 
 @Resolver()
 export class RoomEffectResolver {

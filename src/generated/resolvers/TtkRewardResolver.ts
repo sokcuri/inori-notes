@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TtkReward } from '../models/TtkReward';
+import { TtkReward } from '../entities/TtkReward';
 
 @Resolver()
 export class TtkRewardResolver {

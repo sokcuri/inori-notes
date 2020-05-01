@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { PctGamingMotion } from '../models/PctGamingMotion';
+import { PctGamingMotion } from '../entities/PctGamingMotion';
 
 @Resolver()
 export class PctGamingMotionResolver {

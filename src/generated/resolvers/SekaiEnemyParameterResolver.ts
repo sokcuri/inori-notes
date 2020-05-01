@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SekaiEnemyParameter } from '../models/SekaiEnemyParameter';
+import { SekaiEnemyParameter } from '../entities/SekaiEnemyParameter';
 
 @Resolver()
 export class SekaiEnemyParameterResolver {

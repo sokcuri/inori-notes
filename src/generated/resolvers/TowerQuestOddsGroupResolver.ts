@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TowerQuestOddsGroup } from '../models/TowerQuestOddsGroup';
+import { TowerQuestOddsGroup } from '../entities/TowerQuestOddsGroup';
 
 @Resolver()
 export class TowerQuestOddsGroupResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomChange } from '../models/RoomChange';
+import { RoomChange } from '../entities/RoomChange';
 
 @Resolver()
 export class RoomChangeResolver {

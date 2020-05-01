@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { PositionSetting } from '../models/PositionSetting';
+import { PositionSetting } from '../entities/PositionSetting';
 
 @Resolver()
 export class PositionSettingResolver {

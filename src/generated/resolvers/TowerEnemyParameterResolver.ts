@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { TowerEnemyParameter } from '../models/TowerEnemyParameter';
+import { TowerEnemyParameter } from '../entities/TowerEnemyParameter';
 
 @Resolver()
 export class TowerEnemyParameterResolver {

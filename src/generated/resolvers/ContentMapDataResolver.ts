@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ContentMapData } from '../models/ContentMapData';
+import { ContentMapData } from '../entities/ContentMapData';
 
 @Resolver()
 export class ContentMapDataResolver {

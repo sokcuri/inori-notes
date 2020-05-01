@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { FkeHappeningList } from '../models/FkeHappeningList';
+import { FkeHappeningList } from '../entities/FkeHappeningList';
 
 @Resolver()
 export class FkeHappeningListResolver {

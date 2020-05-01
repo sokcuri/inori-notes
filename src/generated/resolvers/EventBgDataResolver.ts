@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { EventBgData } from '../models/EventBgData';
+import { EventBgData } from '../entities/EventBgData';
 
 @Resolver()
 export class EventBgDataResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { SpaceBattleData } from '../models/SpaceBattleData';
+import { SpaceBattleData } from '../entities/SpaceBattleData';
 
 @Resolver()
 export class SpaceBattleDataResolver {

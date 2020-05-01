@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { RoomCharacterPersonality } from '../models/RoomCharacterPersonality';
+import { RoomCharacterPersonality } from '../entities/RoomCharacterPersonality';
 
 @Resolver()
 export class RoomCharacterPersonalityResolver {

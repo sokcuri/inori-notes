@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ShioriQuestArea } from '../models/ShioriQuestArea';
+import { ShioriQuestArea } from '../entities/ShioriQuestArea';
 
 @Resolver()
 export class ShioriQuestAreaResolver {

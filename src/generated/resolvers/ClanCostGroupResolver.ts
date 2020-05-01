@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { ClanCostGroup } from '../models/ClanCostGroup';
+import { ClanCostGroup } from '../entities/ClanCostGroup';
 
 @Resolver()
 export class ClanCostGroupResolver {

@@ -1,5 +1,5 @@
 import { Resolver, Query } from 'type-graphql';
-import { CharaETicketData } from '../models/CharaETicketData';
+import { CharaETicketData } from '../entities/CharaETicketData';
 
 @Resolver()
 export class CharaETicketDataResolver {
