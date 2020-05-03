@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Resolver, Field, Query, Arg, Int, ObjectType } from 'type-graphql';
-import { getRepository } from 'typeorm';
+import { Resolver, Field, Query, Arg, Int, ObjectType, ID } from 'type-graphql';
+import { getRepository, BaseEntity } from 'typeorm';
 import {
   ActualUnitBackground,
   UnitBackground,
@@ -10,84 +10,143 @@ import {
   UnitRarity,
   UnitPromotion,
   UnitPromotionStatus,
+  UnitSkillData,
 } from '../entities';
 
 @ObjectType()
-class UnitResponse {
-  // we can freely add more fields or overwrite the existing one's types
-  @Field(type => ActualUnitBackground, { nullable: true })
-  actualUnitBackground?: ActualUnitBackground;
+class ActualUnitBackgroundResp extends ActualUnitBackground { }
 
-  @Field(type => UnitBackground, { nullable: true })
-  unitBackground?: UnitBackground;
+@ObjectType()
+class UnitBackgroundResp extends UnitBackground { }
 
-  @Field(type => UnitComments, { nullable: true })
-  unitComments?: UnitComments;
+@ObjectType()
+class UnitCommentsResp extends UnitComments { }
 
-  @Field(type => UnitProfile, { nullable: true })
-  unitProfile?: UnitProfile;
+@ObjectType()
+class UnitDataResp extends UnitData { }
 
-  @Field(type => UnitData)
-  unitData: UnitData;
+@ObjectType()
+class UnitProfileResp extends UnitProfile { }
 
-  @Field(type => [UnitRarity])
-  unitRarity: UnitRarity[];
+@ObjectType()
+class UnitRarityResp extends UnitRarity { }
 
-  @Field(type => [UnitPromotionStatus])
-  unitPromotionStatus: UnitPromotionStatus[];
+@ObjectType()
+class UnitPromotionResp extends UnitPromotion { }
+
+@ObjectType()
+class UnitPromotionStatusResp extends UnitPromotionStatus { }
+
+@ObjectType()
+class UnitSkillDataResp extends BaseEntity {
+  @Field(type => ID)
+  unitId: number;
+
+  @Field(type => Int)
+  unionBurst: number;
+
+  @Field(type => [Int])
+  mainSkill: number[];
+
+  @Field(type => [Int])
+  exSkill: number[];
+
+  @Field(type => [Int])
+  exSkillEvolution: number[];
+
+  @Field(type => [Int])
+  spSkill: number[];
+
+  @Field(type => [Int])
+  unionBurstEvolution: number[];
+
+  @Field(type => [Int])
+  mainSkillEvolution: number[];
 }
 
-async function actualUnitBackground(unitId: number) {
-  return await getRepository(ActualUnitBackground)
+async function actualUnitBackground(unitId: number): Promise<ActualUnitBackgroundResp> {
+  return getRepository(ActualUnitBackground)
     .createQueryBuilder('ActualUnitBackground')
     .where('ActualUnitBackground.unitId = :unitId', { unitId: unitId + 30 })
     .getOne();
 }
 
-async function unitBackground(unitId: number) {
-  return await getRepository(UnitBackground)
+async function unitBackground(unitId: number): Promise<UnitBackgroundResp> {
+  return getRepository(UnitBackground)
     .createQueryBuilder('UnitBackground')
     .where('UnitBackground.unitId = :unitId', { unitId })
     .getOne();
 }
 
-async function unitComments(unitId: number) {
-  return await getRepository(UnitComments)
+async function unitComments(unitId: number): Promise<UnitCommentsResp> {
+  return getRepository(UnitComments)
     .createQueryBuilder('UnitComments')
     .where('UnitComments.unitId = :unitId', { unitId })
     .getOne();
 }
 
-async function unitProfile(unitId: number) {
-  return await getRepository(UnitProfile)
+async function unitProfile(unitId: number): Promise<UnitProfileResp> {
+  return getRepository(UnitProfile)
     .createQueryBuilder('UnitProfile')
     .where('UnitProfile.unitId = :unitId', { unitId })
     .getOne();
 }
 
-async function unitData(unitId: number) {
-  return await getRepository(UnitData)
+async function unitData(unitId: number): Promise<UnitDataResp> {
+  return getRepository(UnitData)
   .createQueryBuilder('UnitData')
   .where('UnitData.unitId = :unitId', { unitId })
   .getOne();
 }
 
-async function unitRarity(unitId: number) {
-  return await getRepository(UnitRarity)
+async function unitRarity(unitId: number): Promise<UnitRarityResp[]> {
+  return getRepository(UnitRarity)
   .createQueryBuilder('UnitRarity')
   .where('UnitRarity.unitId = :unitId', { unitId })
   .getMany();
 }
 
-async function unitPromotion(unitId: number, level: number) {
-  return await getRepository(UnitPromotion)
+async function unitSkillData(unitId: number): Promise<UnitSkillDataResp> {
+  const skillData = await getRepository(UnitSkillData)
+  .createQueryBuilder('UnitSkillData')
+  .where('UnitSkillData.unitId = :unitId', { unitId })
+  .getOne();
+
+  const groups = (prefix: string) => {
+    const result: number[] = [];
+    Object.entries(skillData)
+      .filter(item => item[0].indexOf(prefix) !== -1)
+      .forEach(item => {
+        const [name, value] = item;
+        const id = +name.substr(prefix.length + name.indexOf(prefix));
+        if (!isNaN(id)) {
+          result.push(value);
+        }
+      });
+    return result;
+  };
+
+  const resp = new UnitSkillDataResp();
+  resp.unitId = skillData.unitId;
+  resp.unionBurst = skillData.unionBurst;
+  resp.mainSkill = groups('mainSkill');
+  resp.exSkill = groups('exSkill');
+  resp.exSkillEvolution = groups('exSkillEvolution');
+  resp.spSkill = groups('spSkill');
+  resp.unionBurstEvolution = groups('unionBurstEvolution');
+  resp.mainSkillEvolution = groups('mainSkillEvolution');
+  return resp;
+}
+
+async function unitPromotion(unitId: number, level: number): Promise<UnitPromotionResp> {
+  return getRepository(UnitPromotion)
   .createQueryBuilder('UnitPromotion')
   .where('UnitPromotion.unitId = :unitId AND UnitPromotion.promotionLevel = :level', { unitId, level })
   .getOne();
 }
 
-async function unitPromotionStatus(unitId: number) {
-  return await getRepository(UnitPromotionStatus)
+async function unitPromotionStatus(unitId: number): Promise<UnitPromotionStatusResp[]> {
+  return getRepository(UnitPromotionStatus)
   .createQueryBuilder('UnitPromotionStatus')
   .where('UnitPromotionStatus.unitId = :unitId', { unitId })
   .getMany();
@@ -95,26 +154,67 @@ async function unitPromotionStatus(unitId: number) {
 
 @Resolver()
 export class UnitResolver {
-  @Query(returns => UnitResponse)
-  async getUnit(
+  @Query(returns => ActualUnitBackgroundResp)
+  async getActualUnitBackground(
     @Arg("unitId", type => Int) unitId: number
-  ): Promise<UnitResponse> {
-    return {
-      actualUnitBackground: await actualUnitBackground(unitId),
-      unitBackground: await unitBackground(unitId),
-      unitComments: await unitComments(unitId),
-      unitData: await unitData(unitId),
-      unitProfile: await unitProfile(unitId),
-      unitRarity: await unitRarity(unitId),
-      unitPromotionStatus: await unitPromotionStatus(unitId)
-    };
+  ): Promise<ActualUnitBackgroundResp> {
+    return await actualUnitBackground(unitId);
   }
 
-  @Query(() => UnitPromotion)
+  @Query(returns => UnitBackgroundResp)
+  async getUnitBackground(
+    @Arg("unitId", type => Int) unitId: number
+  ): Promise<UnitBackgroundResp> {
+    return await unitBackground(unitId);
+  }
+
+  @Query(returns => UnitCommentsResp)
+  async getUnitComments(
+    @Arg("unitId", type => Int) unitId: number
+  ): Promise<UnitCommentsResp> {
+    return await unitComments(unitId);
+  }
+
+  @Query(returns => UnitDataResp)
+  async getUnitData(
+    @Arg("unitId", type => Int) unitId: number
+  ): Promise<UnitDataResp> {
+    return await unitData(unitId);
+  }
+
+  @Query(returns => UnitProfileResp)
+  async getUnitProfile(
+    @Arg("unitId", type => Int) unitId: number
+  ): Promise<UnitProfileResp> {
+    return await unitProfile(unitId);
+  }
+
+  @Query(returns => [UnitRarityResp])
+  async getUnitRarity(
+    @Arg("unitId", type => Int) unitId: number
+  ): Promise<UnitRarityResp[]> {
+    return await unitRarity(unitId);
+  }
+
+  @Query(returns => UnitSkillDataResp)
+  async getUnitSkillData(
+    @Arg("unitId", type => Int) unitId: number
+  ): Promise<UnitSkillDataResp> {
+    return await unitSkillData(unitId);
+  }
+
+  @Query(returns => UnitPromotion)
   async getUnitPromotion(
     @Arg("unitId", type => Int) unitId: number,
     @Arg("level", type => Int) level: number,
   ): Promise<UnitPromotion> {
-    return unitPromotion(unitId, level);
+    return await unitPromotion(unitId, level);
+  }
+
+  @Query(returns => [UnitPromotionStatus])
+  async getUnitPromotionStatus(
+    @Arg("unitId", type => Int) unitId: number
+  ): Promise<UnitPromotionStatus[]> {
+    return await unitPromotionStatus(unitId);
   }
 }

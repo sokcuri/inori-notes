@@ -24,7 +24,7 @@ async function main() {
   await server.listen(4000);
   console.log("Server has started!");
 
-  await getUnitData();
+  // await getUnitData();
 }
 
 main();
