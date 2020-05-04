@@ -76,10 +76,5 @@ export class RoomItem extends BaseEntity {
   @Column({ name: 'condition_quest_id', type: 'integer' })
   conditionQuestId: number;
 
-  @Field(type => [Int])
-  get effectId() {
-    return [this.effectId1];
-  }
-
 }
 

@@ -178,10 +178,5 @@ export class EnemyParameter extends BaseEntity {
     return [this.exSkillLv1, this.exSkillLv2, this.exSkillLv3, this.exSkillLv4, this.exSkillLv5];
   }
 
-  @Field(type => [Int])
-  get uniqueEquipmentFlag() {
-    return [this.uniqueEquipmentFlag1];
-  }
-
 }
 

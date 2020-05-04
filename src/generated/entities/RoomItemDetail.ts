@@ -56,20 +56,5 @@ export class RoomItemDetail extends BaseEntity {
   @Column({ name: 'lvup_time', type: 'integer' })
   lvupTime: number;
 
-  @Field(type => [Int])
-  get lvupTriggerType() {
-    return [this.lvupTriggerType2];
-  }
-
-  @Field(type => [Int])
-  get lvupTriggerId() {
-    return [this.lvupTriggerId2];
-  }
-
-  @Field(type => [Int])
-  get lvupTriggerValue() {
-    return [this.lvupTriggerValue2];
-  }
-
 }
 

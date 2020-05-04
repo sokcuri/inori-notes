@@ -20,10 +20,5 @@ export class AilmentData extends BaseEntity {
   @Column({ name: 'ailment_name', type: 'text' })
   ailmentName: string;
 
-  @Field(type => [Int])
-  get ailmentDetail() {
-    return [this.ailmentDetail1];
-  }
-
 }
 

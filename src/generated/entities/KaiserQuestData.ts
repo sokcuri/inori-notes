@@ -150,11 +150,6 @@ export class KaiserQuestData extends BaseEntity {
     return [this.rewardCount1, this.rewardCount2, this.rewardCount3, this.rewardCount4, this.rewardCount5];
   }
 
-  @Field(type => [Float])
-  get enemySize() {
-    return [this.enemySize1];
-  }
-
   @Field(type => [Int])
   get clearStoryId() {
     return [this.clearStoryId1, this.clearStoryId2];

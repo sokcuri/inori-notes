@@ -37,10 +37,5 @@ export class HatsuneMultiRouteParameter extends BaseEntity {
     return [this.param1, this.param2, this.param3];
   }
 
-  @Field(type => [String])
-  get text() {
-    return [this.text1];
-  }
-
 }
 

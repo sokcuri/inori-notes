@@ -36,10 +36,5 @@ export class Banner extends BaseEntity {
   @Column({ name: 'is_show_room', type: 'integer' })
   isShowRoom: number;
 
-  @Field(type => [Int])
-  get subBannerId() {
-    return [this.subBannerId1];
-  }
-
 }
 

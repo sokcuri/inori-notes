@@ -81,15 +81,5 @@ export class DungeonQuestData extends BaseEntity {
     return [this.rewardImage1, this.rewardImage2, this.rewardImage3];
   }
 
-  @Field(type => [String])
-  get waveBgmSheetId() {
-    return [this.waveBgmSheetId1];
-  }
-
-  @Field(type => [String])
-  get waveBgmQueId() {
-    return [this.waveBgmQueId1];
-  }
-
 }
 

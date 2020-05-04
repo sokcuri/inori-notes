@@ -28,15 +28,5 @@ export class Minigame extends BaseEntity {
   @Column({ name: 'first_time_story_id', type: 'integer' })
   firstTimeStoryId: number;
 
-  @Field(type => [Int])
-  get releaseConditions() {
-    return [this.releaseConditions1];
-  }
-
-  @Field(type => [Int])
-  get conditionsId() {
-    return [this.conditionsId1];
-  }
-
 }
 

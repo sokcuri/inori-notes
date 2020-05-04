@@ -24,10 +24,5 @@ export class SkipMonsterData extends BaseEntity {
   @Column({ name: 'bg_skip_id', type: 'integer' })
   bgSkipId: number;
 
-  @Field(type => [Int])
-  get waveGroupId() {
-    return [this.waveGroupId1];
-  }
-
 }
 

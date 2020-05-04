@@ -172,40 +172,5 @@ export class HatsuneBoss extends BaseEntity {
   @Column({ name: 'disp_on_bg', type: 'integer' })
   dispOnBg: number;
 
-  @Field(type => [Int])
-  get eventBossTreasureBoxId() {
-    return [this.eventBossTreasureBoxId1];
-  }
-
-  @Field(type => [Int])
-  get background() {
-    return [this.background1];
-  }
-
-  @Field(type => [Int])
-  get waveGroupId() {
-    return [this.waveGroupId1];
-  }
-
-  @Field(type => [String])
-  get waveBgmSheetId() {
-    return [this.waveBgmSheetId1];
-  }
-
-  @Field(type => [String])
-  get waveBgmQueId() {
-    return [this.waveBgmQueId1];
-  }
-
-  @Field(type => [Int])
-  get storyIdWavestart() {
-    return [this.storyIdWavestart1];
-  }
-
-  @Field(type => [Int])
-  get storyIdWaveend() {
-    return [this.storyIdWaveend1];
-  }
-
 }
 
