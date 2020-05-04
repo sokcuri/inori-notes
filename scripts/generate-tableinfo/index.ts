@@ -110,7 +110,7 @@ async function getTableInfo(name: string) {
       cf.column = `@PrimaryColumn({ name: '${x.name}', type: '${toTypeORMType(x.type)}' })`;
     } else if (x.notnull === 0) {
       cf.name += '?';
-      cf.field = `@Field(type => ${toGraphQLType(x.type)})`;
+      cf.field = `@Field(type => ${toGraphQLType(x.type)}, { nullable: true })`;
       cf.column = `@Column({ name: '${x.name}', type: '${toTypeORMType(x.type)}', nullable: true })`;
     } else {
       cf.field = `@Field(type => ${toGraphQLType(x.type)})`;
