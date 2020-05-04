@@ -11,6 +11,7 @@ import {
   UnitPromotionObject,
   UnitPromotionStatusObject,
   UnitSkillDataObject,
+  UnitSkillDetailObject,
 } from '../landsol';
 
 import {
@@ -23,6 +24,7 @@ import {
   unitPromotionStatus,
   unitRarity,
   unitSkillData,
+  unitSkillDetail,
 } from '../landsol';
 
 @ObjectType()
@@ -57,6 +59,9 @@ class UnitResponse {
 
   /**  */
 
+  @Field(type => UnitSkillDetailObject)
+  skillDetail: UnitSkillDetailObject;
+
   @Field(type => String)
   name: string;
 }
@@ -77,6 +82,8 @@ export class UnitResolver {
     const rarity = await unitRarity(unitId);
     const skillData = await unitSkillData(unitId);
 
+    const skillDetail = await unitSkillDetail(unitId);
+
     const name = 'test';
     return {
       actualBackground,
@@ -88,6 +95,7 @@ export class UnitResolver {
       promotionStatus,
       rarity,
       skillData,
+      skillDetail,
       name
     };
   }
