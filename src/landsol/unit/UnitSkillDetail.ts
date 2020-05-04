@@ -24,8 +24,8 @@ export class UnitSkillDetailObject extends BaseEntity {
   @Field(type => [SkillDataObject], { nullable: true })
   spSkill?: SkillDataObject[];
 
-  @Field(type => [SkillDataObject], { nullable: true })
-  unionBurstEvolution?: SkillDataObject[];
+  @Field(type => SkillDataObject, { nullable: true })
+  unionBurstEvolution?: SkillDataObject;
 
   @Field(type => [SkillDataObject], { nullable: true })
   mainSkillEvolution?: SkillDataObject[];
@@ -46,7 +46,7 @@ async function toDetailObject(p: UnitSkillDataObject) {
   result.exSkill = await toSkillDataArray(p.exSkill);
   result.exSkillEvolution = await toSkillDataArray(p.exSkillEvolution);
   result.spSkill = await toSkillDataArray(p.spSkill);
-  result.unionBurstEvolution = await toSkillDataArray(p.unionBurstEvolution);
+  result.unionBurstEvolution = await toSkillData(p.unionBurstEvolution);
   result.mainSkillEvolution = await toSkillDataArray(p.mainSkillEvolution);
   return result;
 }
