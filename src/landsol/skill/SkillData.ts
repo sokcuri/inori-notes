@@ -20,6 +20,9 @@ export class SkillDataObject {
   @Field(type => Float)
   skillCastTime: number;
 
+  @Field(type => [Int])
+  action: number[];
+
   @Field(type => Int)
   action1: number;
 
@@ -40,6 +43,9 @@ export class SkillDataObject {
 
   @Field(type => Int)
   action7: number;
+
+  @Field(type => [Int])
+  dependAction: number[];
 
   @Field(type => Int)
   dependAction1: number;
