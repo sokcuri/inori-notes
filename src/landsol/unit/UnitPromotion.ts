@@ -11,23 +11,8 @@ export class UnitPromotionObject {
   @Field(type => Int)
   promotionLevel: number;
 
-  @Field(type => Int)
-  equipSlot1: number;
-
-  @Field(type => Int)
-  equipSlot2: number;
-
-  @Field(type => Int)
-  equipSlot3: number;
-
-  @Field(type => Int)
-  equipSlot4: number;
-
-  @Field(type => Int)
-  equipSlot5: number;
-
-  @Field(type => Int)
-  equipSlot6: number;
+  @Field(type => [Int])
+  equipSlot: number[];
 }
 
 export async function unitPromotion(unitId: number): Promise<UnitPromotionObject[]> {
