@@ -10,5 +10,12 @@ export class {{className}} extends BaseEntity {
   {{{camelName}}}: {{{type}}};
 
   {{/each}}
+  {{#each mergeFields}}
+  @Field(type => [{{{type}}}])
+  get {{{name}}}() {
+    return [{{{fieldText}}}];
+  }
+
+  {{/each}}
 }
 

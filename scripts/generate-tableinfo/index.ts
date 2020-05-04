@@ -9,6 +9,7 @@ interface TableInfo {
   className: string;
   fields: TableField[];
   classFields: TableClassField[];
+  mergeFields: MergeField[];
 }
 
 interface TableField {
@@ -26,6 +27,13 @@ interface TableClassField {
   name: string;
   camelName: string;
   type: string;
+}
+
+interface MergeField {
+  name: string;
+  type: string;
+  fields: string[];
+  fieldText?: string;
 }
 
 function snakeToPascal(str: string) {
@@ -93,6 +101,44 @@ function toGraphQLType(type: string): string {
   }
 }
 
+function mergeSubFields(fields: TableField[]) {
+  const regex = /^([a-zA-Z]+)*([0-9]+)$/;
+  const map: Map<string, MergeField> = new Map<string, MergeField>();
+
+  fields.forEach(x => {
+    const fullName = snakeToPascalLower(x.name);
+    if (regex.test(fullName)) {
+      const exec = regex.exec(fullName);
+      const name = exec[1];
+      const type = toGraphQLType(x.type);
+
+      if (!map.has(name)) {
+        const fields: string[] = [];
+        map.set(name, { name, type, fields });
+      }
+
+      if (map.get(name).type !== type) {
+        throw new Error(`subfields must be of the same type. name: ${name}, map.type: ${map.get(name).type}, type: ${x.type}`);
+      }
+
+      const item = map.get(name);
+      item.fields.push(fullName);
+    }
+  });
+
+  const checkExistFieldName = (name: string) => {
+    return !!fields.filter(x => x.name === name).length;
+  };
+
+  return Array.from(map.values()).map(item => {
+    if (checkExistFieldName(item.name)) {
+      item.name += 'Array';
+    }
+    item.fieldText = item.fields.map(x => 'this.' + x).join(', ').toString();
+    return item;
+  });
+}
+
 async function getTableInfo(name: string) {
   const fields = await db.all<TableField[]>(`PRAGMA table_info(${name});`);
 
@@ -119,7 +165,9 @@ async function getTableInfo(name: string) {
     classFields.push(cf);
   });
 
-  const tableInfo: TableInfo = { name, className, fields, classFields };
+  const mergeFields = mergeSubFields(fields);
+
+  const tableInfo: TableInfo = { name, className, fields, classFields, mergeFields };
   return tableInfo;
 }
 
