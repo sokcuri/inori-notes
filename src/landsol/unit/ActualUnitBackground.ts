@@ -21,6 +21,6 @@ export class ActualUnitBackgroundObject {
 export async function actualUnitBackground(unitId: number): Promise<ActualUnitBackgroundObject> {
   return getRepository(ActualUnitBackground)
     .createQueryBuilder('ActualUnitBackground')
-    .where('ActualUnitBackground.unitId = :unitId', { unitId: Math.floor(unitId / 100) * 100 + 31 })
+    .where('ActualUnitBackground.unitId >= :id * 100 AND ActualUnitBackground.unitId <= :id * 100 + 99', { id: Math.floor(unitId / 100) })
     .getOne();
 }
