@@ -102,7 +102,7 @@ function toGraphQLType(type: string): string {
 }
 
 function mergeSubFields(fields: TableField[]) {
-  const regex = /^([a-zA-Z]+)*([0-9]+)$/;
+  const regex = /^([a-zA-Z]+)([0-9]+)$/;
   const map: Map<string, MergeField> = new Map<string, MergeField>();
 
   fields.forEach(x => {
@@ -127,10 +127,12 @@ function mergeSubFields(fields: TableField[]) {
   });
 
   const checkExistFieldName = (name: string) => {
-    return !!fields.filter(x => x.name === name).length;
+    return !!fields.filter(x => snakeToPascalLower(x.name) === name).length;
   };
 
-  return Array.from(map.values()).map(item => {
+  return Array.from(map.values())
+    .filter(item => item.fields.length > 1)
+    .map(item => {
     if (checkExistFieldName(item.name)) {
       item.name += 'Array';
     }
