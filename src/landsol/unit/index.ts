@@ -7,5 +7,3 @@ export * from './UnitProfile';
 export * from './UnitPromotion';
 export * from './UnitPromotionStatus';
 export * from './UnitRarity';
-
-export * from './UnitSkillDetail';
