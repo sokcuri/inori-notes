@@ -70,7 +70,7 @@ export class SkillDataObject {
 
 }
 
-export default async function skillData(skillId: number): Promise<SkillData> {
+export async function skillData(skillId: number): Promise<SkillData> {
   return getRepository(SkillData)
     .createQueryBuilder('UnitData')
     .where('UnitData.skillId = :skillId', { skillId })
