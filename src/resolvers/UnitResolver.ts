@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Resolver, Query, Arg, Int, ObjectType, Field } from 'type-graphql';
-
 import {
   ActualUnitBackgroundObject,
   UnitBackgroundObject,
@@ -26,6 +25,8 @@ import {
   unitSkillData,
   unitSkillDetail,
 } from '../landsol';
+
+import { UnitNotExistError } from '../error';
 
 @ObjectType()
 class UnitResponse {
@@ -72,10 +73,14 @@ export class UnitResolver {
   async getUnit(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitResponse> {
+    const data = await unitData(unitId);
+    if (!data) {
+      throw new UnitNotExistError(unitId);
+    }
+
     const actualBackground = await actualUnitBackground(unitId);
     const background = await unitBackground(unitId);
     const comments = await unitComments(unitId);
-    const data = await unitData(unitId);
     const profile = await unitProfile(unitId);
     const promotion = await unitPromotion(unitId);
     const promotionStatus = await unitPromotionStatus(unitId);
