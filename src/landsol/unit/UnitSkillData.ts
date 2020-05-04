@@ -16,7 +16,7 @@ interface UnitSkillBase<T> {
 }
 
 @ObjectType()
-export class UnitSkillDataObject extends BaseEntity implements UnitSkillBase<number> {
+export class UnitSkillDataObject implements UnitSkillBase<number> {
   @Field(type => Int, { nullable: true })
   unionBurst?: number;
 
@@ -40,7 +40,7 @@ export class UnitSkillDataObject extends BaseEntity implements UnitSkillBase<num
 }
 
 @ObjectType()
-export class UnitSkillDetailObject extends BaseEntity implements UnitSkillBase<SkillDataObject> {
+export class UnitSkillDetailObject implements UnitSkillBase<SkillDataObject> {
   @Field(type => SkillDataObject, { nullable: true })
   unionBurst?: SkillDataObject;
 
