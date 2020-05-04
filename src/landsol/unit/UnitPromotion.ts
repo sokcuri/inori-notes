@@ -30,9 +30,9 @@ export class UnitPromotionObject {
   equipSlot6: number;
 }
 
-export async function unitPromotion(unitId: number, promotionLevel: number): Promise<UnitPromotionObject> {
+export async function unitPromotion(unitId: number): Promise<UnitPromotionObject[]> {
   return getRepository(UnitPromotion)
     .createQueryBuilder('UnitPromotion')
-    .where('UnitPromotion.unitId = :unitId AND UnitPromotion.promotionLevel = :promotionLevel', { unitId, promotionLevel })
-    .getOne();
+    .where('UnitPromotion.unitId = :unitId', { unitId })
+    .getMany();
 }
