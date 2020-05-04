@@ -3,7 +3,7 @@
   "type": "sqlite",
   "database": "master.db",
   "synchronize": false,
-  "logging": true,
+  "logging": false,
   "entities": [
     "src/generated/entities/*.ts"
   ]
