@@ -92,5 +92,20 @@ export class EventStoryDetail extends BaseEntity {
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3];
+  }
+
+  @Field(type => [Int])
+  get rewardId() {
+    return [this.rewardId1, this.rewardId2, this.rewardId3];
+  }
+
+  @Field(type => [Int])
+  get rewardValue() {
+    return [this.rewardValue1, this.rewardValue2, this.rewardValue3];
+  }
+
 }
 

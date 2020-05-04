@@ -44,5 +44,10 @@ export class PctSystem extends BaseEntity {
   @Column({ name: 'chara2_gauge_choice', type: 'integer' })
   chara2GaugeChoice: number;
 
+  @Field(type => [Int])
+  get chara() {
+    return [this.chara1, this.chara2];
+  }
+
 }
 

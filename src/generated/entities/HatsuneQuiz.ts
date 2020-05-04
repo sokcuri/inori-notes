@@ -84,5 +84,10 @@ export class HatsuneQuiz extends BaseEntity {
   @Column({ name: 'adv_id_quiz_end', type: 'integer' })
   advIdQuizEnd: number;
 
+  @Field(type => [String])
+  get choice() {
+    return [this.choice1, this.choice2, this.choice3, this.choice4, this.choice5, this.choice6];
+  }
+
 }
 

@@ -64,5 +64,20 @@ export class CharacterLoveRankupText extends BaseEntity {
   @Column({ name: 'serif_3', type: 'text' })
   serif3: string;
 
+  @Field(type => [Int])
+  get voiceId() {
+    return [this.voiceId1, this.voiceId2, this.voiceId3];
+  }
+
+  @Field(type => [Int])
+  get face() {
+    return [this.face1, this.face2, this.face3];
+  }
+
+  @Field(type => [String])
+  get serif() {
+    return [this.serif1, this.serif2, this.serif3];
+  }
+
 }
 

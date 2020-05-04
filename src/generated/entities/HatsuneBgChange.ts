@@ -28,5 +28,10 @@ export class HatsuneBgChange extends BaseEntity {
   @Column({ name: 'quest_id_5', type: 'integer' })
   questId5: number;
 
+  @Field(type => [Int])
+  get questId() {
+    return [this.questId1, this.questId2, this.questId3, this.questId4, this.questId5];
+  }
+
 }
 

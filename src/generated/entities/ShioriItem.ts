@@ -16,5 +16,10 @@ export class ShioriItem extends BaseEntity {
   @Column({ name: 'unit_material_id_2', type: 'integer' })
   unitMaterialId2: number;
 
+  @Field(type => [Int])
+  get unitMaterialId() {
+    return [this.unitMaterialId1, this.unitMaterialId2];
+  }
+
 }
 

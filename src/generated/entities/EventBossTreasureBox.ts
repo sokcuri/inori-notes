@@ -128,5 +128,20 @@ export class EventBossTreasureBox extends BaseEntity {
   @Column({ name: 'each_odds_10', type: 'integer' })
   eachOdds10: number;
 
+  @Field(type => [Int])
+  get treasureType() {
+    return [this.treasureType1, this.treasureType2, this.treasureType3, this.treasureType4, this.treasureType5, this.treasureType6, this.treasureType7, this.treasureType8, this.treasureType9, this.treasureType10];
+  }
+
+  @Field(type => [Int])
+  get eventBossTreasureContentId() {
+    return [this.eventBossTreasureContentId1, this.eventBossTreasureContentId2, this.eventBossTreasureContentId3, this.eventBossTreasureContentId4, this.eventBossTreasureContentId5, this.eventBossTreasureContentId6, this.eventBossTreasureContentId7, this.eventBossTreasureContentId8, this.eventBossTreasureContentId9, this.eventBossTreasureContentId10];
+  }
+
+  @Field(type => [Int])
+  get eachOdds() {
+    return [this.eachOdds1, this.eachOdds2, this.eachOdds3, this.eachOdds4, this.eachOdds5, this.eachOdds6, this.eachOdds7, this.eachOdds8, this.eachOdds9, this.eachOdds10];
+  }
+
 }
 

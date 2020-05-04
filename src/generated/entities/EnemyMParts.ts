@@ -32,5 +32,10 @@ export class EnemyMParts extends BaseEntity {
   @Column({ name: 'child_enemy_parameter_5', type: 'integer' })
   childEnemyParameter5: number;
 
+  @Field(type => [Int])
+  get childEnemyParameter() {
+    return [this.childEnemyParameter1, this.childEnemyParameter2, this.childEnemyParameter3, this.childEnemyParameter4, this.childEnemyParameter5];
+  }
+
 }
 

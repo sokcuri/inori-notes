@@ -100,5 +100,10 @@ export class UnitAttackPattern extends BaseEntity {
   @Column({ name: 'atk_pattern_20', type: 'integer' })
   atkPattern20: number;
 
+  @Field(type => [Int])
+  get atkPattern() {
+    return [this.atkPattern1, this.atkPattern2, this.atkPattern3, this.atkPattern4, this.atkPattern5, this.atkPattern6, this.atkPattern7, this.atkPattern8, this.atkPattern9, this.atkPattern10, this.atkPattern11, this.atkPattern12, this.atkPattern13, this.atkPattern14, this.atkPattern15, this.atkPattern16, this.atkPattern17, this.atkPattern18, this.atkPattern19, this.atkPattern20];
+  }
+
 }
 

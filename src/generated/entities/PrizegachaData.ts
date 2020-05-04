@@ -108,5 +108,15 @@ export class PrizegachaData extends BaseEntity {
   @Column({ name: 'rarity_odds', type: 'integer' })
   rarityOdds: number;
 
+  @Field(type => [Int])
+  get prizeMemoryId() {
+    return [this.prizeMemoryId1, this.prizeMemoryId2, this.prizeMemoryId3, this.prizeMemoryId4, this.prizeMemoryId5, this.prizeMemoryId6, this.prizeMemoryId7, this.prizeMemoryId8, this.prizeMemoryId9, this.prizeMemoryId10, this.prizeMemoryId11, this.prizeMemoryId12, this.prizeMemoryId13, this.prizeMemoryId14, this.prizeMemoryId15, this.prizeMemoryId16, this.prizeMemoryId17, this.prizeMemoryId18, this.prizeMemoryId19, this.prizeMemoryId20];
+  }
+
+  @Field(type => [Int])
+  get gachaPrize() {
+    return [this.gachaPrize1, this.gachaPrize10];
+  }
+
 }
 

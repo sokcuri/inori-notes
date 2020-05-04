@@ -48,5 +48,10 @@ export class SpecialfesBanner extends BaseEntity {
   @Column({ name: 'banner_id_10', type: 'integer' })
   bannerId10: number;
 
+  @Field(type => [Int])
+  get bannerId() {
+    return [this.bannerId1, this.bannerId2, this.bannerId3, this.bannerId4, this.bannerId5, this.bannerId6, this.bannerId7, this.bannerId8, this.bannerId9, this.bannerId10];
+  }
+
 }
 

@@ -168,5 +168,15 @@ export class TowerEnemyParameter extends BaseEntity {
   @Column({ name: 'enemy_color', type: 'integer' })
   enemyColor: number;
 
+  @Field(type => [Int])
+  get mainSkillLv() {
+    return [this.mainSkillLv1, this.mainSkillLv2, this.mainSkillLv3, this.mainSkillLv4, this.mainSkillLv5, this.mainSkillLv6, this.mainSkillLv7, this.mainSkillLv8, this.mainSkillLv9, this.mainSkillLv10];
+  }
+
+  @Field(type => [Int])
+  get exSkillLv() {
+    return [this.exSkillLv1, this.exSkillLv2, this.exSkillLv3, this.exSkillLv4, this.exSkillLv5];
+  }
+
 }
 

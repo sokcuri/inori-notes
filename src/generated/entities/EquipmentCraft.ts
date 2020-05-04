@@ -92,5 +92,15 @@ export class EquipmentCraft extends BaseEntity {
   @Column({ name: 'consume_num_10', type: 'integer' })
   consumeNum10: number;
 
+  @Field(type => [Int])
+  get conditionEquipmentId() {
+    return [this.conditionEquipmentId1, this.conditionEquipmentId2, this.conditionEquipmentId3, this.conditionEquipmentId4, this.conditionEquipmentId5, this.conditionEquipmentId6, this.conditionEquipmentId7, this.conditionEquipmentId8, this.conditionEquipmentId9, this.conditionEquipmentId10];
+  }
+
+  @Field(type => [Int])
+  get consumeNum() {
+    return [this.consumeNum1, this.consumeNum2, this.consumeNum3, this.consumeNum4, this.consumeNum5, this.consumeNum6, this.consumeNum7, this.consumeNum8, this.consumeNum9, this.consumeNum10];
+  }
+
 }
 

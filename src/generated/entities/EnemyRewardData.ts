@@ -92,5 +92,25 @@ export class EnemyRewardData extends BaseEntity {
   @Column({ name: 'odds_5', type: 'integer' })
   odds5: number;
 
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3, this.rewardType4, this.rewardType5];
+  }
+
+  @Field(type => [Int])
+  get rewardId() {
+    return [this.rewardId1, this.rewardId2, this.rewardId3, this.rewardId4, this.rewardId5];
+  }
+
+  @Field(type => [Int])
+  get rewardNum() {
+    return [this.rewardNum1, this.rewardNum2, this.rewardNum3, this.rewardNum4, this.rewardNum5];
+  }
+
+  @Field(type => [Int])
+  get odds() {
+    return [this.odds1, this.odds2, this.odds3, this.odds4, this.odds5];
+  }
+
 }
 

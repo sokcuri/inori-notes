@@ -200,5 +200,45 @@ export class QuestData extends BaseEntity {
   @Column({ name: 'lv_reward_flag', type: 'integer' })
   lvRewardFlag: number;
 
+  @Field(type => [Int])
+  get background() {
+    return [this.background1, this.background2, this.background3];
+  }
+
+  @Field(type => [Int])
+  get waveGroupId() {
+    return [this.waveGroupId1, this.waveGroupId2, this.waveGroupId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmSheetId() {
+    return [this.waveBgmSheetId1, this.waveBgmSheetId2, this.waveBgmSheetId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmQueId() {
+    return [this.waveBgmQueId1, this.waveBgmQueId2, this.waveBgmQueId3];
+  }
+
+  @Field(type => [Int])
+  get storyIdWavestart() {
+    return [this.storyIdWavestart1, this.storyIdWavestart2, this.storyIdWavestart3];
+  }
+
+  @Field(type => [Int])
+  get storyIdWaveend() {
+    return [this.storyIdWaveend1, this.storyIdWaveend2, this.storyIdWaveend3];
+  }
+
+  @Field(type => [Int])
+  get enemyImage() {
+    return [this.enemyImage1, this.enemyImage2, this.enemyImage3, this.enemyImage4, this.enemyImage5];
+  }
+
+  @Field(type => [Int])
+  get rewardImage() {
+    return [this.rewardImage1, this.rewardImage2, this.rewardImage3, this.rewardImage4, this.rewardImage5];
+  }
+
 }
 

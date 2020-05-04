@@ -24,7 +24,7 @@ export class TtkNaviComment extends BaseEntity {
   @Column({ name: 'character_name', type: 'text' })
   characterName: string;
 
-  @Field(type => String)
+  @Field(type => String, { nullable: true })
   @Column({ name: 'description', type: 'text', nullable: true })
   description: string;
 

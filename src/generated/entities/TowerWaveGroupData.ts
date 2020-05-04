@@ -36,5 +36,10 @@ export class TowerWaveGroupData extends BaseEntity {
   @Column({ name: 'enemy_id_5', type: 'integer' })
   enemyId5: number;
 
+  @Field(type => [Int])
+  get enemyId() {
+    return [this.enemyId1, this.enemyId2, this.enemyId3, this.enemyId4, this.enemyId5];
+  }
+
 }
 

@@ -48,5 +48,10 @@ export class UekDrama extends BaseEntity {
   @Column({ name: 'param_08', type: 'text' })
   param08: string;
 
+  @Field(type => [String])
+  get param() {
+    return [this.param01, this.param02, this.param03, this.param04, this.param05, this.param06, this.param07, this.param08];
+  }
+
 }
 

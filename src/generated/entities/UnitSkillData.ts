@@ -124,5 +124,30 @@ export class UnitSkillData extends BaseEntity {
   @Column({ name: 'main_skill_evolution_2', type: 'integer' })
   mainSkillEvolution2: number;
 
+  @Field(type => [Int])
+  get mainSkill() {
+    return [this.mainSkill1, this.mainSkill2, this.mainSkill3, this.mainSkill4, this.mainSkill5, this.mainSkill6, this.mainSkill7, this.mainSkill8, this.mainSkill9, this.mainSkill10];
+  }
+
+  @Field(type => [Int])
+  get exSkill() {
+    return [this.exSkill1, this.exSkill2, this.exSkill3, this.exSkill4, this.exSkill5];
+  }
+
+  @Field(type => [Int])
+  get exSkillEvolution() {
+    return [this.exSkillEvolution1, this.exSkillEvolution2, this.exSkillEvolution3, this.exSkillEvolution4, this.exSkillEvolution5];
+  }
+
+  @Field(type => [Int])
+  get spSkill() {
+    return [this.spSkill1, this.spSkill2, this.spSkill3, this.spSkill4, this.spSkill5];
+  }
+
+  @Field(type => [Int])
+  get mainSkillEvolution() {
+    return [this.mainSkillEvolution1, this.mainSkillEvolution2];
+  }
+
 }
 

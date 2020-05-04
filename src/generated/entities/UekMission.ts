@@ -112,5 +112,25 @@ export class UekMission extends BaseEntity {
   @Column({ name: 'event_id', type: 'integer' })
   eventId: number;
 
+  @Field(type => [Int])
+  get conditionValue() {
+    return [this.conditionValue1, this.conditionValue2, this.conditionValue3, this.conditionValue4, this.conditionValue5];
+  }
+
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3, this.rewardType4, this.rewardType5];
+  }
+
+  @Field(type => [Int])
+  get rewardId() {
+    return [this.rewardId1, this.rewardId2, this.rewardId3, this.rewardId4, this.rewardId5];
+  }
+
+  @Field(type => [Int])
+  get rewardNum() {
+    return [this.rewardNum1, this.rewardNum2, this.rewardNum3, this.rewardNum4, this.rewardNum5];
+  }
+
 }
 

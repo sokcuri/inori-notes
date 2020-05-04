@@ -56,5 +56,15 @@ export class EventIntroduction extends BaseEntity {
   @Column({ name: 'que_id', type: 'text' })
   queId: string;
 
+  @Field(type => [Int])
+  get maximumChunkSize() {
+    return [this.maximumChunkSize1, this.maximumChunkSize2, this.maximumChunkSize3];
+  }
+
+  @Field(type => [Int])
+  get maximumChunkSizeLoop() {
+    return [this.maximumChunkSizeLoop1, this.maximumChunkSizeLoop2, this.maximumChunkSizeLoop3];
+  }
+
 }
 

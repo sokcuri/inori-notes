@@ -32,43 +32,43 @@ export class CampaignMissionData extends BaseEntity {
   @Column({ name: 'mission_condition', type: 'integer' })
   missionCondition: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_1', type: 'integer', nullable: true })
   conditionValue1: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_2', type: 'integer', nullable: true })
   conditionValue2: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_3', type: 'integer', nullable: true })
   conditionValue3: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_4', type: 'integer', nullable: true })
   conditionValue4: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_5', type: 'integer', nullable: true })
   conditionValue5: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_6', type: 'integer', nullable: true })
   conditionValue6: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_7', type: 'integer', nullable: true })
   conditionValue7: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_8', type: 'integer', nullable: true })
   conditionValue8: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_9', type: 'integer', nullable: true })
   conditionValue9: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'condition_value_10', type: 'integer', nullable: true })
   conditionValue10: number;
 
@@ -80,7 +80,7 @@ export class CampaignMissionData extends BaseEntity {
   @Column({ name: 'campaign_mission_reward_id', type: 'integer' })
   campaignMissionRewardId: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'system_id', type: 'integer', nullable: true })
   systemId: number;
 
@@ -111,6 +111,11 @@ export class CampaignMissionData extends BaseEntity {
   @Field(type => Int)
   @Column({ name: 'mark_flag', type: 'integer' })
   markFlag: number;
+
+  @Field(type => [Int])
+  get conditionValue() {
+    return [this.conditionValue1, this.conditionValue2, this.conditionValue3, this.conditionValue4, this.conditionValue5, this.conditionValue6, this.conditionValue7, this.conditionValue8, this.conditionValue9, this.conditionValue10];
+  }
 
 }
 

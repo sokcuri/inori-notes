@@ -92,5 +92,20 @@ export class CharaStoryStatus extends BaseEntity {
   @Column({ name: 'chara_id_10', type: 'integer' })
   charaId10: number;
 
+  @Field(type => [Int])
+  get statusType() {
+    return [this.statusType1, this.statusType2, this.statusType3, this.statusType4, this.statusType5];
+  }
+
+  @Field(type => [Int])
+  get statusRate() {
+    return [this.statusRate1, this.statusRate2, this.statusRate3, this.statusRate4, this.statusRate5];
+  }
+
+  @Field(type => [Int])
+  get charaId() {
+    return [this.charaId1, this.charaId2, this.charaId3, this.charaId4, this.charaId5, this.charaId6, this.charaId7, this.charaId8, this.charaId9, this.charaId10];
+  }
+
 }
 

@@ -140,5 +140,25 @@ export class KaiserQuestData extends BaseEntity {
   @Column({ name: 'clear_story_id_2', type: 'integer' })
   clearStoryId2: number;
 
+  @Field(type => [Int])
+  get rewardImage() {
+    return [this.rewardImage1, this.rewardImage2, this.rewardImage3, this.rewardImage4, this.rewardImage5];
+  }
+
+  @Field(type => [Int])
+  get rewardCount() {
+    return [this.rewardCount1, this.rewardCount2, this.rewardCount3, this.rewardCount4, this.rewardCount5];
+  }
+
+  @Field(type => [Float])
+  get enemySize() {
+    return [this.enemySize1];
+  }
+
+  @Field(type => [Int])
+  get clearStoryId() {
+    return [this.clearStoryId1, this.clearStoryId2];
+  }
+
 }
 

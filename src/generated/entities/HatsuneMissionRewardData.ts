@@ -16,7 +16,7 @@ export class HatsuneMissionRewardData extends BaseEntity {
   @Column({ name: 'reward_type', type: 'integer' })
   rewardType: number;
 
-  @Field(type => Int)
+  @Field(type => Int, { nullable: true })
   @Column({ name: 'reward_id', type: 'integer', nullable: true })
   rewardId: number;
 

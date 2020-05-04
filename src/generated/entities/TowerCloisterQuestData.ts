@@ -272,5 +272,20 @@ export class TowerCloisterQuestData extends BaseEntity {
   @Column({ name: 'bg_position', type: 'integer' })
   bgPosition: number;
 
+  @Field(type => [Int])
+  get backgroundArray() {
+    return [this.background1, this.background2, this.background3];
+  }
+
+  @Field(type => [Int])
+  get waveGroupId() {
+    return [this.waveGroupId1, this.waveGroupId2, this.waveGroupId3];
+  }
+
+  @Field(type => [Int])
+  get rewardImage() {
+    return [this.rewardImage1, this.rewardImage2, this.rewardImage3, this.rewardImage4, this.rewardImage5];
+  }
+
 }
 

@@ -168,5 +168,40 @@ export class EventRevivalWaveGroupData extends BaseEntity {
   @Column({ name: 'reward_odds_5', type: 'integer' })
   rewardOdds5: number;
 
+  @Field(type => [Int])
+  get enemyId() {
+    return [this.enemyId1, this.enemyId2, this.enemyId3, this.enemyId4, this.enemyId5];
+  }
+
+  @Field(type => [Int])
+  get dropGold() {
+    return [this.dropGold1, this.dropGold2, this.dropGold3, this.dropGold4, this.dropGold5];
+  }
+
+  @Field(type => [Int])
+  get rewardGroupId() {
+    return [this.rewardGroupId1, this.rewardGroupId2, this.rewardGroupId3, this.rewardGroupId4, this.rewardGroupId5];
+  }
+
+  @Field(type => [Int])
+  get dispRewardType() {
+    return [this.dispRewardType1, this.dispRewardType2, this.dispRewardType3, this.dispRewardType4, this.dispRewardType5];
+  }
+
+  @Field(type => [Int])
+  get dispRewardId() {
+    return [this.dispRewardId1, this.dispRewardId2, this.dispRewardId3, this.dispRewardId4, this.dispRewardId5];
+  }
+
+  @Field(type => [Int])
+  get rewardLotCount() {
+    return [this.rewardLotCount1, this.rewardLotCount2, this.rewardLotCount3, this.rewardLotCount4, this.rewardLotCount5];
+  }
+
+  @Field(type => [Int])
+  get rewardOdds() {
+    return [this.rewardOdds1, this.rewardOdds2, this.rewardOdds3, this.rewardOdds4, this.rewardOdds5];
+  }
+
 }
 

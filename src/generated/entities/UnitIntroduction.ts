@@ -48,5 +48,15 @@ export class UnitIntroduction extends BaseEntity {
   @Column({ name: 'maximum_chunk_size_loop_3', type: 'integer' })
   maximumChunkSizeLoop3: number;
 
+  @Field(type => [Int])
+  get maximumChunkSize() {
+    return [this.maximumChunkSize1, this.maximumChunkSize2, this.maximumChunkSize3];
+  }
+
+  @Field(type => [Int])
+  get maximumChunkSizeLoop() {
+    return [this.maximumChunkSizeLoop1, this.maximumChunkSizeLoop2, this.maximumChunkSizeLoop3];
+  }
+
 }
 

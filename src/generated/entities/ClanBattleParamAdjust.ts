@@ -100,5 +100,10 @@ export class ClanBattleParamAdjust extends BaseEntity {
   @Column({ name: 'score_coefficient', type: 'integer' })
   scoreCoefficient: number;
 
+  @Field(type => [Int])
+  get mainSkillLv() {
+    return [this.mainSkillLv1, this.mainSkillLv2, this.mainSkillLv3, this.mainSkillLv4, this.mainSkillLv5, this.mainSkillLv6, this.mainSkillLv7, this.mainSkillLv8, this.mainSkillLv9, this.mainSkillLv10];
+  }
+
 }
 

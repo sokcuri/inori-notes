@@ -40,5 +40,10 @@ export class PctResult extends BaseEntity {
   @Column({ name: 'comment_id_5', type: 'integer' })
   commentId5: number;
 
+  @Field(type => [Int])
+  get commentId() {
+    return [this.commentId1, this.commentId2, this.commentId3, this.commentId4, this.commentId5];
+  }
+
 }
 

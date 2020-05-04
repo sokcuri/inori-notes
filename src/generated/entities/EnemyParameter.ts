@@ -168,5 +168,20 @@ export class EnemyParameter extends BaseEntity {
   @Column({ name: 'unique_equipment_flag_1', type: 'integer' })
   uniqueEquipmentFlag1: number;
 
+  @Field(type => [Int])
+  get mainSkillLv() {
+    return [this.mainSkillLv1, this.mainSkillLv2, this.mainSkillLv3, this.mainSkillLv4, this.mainSkillLv5, this.mainSkillLv6, this.mainSkillLv7, this.mainSkillLv8, this.mainSkillLv9, this.mainSkillLv10];
+  }
+
+  @Field(type => [Int])
+  get exSkillLv() {
+    return [this.exSkillLv1, this.exSkillLv2, this.exSkillLv3, this.exSkillLv4, this.exSkillLv5];
+  }
+
+  @Field(type => [Int])
+  get uniqueEquipmentFlag() {
+    return [this.uniqueEquipmentFlag1];
+  }
+
 }
 

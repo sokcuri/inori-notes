@@ -32,5 +32,15 @@ export class EventNaviCommentCondition extends BaseEntity {
   @Column({ name: 'condition_value_3', type: 'integer' })
   conditionValue3: number;
 
+  @Field(type => [Int])
+  get conditionType() {
+    return [this.conditionType1, this.conditionType2, this.conditionType3];
+  }
+
+  @Field(type => [Int])
+  get conditionValue() {
+    return [this.conditionValue1, this.conditionValue2, this.conditionValue3];
+  }
+
 }
 

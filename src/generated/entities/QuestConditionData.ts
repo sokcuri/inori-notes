@@ -48,5 +48,15 @@ export class QuestConditionData extends BaseEntity {
   @Column({ name: 'release_quest_id_5', type: 'integer' })
   releaseQuestId5: number;
 
+  @Field(type => [Int])
+  get conditionQuestId() {
+    return [this.conditionQuestId1, this.conditionQuestId2, this.conditionQuestId3, this.conditionQuestId4, this.conditionQuestId5];
+  }
+
+  @Field(type => [Int])
+  get releaseQuestId() {
+    return [this.releaseQuestId1, this.releaseQuestId2, this.releaseQuestId3, this.releaseQuestId4, this.releaseQuestId5];
+  }
+
 }
 

@@ -48,5 +48,15 @@ export class CombinedResultMotion extends BaseEntity {
   @Column({ name: 'disp_order_5', type: 'integer' })
   dispOrder5: number;
 
+  @Field(type => [Int])
+  get unitId() {
+    return [this.unitId1, this.unitId2, this.unitId3, this.unitId4, this.unitId5];
+  }
+
+  @Field(type => [Int])
+  get dispOrder() {
+    return [this.dispOrder1, this.dispOrder2, this.dispOrder3, this.dispOrder4, this.dispOrder5];
+  }
+
 }
 

@@ -156,5 +156,40 @@ export class TrainingQuestData extends BaseEntity {
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
+  @Field(type => [Int])
+  get unlockQuestId() {
+    return [this.unlockQuestId1, this.unlockQuestId2];
+  }
+
+  @Field(type => [Int])
+  get background() {
+    return [this.background1, this.background2, this.background3];
+  }
+
+  @Field(type => [Int])
+  get waveGroupId() {
+    return [this.waveGroupId1, this.waveGroupId2, this.waveGroupId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmSheetId() {
+    return [this.waveBgmSheetId1, this.waveBgmSheetId2, this.waveBgmSheetId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmQueId() {
+    return [this.waveBgmQueId1, this.waveBgmQueId2, this.waveBgmQueId3];
+  }
+
+  @Field(type => [Int])
+  get enemyImage() {
+    return [this.enemyImage1, this.enemyImage2, this.enemyImage3, this.enemyImage4, this.enemyImage5];
+  }
+
+  @Field(type => [Int])
+  get rewardImage() {
+    return [this.rewardImage1, this.rewardImage2, this.rewardImage3, this.rewardImage4, this.rewardImage5];
+  }
+
 }
 

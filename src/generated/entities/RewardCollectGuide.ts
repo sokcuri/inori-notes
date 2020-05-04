@@ -68,5 +68,15 @@ export class RewardCollectGuide extends BaseEntity {
   @Column({ name: 'system_id_5', type: 'integer' })
   systemId5: number;
 
+  @Field(type => [Int])
+  get questId() {
+    return [this.questId1, this.questId2, this.questId3, this.questId4, this.questId5, this.questId6, this.questId7, this.questId8, this.questId9, this.questId10];
+  }
+
+  @Field(type => [Int])
+  get systemId() {
+    return [this.systemId1, this.systemId2, this.systemId3, this.systemId4, this.systemId5];
+  }
+
 }
 

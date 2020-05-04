@@ -56,5 +56,10 @@ export class ClanBattleOddsData extends BaseEntity {
   @Column({ name: 'odds_csv_10', type: 'text' })
   oddsCsv10: string;
 
+  @Field(type => [String])
+  get oddsCsv() {
+    return [this.oddsCsv1, this.oddsCsv2, this.oddsCsv3, this.oddsCsv4, this.oddsCsv5, this.oddsCsv6, this.oddsCsv7, this.oddsCsv8, this.oddsCsv9, this.oddsCsv10];
+  }
+
 }
 

@@ -92,5 +92,10 @@ export class UnitData extends BaseEntity {
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
+  @Field(type => [Int])
+  get cutin() {
+    return [this.cutin1, this.cutin2];
+  }
+
 }
 

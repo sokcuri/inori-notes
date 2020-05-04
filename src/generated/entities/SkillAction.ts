@@ -88,5 +88,15 @@ export class SkillAction extends BaseEntity {
   @Column({ name: 'level_up_disp', type: 'text' })
   levelUpDisp: string;
 
+  @Field(type => [Int])
+  get actionDetail() {
+    return [this.actionDetail1, this.actionDetail2, this.actionDetail3];
+  }
+
+  @Field(type => [Float])
+  get actionValue() {
+    return [this.actionValue1, this.actionValue2, this.actionValue3, this.actionValue4, this.actionValue5, this.actionValue6, this.actionValue7];
+  }
+
 }
 

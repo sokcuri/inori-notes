@@ -56,5 +56,10 @@ export class HatsuneItem extends BaseEntity {
   @Column({ name: 'unit_material_id_10', type: 'integer' })
   unitMaterialId10: number;
 
+  @Field(type => [Int])
+  get unitMaterialId() {
+    return [this.unitMaterialId1, this.unitMaterialId2, this.unitMaterialId3, this.unitMaterialId4, this.unitMaterialId5, this.unitMaterialId6, this.unitMaterialId7, this.unitMaterialId8, this.unitMaterialId9, this.unitMaterialId10];
+  }
+
 }
 

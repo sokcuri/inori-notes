@@ -140,5 +140,10 @@ export class Guild extends BaseEntity {
   @Column({ name: 'member30', type: 'integer' })
   member30: number;
 
+  @Field(type => [Int])
+  get member() {
+    return [this.member1, this.member2, this.member3, this.member4, this.member5, this.member6, this.member7, this.member8, this.member9, this.member10, this.member11, this.member12, this.member13, this.member14, this.member15, this.member16, this.member17, this.member18, this.member19, this.member20, this.member21, this.member22, this.member23, this.member24, this.member25, this.member26, this.member27, this.member28, this.member29, this.member30];
+  }
+
 }
 

@@ -40,5 +40,10 @@ export class CampaignFreegacha extends BaseEntity {
   @Column({ name: 'relation_count', type: 'integer' })
   relationCount: number;
 
+  @Field(type => [Int])
+  get freegacha() {
+    return [this.freegacha1, this.freegacha10];
+  }
+
 }
 

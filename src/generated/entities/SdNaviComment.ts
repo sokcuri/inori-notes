@@ -20,7 +20,7 @@ export class SdNaviComment extends BaseEntity {
   @Column({ name: 'motion_type', type: 'integer' })
   motionType: number;
 
-  @Field(type => String)
+  @Field(type => String, { nullable: true })
   @Column({ name: 'description', type: 'text', nullable: true })
   description: string;
 

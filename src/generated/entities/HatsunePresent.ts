@@ -96,5 +96,20 @@ export class HatsunePresent extends BaseEntity {
   @Column({ name: 'item_num_5', type: 'integer' })
   itemNum5: number;
 
+  @Field(type => [Int])
+  get itemType() {
+    return [this.itemType1, this.itemType2, this.itemType3, this.itemType4, this.itemType5];
+  }
+
+  @Field(type => [Int])
+  get itemId() {
+    return [this.itemId1, this.itemId2, this.itemId3, this.itemId4, this.itemId5];
+  }
+
+  @Field(type => [Int])
+  get itemNum() {
+    return [this.itemNum1, this.itemNum2, this.itemNum3, this.itemNum4, this.itemNum5];
+  }
+
 }
 

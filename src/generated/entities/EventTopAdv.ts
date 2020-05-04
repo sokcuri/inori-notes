@@ -44,5 +44,10 @@ export class EventTopAdv extends BaseEntity {
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
+  @Field(type => [Int])
+  get value() {
+    return [this.value1, this.value2, this.value3];
+  }
+
 }
 

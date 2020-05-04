@@ -76,5 +76,10 @@ export class Still extends BaseEntity {
   @Column({ name: 'album_ignore', type: 'integer' })
   albumIgnore: number;
 
+  @Field(type => [Int])
+  get unitId() {
+    return [this.unitId1, this.unitId2, this.unitId3, this.unitId4, this.unitId5, this.unitId6, this.unitId7, this.unitId8, this.unitId9, this.unitId10];
+  }
+
 }
 

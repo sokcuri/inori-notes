@@ -28,5 +28,10 @@ export class HatsuneMapEvent extends BaseEntity {
   @Column({ name: 'param2', type: 'integer' })
   param2: number;
 
+  @Field(type => [Int])
+  get param() {
+    return [this.param1, this.param2];
+  }
+
 }
 

@@ -28,5 +28,10 @@ export class GiftMessage extends BaseEntity {
   @Column({ name: 'type_4', type: 'integer' })
   type4: number;
 
+  @Field(type => [Int])
+  get type() {
+    return [this.type1, this.type2, this.type3, this.type4];
+  }
+
 }
 

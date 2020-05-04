@@ -132,5 +132,30 @@ export class GachaData extends BaseEntity {
   @Column({ name: 'gacha_times_limit10', type: 'integer' })
   gachaTimesLimit10: number;
 
+  @Field(type => [String])
+  get descriptionArray() {
+    return [this.description2];
+  }
+
+  @Field(type => [String])
+  get gachaOddsStar() {
+    return [this.gachaOddsStar2];
+  }
+
+  @Field(type => [Int])
+  get ticketId() {
+    return [this.ticketId10];
+  }
+
+  @Field(type => [String])
+  get charaOddsStar() {
+    return [this.charaOddsStar1, this.charaOddsStar2, this.charaOddsStar3];
+  }
+
+  @Field(type => [Int])
+  get gachaTimesLimit() {
+    return [this.gachaTimesLimit10];
+  }
+
 }
 

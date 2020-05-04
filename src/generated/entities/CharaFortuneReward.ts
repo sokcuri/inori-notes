@@ -76,5 +76,20 @@ export class CharaFortuneReward extends BaseEntity {
   @Column({ name: 'count_5', type: 'integer' })
   count5: number;
 
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3, this.rewardType4, this.rewardType5];
+  }
+
+  @Field(type => [Int])
+  get rewardId() {
+    return [this.rewardId1, this.rewardId2, this.rewardId3, this.rewardId4, this.rewardId5];
+  }
+
+  @Field(type => [Int])
+  get count() {
+    return [this.count1, this.count2, this.count3, this.count4, this.count5];
+  }
+
 }
 

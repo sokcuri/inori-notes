@@ -140,5 +140,20 @@ export class SekaiBossFixReward extends BaseEntity {
   @Column({ name: 'reward_num_10', type: 'integer' })
   rewardNum10: number;
 
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3, this.rewardType4, this.rewardType5, this.rewardType6, this.rewardType7, this.rewardType8, this.rewardType9, this.rewardType10];
+  }
+
+  @Field(type => [Int])
+  get rewardId() {
+    return [this.rewardId1, this.rewardId2, this.rewardId3, this.rewardId4, this.rewardId5, this.rewardId6, this.rewardId7, this.rewardId8, this.rewardId9, this.rewardId10];
+  }
+
+  @Field(type => [Int])
+  get rewardNum() {
+    return [this.rewardNum1, this.rewardNum2, this.rewardNum3, this.rewardNum4, this.rewardNum5, this.rewardNum6, this.rewardNum7, this.rewardNum8, this.rewardNum9, this.rewardNum10];
+  }
+
 }
 

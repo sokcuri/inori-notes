@@ -52,5 +52,10 @@ export class TicketGachaData extends BaseEntity {
   @Column({ name: 'staging_type', type: 'integer' })
   stagingType: number;
 
+  @Field(type => [String])
+  get charaOddsStar() {
+    return [this.charaOddsStar1, this.charaOddsStar2, this.charaOddsStar3];
+  }
+
 }
 

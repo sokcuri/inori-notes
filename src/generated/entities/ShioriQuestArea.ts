@@ -60,5 +60,10 @@ export class ShioriQuestArea extends BaseEntity {
   @Column({ name: 'additional_effect', type: 'integer' })
   additionalEffect: number;
 
+  @Field(type => [String])
+  get tutorialParam() {
+    return [this.tutorialParam1, this.tutorialParam2];
+  }
+
 }
 

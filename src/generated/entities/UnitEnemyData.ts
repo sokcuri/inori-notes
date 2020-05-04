@@ -56,5 +56,10 @@ export class UnitEnemyData extends BaseEntity {
   @Column({ name: 'comment', type: 'text' })
   comment: string;
 
+  @Field(type => [Int])
+  get cutinStar() {
+    return [this.cutinStar6];
+  }
+
 }
 

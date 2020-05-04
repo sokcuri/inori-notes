@@ -32,5 +32,10 @@ export class VoiceGroup extends BaseEntity {
   @Column({ name: 'group_unit_id_05', type: 'integer' })
   groupUnitId05: number;
 
+  @Field(type => [Int])
+  get groupUnitId() {
+    return [this.groupUnitId01, this.groupUnitId02, this.groupUnitId03, this.groupUnitId04, this.groupUnitId05];
+  }
+
 }
 

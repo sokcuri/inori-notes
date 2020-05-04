@@ -40,5 +40,10 @@ export class GoldsetData extends BaseEntity {
   @Column({ name: 'additional_gold_max_rate', type: 'integer' })
   additionalGoldMaxRate: number;
 
+  @Field(type => [Int])
+  get goldsetOdds() {
+    return [this.goldsetOdds1, this.goldsetOdds2, this.goldsetOdds3];
+  }
+
 }
 

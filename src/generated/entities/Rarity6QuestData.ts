@@ -148,5 +148,30 @@ export class Rarity6QuestData extends BaseEntity {
   @Column({ name: 'wave_bgm', type: 'text' })
   waveBgm: string;
 
+  @Field(type => [Int])
+  get rewardImage() {
+    return [this.rewardImage1, this.rewardImage2, this.rewardImage3, this.rewardImage4, this.rewardImage5];
+  }
+
+  @Field(type => [Int])
+  get rewardCount() {
+    return [this.rewardCount1, this.rewardCount2, this.rewardCount3, this.rewardCount4, this.rewardCount5];
+  }
+
+  @Field(type => [Int])
+  get enemyPositionX() {
+    return [this.enemyPositionX1, this.enemyPositionX2, this.enemyPositionX3, this.enemyPositionX4, this.enemyPositionX5];
+  }
+
+  @Field(type => [Int])
+  get enemyLocalPositionY() {
+    return [this.enemyLocalPositionY1, this.enemyLocalPositionY2, this.enemyLocalPositionY3, this.enemyLocalPositionY4, this.enemyLocalPositionY5];
+  }
+
+  @Field(type => [Float])
+  get enemySize() {
+    return [this.enemySize1, this.enemySize2, this.enemySize3, this.enemySize4, this.enemySize5];
+  }
+
 }
 

@@ -48,5 +48,10 @@ export class SrtScore extends BaseEntity {
   @Column({ name: 'coefficient_wrong_num', type: 'integer' })
   coefficientWrongNum: number;
 
+  @Field(type => [Int])
+  get coefficientReadType() {
+    return [this.coefficientReadType1, this.coefficientReadType2, this.coefficientReadType3];
+  }
+
 }
 

@@ -44,5 +44,10 @@ export class GoldsetData2 extends BaseEntity {
   @Column({ name: 'training_quest_count', type: 'integer' })
   trainingQuestCount: number;
 
+  @Field(type => [Int])
+  get goldsetOdds() {
+    return [this.goldsetOdds1, this.goldsetOdds2, this.goldsetOdds3];
+  }
+
 }
 

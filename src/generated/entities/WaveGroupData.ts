@@ -76,5 +76,20 @@ export class WaveGroupData extends BaseEntity {
   @Column({ name: 'drop_reward_id_5', type: 'integer' })
   dropRewardId5: number;
 
+  @Field(type => [Int])
+  get enemyId() {
+    return [this.enemyId1, this.enemyId2, this.enemyId3, this.enemyId4, this.enemyId5];
+  }
+
+  @Field(type => [Int])
+  get dropGold() {
+    return [this.dropGold1, this.dropGold2, this.dropGold3, this.dropGold4, this.dropGold5];
+  }
+
+  @Field(type => [Int])
+  get dropRewardId() {
+    return [this.dropRewardId1, this.dropRewardId2, this.dropRewardId3, this.dropRewardId4, this.dropRewardId5];
+  }
+
 }
 

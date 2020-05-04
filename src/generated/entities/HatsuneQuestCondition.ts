@@ -48,5 +48,25 @@ export class HatsuneQuestCondition extends BaseEntity {
   @Column({ name: 'condition_main_quest_id', type: 'integer' })
   conditionMainQuestId: number;
 
+  @Field(type => [Int])
+  get conditionQuestId() {
+    return [this.conditionQuestId1, this.conditionQuestId2];
+  }
+
+  @Field(type => [Int])
+  get conditionBossId() {
+    return [this.conditionBossId1, this.conditionBossId2];
+  }
+
+  @Field(type => [Int])
+  get releaseQuestId() {
+    return [this.releaseQuestId1, this.releaseQuestId2];
+  }
+
+  @Field(type => [Int])
+  get releaseBossId() {
+    return [this.releaseBossId1, this.releaseBossId2];
+  }
+
 }
 

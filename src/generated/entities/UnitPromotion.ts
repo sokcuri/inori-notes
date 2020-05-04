@@ -36,5 +36,10 @@ export class UnitPromotion extends BaseEntity {
   @Column({ name: 'equip_slot_6', type: 'integer' })
   equipSlot6: number;
 
+  @Field(type => [Int])
+  get equipSlot() {
+    return [this.equipSlot1, this.equipSlot2, this.equipSlot3, this.equipSlot4, this.equipSlot5, this.equipSlot6];
+  }
+
 }
 

@@ -116,5 +116,15 @@ export class DungeonAreaData extends BaseEntity {
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
+  @Field(type => [Int])
+  get enemyImage() {
+    return [this.enemyImage1, this.enemyImage2, this.enemyImage3, this.enemyImage4, this.enemyImage5];
+  }
+
+  @Field(type => [Int])
+  get viewRewardId() {
+    return [this.viewRewardId1, this.viewRewardId2, this.viewRewardId3, this.viewRewardId4, this.viewRewardId5];
+  }
+
 }
 

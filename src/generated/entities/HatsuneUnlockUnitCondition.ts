@@ -32,5 +32,10 @@ export class HatsuneUnlockUnitCondition extends BaseEntity {
   @Column({ name: 'description_2', type: 'text' })
   description2: string;
 
+  @Field(type => [String])
+  get description() {
+    return [this.description1, this.description2];
+  }
+
 }
 

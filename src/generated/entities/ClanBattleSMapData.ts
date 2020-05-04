@@ -180,5 +180,35 @@ export class ClanBattleSMapData extends BaseEntity {
   @Column({ name: 'param_adjust_interval', type: 'integer' })
   paramAdjustInterval: number;
 
+  @Field(type => [Int])
+  get bossId() {
+    return [this.bossId1, this.bossId2, this.bossId3, this.bossId4, this.bossId5];
+  }
+
+  @Field(type => [Int])
+  get extraBattleFlag() {
+    return [this.extraBattleFlag1, this.extraBattleFlag2, this.extraBattleFlag3, this.extraBattleFlag4, this.extraBattleFlag5];
+  }
+
+  @Field(type => [Int])
+  get waveGroupId() {
+    return [this.waveGroupId1, this.waveGroupId2, this.waveGroupId3, this.waveGroupId4, this.waveGroupId5];
+  }
+
+  @Field(type => [Int])
+  get fixRewardId() {
+    return [this.fixRewardId1, this.fixRewardId2, this.fixRewardId3, this.fixRewardId4, this.fixRewardId5];
+  }
+
+  @Field(type => [Int])
+  get damageRankId() {
+    return [this.damageRankId1, this.damageRankId2, this.damageRankId3, this.damageRankId4, this.damageRankId5];
+  }
+
+  @Field(type => [Float])
+  get scoreCoefficient() {
+    return [this.scoreCoefficient1, this.scoreCoefficient2, this.scoreCoefficient3, this.scoreCoefficient4, this.scoreCoefficient5];
+  }
+
 }
 

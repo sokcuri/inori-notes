@@ -224,5 +224,55 @@ export class CooperationQuestData extends BaseEntity {
   @Column({ name: 'unlock_quest_id_2', type: 'integer' })
   unlockQuestId2: number;
 
+  @Field(type => [Int])
+  get background() {
+    return [this.background1, this.background2, this.background3];
+  }
+
+  @Field(type => [Int])
+  get waveGroupId() {
+    return [this.waveGroupId1, this.waveGroupId2, this.waveGroupId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmSheetId() {
+    return [this.waveBgmSheetId1, this.waveBgmSheetId2, this.waveBgmSheetId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmQueId() {
+    return [this.waveBgmQueId1, this.waveBgmQueId2, this.waveBgmQueId3];
+  }
+
+  @Field(type => [Int])
+  get enemyImage() {
+    return [this.enemyImage1, this.enemyImage2, this.enemyImage3, this.enemyImage4, this.enemyImage5];
+  }
+
+  @Field(type => [Int])
+  get firstRewardImage() {
+    return [this.firstRewardImage1, this.firstRewardImage2, this.firstRewardImage3, this.firstRewardImage4, this.firstRewardImage5];
+  }
+
+  @Field(type => [Int])
+  get repeatRewardImage() {
+    return [this.repeatRewardImage1, this.repeatRewardImage2, this.repeatRewardImage3];
+  }
+
+  @Field(type => [Int])
+  get mainEnemyImageWave() {
+    return [this.mainEnemyImageWave1, this.mainEnemyImageWave2, this.mainEnemyImageWave3];
+  }
+
+  @Field(type => [Int])
+  get subEnemyImageWave() {
+    return [this.subEnemyImageWave11, this.subEnemyImageWave12, this.subEnemyImageWave13, this.subEnemyImageWave14, this.subEnemyImageWave21, this.subEnemyImageWave22, this.subEnemyImageWave23, this.subEnemyImageWave24, this.subEnemyImageWave31, this.subEnemyImageWave32, this.subEnemyImageWave33, this.subEnemyImageWave34];
+  }
+
+  @Field(type => [Int])
+  get unlockQuestId() {
+    return [this.unlockQuestId1, this.unlockQuestId2];
+  }
+
 }
 

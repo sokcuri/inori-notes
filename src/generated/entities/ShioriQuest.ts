@@ -168,5 +168,35 @@ export class ShioriQuest extends BaseEntity {
   @Column({ name: 'quest_detail_bg_position', type: 'integer' })
   questDetailBgPosition: number;
 
+  @Field(type => [Int])
+  get waveGroupId() {
+    return [this.waveGroupId1, this.waveGroupId2, this.waveGroupId3];
+  }
+
+  @Field(type => [Int])
+  get background() {
+    return [this.background1, this.background2, this.background3];
+  }
+
+  @Field(type => [String])
+  get waveBgmSheetId() {
+    return [this.waveBgmSheetId1, this.waveBgmSheetId2, this.waveBgmSheetId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmQueId() {
+    return [this.waveBgmQueId1, this.waveBgmQueId2, this.waveBgmQueId3];
+  }
+
+  @Field(type => [Int])
+  get storyIdWavestart() {
+    return [this.storyIdWavestart1, this.storyIdWavestart2, this.storyIdWavestart3];
+  }
+
+  @Field(type => [Int])
+  get storyIdWaveend() {
+    return [this.storyIdWaveend1, this.storyIdWaveend2, this.storyIdWaveend3];
+  }
+
 }
 

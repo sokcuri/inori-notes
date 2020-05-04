@@ -88,5 +88,30 @@ export class StoryQuestData extends BaseEntity {
   @Column({ name: 'guest_unit_5', type: 'integer' })
   guestUnit5: number;
 
+  @Field(type => [Int])
+  get background() {
+    return [this.background1, this.background2, this.background3];
+  }
+
+  @Field(type => [Int])
+  get waveGroupId() {
+    return [this.waveGroupId1, this.waveGroupId2, this.waveGroupId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmSheetId() {
+    return [this.waveBgmSheetId1, this.waveBgmSheetId2, this.waveBgmSheetId3];
+  }
+
+  @Field(type => [String])
+  get waveBgmQueId() {
+    return [this.waveBgmQueId1, this.waveBgmQueId2, this.waveBgmQueId3];
+  }
+
+  @Field(type => [Int])
+  get guestUnit() {
+    return [this.guestUnit1, this.guestUnit2, this.guestUnit3, this.guestUnit4, this.guestUnit5];
+  }
+
 }
 

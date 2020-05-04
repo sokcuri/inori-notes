@@ -60,5 +60,10 @@ export class EmblemMissionData extends BaseEntity {
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
+  @Field(type => [Int])
+  get conditionValue() {
+    return [this.conditionValue1, this.conditionValue2, this.conditionValue3];
+  }
+
 }
 

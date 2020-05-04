@@ -208,5 +208,10 @@ export class ResistData extends BaseEntity {
   @Column({ name: 'ailment_50', type: 'integer' })
   ailment50: number;
 
+  @Field(type => [Int])
+  get ailment() {
+    return [this.ailment1, this.ailment2, this.ailment3, this.ailment4, this.ailment5, this.ailment6, this.ailment7, this.ailment8, this.ailment9, this.ailment10, this.ailment11, this.ailment12, this.ailment13, this.ailment14, this.ailment15, this.ailment16, this.ailment17, this.ailment18, this.ailment19, this.ailment20, this.ailment21, this.ailment22, this.ailment23, this.ailment24, this.ailment25, this.ailment26, this.ailment27, this.ailment28, this.ailment29, this.ailment30, this.ailment31, this.ailment32, this.ailment33, this.ailment34, this.ailment35, this.ailment36, this.ailment37, this.ailment38, this.ailment39, this.ailment40, this.ailment41, this.ailment42, this.ailment43, this.ailment44, this.ailment45, this.ailment46, this.ailment47, this.ailment48, this.ailment49, this.ailment50];
+  }
+
 }
 

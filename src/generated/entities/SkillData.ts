@@ -8,7 +8,7 @@ export class SkillData extends BaseEntity {
   @PrimaryColumn({ name: 'skill_id', type: 'integer' })
   skillId: number;
 
-  @Field(type => String)
+  @Field(type => String, { nullable: true })
   @Column({ name: 'name', type: 'text', nullable: true })
   name: string;
 
@@ -87,6 +87,16 @@ export class SkillData extends BaseEntity {
   @Field(type => Int)
   @Column({ name: 'icon_type', type: 'integer' })
   iconType: number;
+
+  @Field(type => [Int])
+  get action() {
+    return [this.action1, this.action2, this.action3, this.action4, this.action5, this.action6, this.action7];
+  }
+
+  @Field(type => [Int])
+  get dependAction() {
+    return [this.dependAction1, this.dependAction2, this.dependAction3, this.dependAction4, this.dependAction5, this.dependAction6, this.dependAction7];
+  }
 
 }
 

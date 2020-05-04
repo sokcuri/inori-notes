@@ -64,5 +64,20 @@ export class SeasonPack extends BaseEntity {
   @Column({ name: 'reward_rate_1', type: 'integer' })
   rewardRate1: number;
 
+  @Field(type => [Int])
+  get systemId() {
+    return [this.systemId1];
+  }
+
+  @Field(type => [Int])
+  get addNum() {
+    return [this.addNum1];
+  }
+
+  @Field(type => [Int])
+  get rewardRate() {
+    return [this.rewardRate1];
+  }
+
 }
 

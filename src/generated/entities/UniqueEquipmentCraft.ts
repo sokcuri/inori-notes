@@ -132,5 +132,20 @@ export class UniqueEquipmentCraft extends BaseEntity {
   @Column({ name: 'consume_num_10', type: 'integer' })
   consumeNum10: number;
 
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3, this.rewardType4, this.rewardType5, this.rewardType6, this.rewardType7, this.rewardType8, this.rewardType9, this.rewardType10];
+  }
+
+  @Field(type => [Int])
+  get itemId() {
+    return [this.itemId1, this.itemId2, this.itemId3, this.itemId4, this.itemId5, this.itemId6, this.itemId7, this.itemId8, this.itemId9, this.itemId10];
+  }
+
+  @Field(type => [Int])
+  get consumeNum() {
+    return [this.consumeNum1, this.consumeNum2, this.consumeNum3, this.consumeNum4, this.consumeNum5, this.consumeNum6, this.consumeNum7, this.consumeNum8, this.consumeNum9, this.consumeNum10];
+  }
+
 }
 

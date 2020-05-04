@@ -76,5 +76,20 @@ export class SrtReward extends BaseEntity {
   @Column({ name: 'reward_count_5', type: 'integer' })
   rewardCount5: number;
 
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3, this.rewardType4, this.rewardType5];
+  }
+
+  @Field(type => [Int])
+  get rewardId() {
+    return [this.rewardId1, this.rewardId2, this.rewardId3, this.rewardId4, this.rewardId5];
+  }
+
+  @Field(type => [Int])
+  get rewardCount() {
+    return [this.rewardCount1, this.rewardCount2, this.rewardCount3, this.rewardCount4, this.rewardCount5];
+  }
+
 }
 

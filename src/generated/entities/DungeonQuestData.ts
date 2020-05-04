@@ -76,5 +76,20 @@ export class DungeonQuestData extends BaseEntity {
   @Column({ name: 'wave_bgm_que_id_1', type: 'text' })
   waveBgmQueId1: string;
 
+  @Field(type => [Int])
+  get rewardImage() {
+    return [this.rewardImage1, this.rewardImage2, this.rewardImage3];
+  }
+
+  @Field(type => [String])
+  get waveBgmSheetId() {
+    return [this.waveBgmSheetId1];
+  }
+
+  @Field(type => [String])
+  get waveBgmQueId() {
+    return [this.waveBgmQueId1];
+  }
+
 }
 

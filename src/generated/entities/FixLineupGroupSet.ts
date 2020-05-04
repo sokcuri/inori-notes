@@ -496,5 +496,35 @@ export class FixLineupGroupSet extends BaseEntity {
   @Column({ name: 'price_20', type: 'integer' })
   price20: number;
 
+  @Field(type => [Int])
+  get rewardType() {
+    return [this.rewardType1, this.rewardType2, this.rewardType3, this.rewardType4, this.rewardType5, this.rewardType6, this.rewardType7, this.rewardType8, this.rewardType9, this.rewardType10, this.rewardType11, this.rewardType12, this.rewardType13, this.rewardType14, this.rewardType15, this.rewardType16, this.rewardType17, this.rewardType18, this.rewardType19, this.rewardType20];
+  }
+
+  @Field(type => [Int])
+  get rewardId() {
+    return [this.rewardId1, this.rewardId2, this.rewardId3, this.rewardId4, this.rewardId5, this.rewardId6, this.rewardId7, this.rewardId8, this.rewardId9, this.rewardId10, this.rewardId11, this.rewardId12, this.rewardId13, this.rewardId14, this.rewardId15, this.rewardId16, this.rewardId17, this.rewardId18, this.rewardId19, this.rewardId20];
+  }
+
+  @Field(type => [Int])
+  get rewardCount() {
+    return [this.rewardCount1, this.rewardCount2, this.rewardCount3, this.rewardCount4, this.rewardCount5, this.rewardCount6, this.rewardCount7, this.rewardCount8, this.rewardCount9, this.rewardCount10, this.rewardCount11, this.rewardCount12, this.rewardCount13, this.rewardCount14, this.rewardCount15, this.rewardCount16, this.rewardCount17, this.rewardCount18, this.rewardCount19, this.rewardCount20];
+  }
+
+  @Field(type => [Int])
+  get priceType() {
+    return [this.priceType1, this.priceType2, this.priceType3, this.priceType4, this.priceType5, this.priceType6, this.priceType7, this.priceType8, this.priceType9, this.priceType10, this.priceType11, this.priceType12, this.priceType13, this.priceType14, this.priceType15, this.priceType16, this.priceType17, this.priceType18, this.priceType19, this.priceType20];
+  }
+
+  @Field(type => [Int])
+  get currencyId() {
+    return [this.currencyId1, this.currencyId2, this.currencyId3, this.currencyId4, this.currencyId5, this.currencyId6, this.currencyId7, this.currencyId8, this.currencyId9, this.currencyId10, this.currencyId11, this.currencyId12, this.currencyId13, this.currencyId14, this.currencyId15, this.currencyId16, this.currencyId17, this.currencyId18, this.currencyId19, this.currencyId20];
+  }
+
+  @Field(type => [Int])
+  get price() {
+    return [this.price1, this.price2, this.price3, this.price4, this.price5, this.price6, this.price7, this.price8, this.price9, this.price10, this.price11, this.price12, this.price13, this.price14, this.price15, this.price16, this.price17, this.price18, this.price19, this.price20];
+  }
+
 }
 

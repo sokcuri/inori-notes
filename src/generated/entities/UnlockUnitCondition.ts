@@ -104,5 +104,25 @@ export class UnlockUnitCondition extends BaseEntity {
   @Column({ name: 'release_effect_type', type: 'integer' })
   releaseEffectType: number;
 
+  @Field(type => [Int])
+  get conditionType() {
+    return [this.conditionType1, this.conditionType2, this.conditionType3, this.conditionType4, this.conditionType5];
+  }
+
+  @Field(type => [Int])
+  get conditionTypeDetail() {
+    return [this.conditionTypeDetail1, this.conditionTypeDetail2, this.conditionTypeDetail3, this.conditionTypeDetail4, this.conditionTypeDetail5];
+  }
+
+  @Field(type => [Int])
+  get conditionId() {
+    return [this.conditionId1, this.conditionId2, this.conditionId3, this.conditionId4, this.conditionId5];
+  }
+
+  @Field(type => [Int])
+  get count() {
+    return [this.count1, this.count2, this.count3, this.count4, this.count5];
+  }
+
 }
 
