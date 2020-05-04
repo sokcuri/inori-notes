@@ -11,6 +11,8 @@ import {
   UnitPromotionStatusObject,
   UnitSkillDataObject,
   UnitSkillDetailObject,
+  UnitPromotionDetailObject,
+  unitPromotionDetail,
 } from '../landsol';
 
 import {
@@ -63,6 +65,9 @@ class UnitResponse {
   @Field(type => UnitSkillDetailObject)
   skillDetail: UnitSkillDetailObject;
 
+  @Field(type => [UnitPromotionDetailObject])
+  promotionDetail: UnitPromotionDetailObject[];
+
   @Field(type => String)
   name: string;
 }
@@ -88,6 +93,7 @@ export class UnitResolver {
     const skillData = await unitSkillData(unitId);
 
     const skillDetail = await unitSkillDetail(unitId);
+    const promotionDetail = await unitPromotionDetail(unitId);
 
     const name = 'test';
     return {
@@ -101,6 +107,7 @@ export class UnitResolver {
       rarity,
       skillData,
       skillDetail,
+      promotionDetail,
       name
     };
   }

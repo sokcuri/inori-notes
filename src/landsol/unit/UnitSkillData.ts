@@ -6,6 +6,7 @@ import { SkillDataObject } from '..';
 import { skillData } from '..';
 
 interface UnitSkillBase<T> {
+  unitId: number;
   unionBurst?: T;
   mainSkill?: T[];
   exSkill?: T[];
@@ -17,6 +18,9 @@ interface UnitSkillBase<T> {
 
 @ObjectType()
 export class UnitSkillDataObject implements UnitSkillBase<number> {
+  @Field(type => Int)
+  unitId: number;
+
   @Field(type => Int, { nullable: true })
   unionBurst?: number;
 
@@ -41,47 +45,45 @@ export class UnitSkillDataObject implements UnitSkillBase<number> {
 
 @ObjectType()
 export class UnitSkillDetailObject implements UnitSkillBase<SkillDataObject> {
+  @Field(type => Int)
+  unitId: number;
+
   @Field(type => SkillDataObject, { nullable: true })
   unionBurst?: SkillDataObject;
 
-  @Field(type => [SkillDataObject], { nullable: true })
+  @Field(type => [SkillDataObject], { nullable: 'itemsAndList' })
   mainSkill?: SkillDataObject[];
 
-  @Field(type => [SkillDataObject], { nullable: true })
+  @Field(type => [SkillDataObject], { nullable: 'itemsAndList' })
   exSkill?: SkillDataObject[];
 
-  @Field(type => [SkillDataObject], { nullable: true })
+  @Field(type => [SkillDataObject], { nullable: 'itemsAndList' })
   exSkillEvolution?: SkillDataObject[];
 
-  @Field(type => [SkillDataObject], { nullable: true })
+  @Field(type => [SkillDataObject], { nullable: 'itemsAndList' })
   spSkill?: SkillDataObject[];
 
   @Field(type => SkillDataObject, { nullable: true })
   unionBurstEvolution?: SkillDataObject;
 
-  @Field(type => [SkillDataObject], { nullable: true })
+  @Field(type => [SkillDataObject], { nullable: 'itemsAndList' })
   mainSkillEvolution?: SkillDataObject[];
 }
 
-async function toDetailObject(p: UnitSkillDataObject) {
-  const toSkillData = async (skillId: number) => await skillData(skillId);
-  const toSkillDataArray = async (skillIds: number[]) => {
-    const skillDataArray = skillIds.filter(id => !!id).map(id => skillData(id));
-    return Promise.all(skillDataArray);
-  };
+async function toDetailObject(p: UnitSkillDataObject, func: Function) {
+  const toData = async (id: number) => func(id);
+  const toArray = async (ids: number[]) => Promise.all(ids.filter(id => !!id).map(id => func(id)));
 
   const result = new UnitSkillDetailObject();
-
-  result.unionBurst = await toSkillData(p.unionBurst);
-  result.mainSkill = await toSkillDataArray(p.mainSkill);
-  result.exSkill = await toSkillDataArray(p.exSkill);
-  result.exSkillEvolution = await toSkillDataArray(p.exSkillEvolution);
-  result.spSkill = await toSkillDataArray(p.spSkill);
-  result.unionBurstEvolution = await toSkillData(p.unionBurstEvolution);
-  result.mainSkillEvolution = await toSkillDataArray(p.mainSkillEvolution);
+  result.unionBurst = await toData(p.unionBurst);
+  result.mainSkill = await toArray(p.mainSkill);
+  result.exSkill = await toArray(p.exSkill);
+  result.exSkillEvolution = await toArray(p.exSkillEvolution);
+  result.spSkill = await toArray(p.spSkill);
+  result.unionBurstEvolution = await toData(p.unionBurstEvolution);
+  result.mainSkillEvolution = await toArray(p.mainSkillEvolution);
   return result;
 }
-
 
 export async function unitSkillData(unitId: number): Promise<UnitSkillDataObject> {
   return await getRepository<UnitSkillDataObject>(UnitSkillData)
@@ -91,10 +93,10 @@ export async function unitSkillData(unitId: number): Promise<UnitSkillDataObject
 }
 
 export async function unitSkillDetail(unitId: number): Promise<UnitSkillDetailObject> {
-  const skillData = await getRepository<UnitSkillDataObject>(UnitSkillData)
+  const data = await getRepository<UnitSkillDataObject>(UnitSkillData)
   .createQueryBuilder('UnitSkillData')
   .where('UnitSkillData.unitId = :unitId', { unitId })
   .getOne();
 
-  return toDetailObject(skillData);
+  return toDetailObject(data, skillData);
 }
