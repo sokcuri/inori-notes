@@ -1,12 +1,34 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Field, Int, ObjectType } from 'type-graphql';
-import { UnitPromotion, EquipmentData } from '../../entities';
+import { UnitPromotion } from '../../entities';
 import { getRepository } from 'typeorm';
-import { equipmentData } from '..';
+import {
+  EquipmentDataObject,
+  EquipmentCraftObject,
+  EquipmentEnhanceRateObject
+} from '..';
+
+import {
+  equipmentCraft,
+  equipmentData,
+  equipmentEnhanceRate
+} from '..';
 
 interface UnitPromotionBase<T> {
   promotionLevel: number;
   equipSlot?: T[];
+}
+
+@ObjectType()
+class EquipmentObject {
+  @Field(type => EquipmentCraftObject, { nullable: true })
+  craft?: EquipmentCraftObject;
+
+  @Field(type => EquipmentDataObject, { nullable: true })
+  data?: EquipmentDataObject;
+
+  @Field(type => EquipmentEnhanceRateObject, { nullable: true })
+  enhanceRate?: EquipmentEnhanceRateObject;
 }
 
 @ObjectType()
@@ -19,24 +41,29 @@ export class UnitPromotionObject implements UnitPromotionBase<number> {
 }
 
 @ObjectType()
-export class UnitPromotionDetailObject implements UnitPromotionBase<EquipmentData> {
+export class UnitPromotionDetailObject implements UnitPromotionBase<EquipmentObject> {
   @Field(type => Int)
   promotionLevel: number;
 
-  @Field(type => [EquipmentData], { nullable: 'itemsAndList' })
-  equipSlot?: EquipmentData[];
+  @Field(type => [EquipmentObject], { nullable: 'itemsAndList' })
+  equipSlot?: EquipmentObject[];
 }
 
-async function toDetailObject(p: UnitPromotionObject[], func: Function) {
-  const toData = async (id: number) => func(id);
-  const toArray = async (ids: number[]) => Promise.all(ids.filter(id => !!id).map(id => func(id)));
-
+async function toDetailObject(unitPromotion: UnitPromotionObject[]) {
   const result: UnitPromotionDetailObject[] = [];
-  for (const item of p) {
-    const obj = new UnitPromotionDetailObject();
-    obj.promotionLevel = item.promotionLevel;
-    obj.equipSlot = await toArray(item.equipSlot);
-    result.push(obj);
+  for (const item of unitPromotion) {
+    const detail = new UnitPromotionDetailObject();
+    detail.promotionLevel = item.promotionLevel;
+    detail.equipSlot = [];
+
+    for (const id of item.equipSlot) {
+      const equipmentObject = new EquipmentObject();
+      equipmentObject.craft = await equipmentCraft(id);
+      equipmentObject.data = await equipmentData(id);
+      equipmentObject.enhanceRate = await equipmentEnhanceRate(id);
+      detail.equipSlot.push(equipmentObject);
+    }
+    result.push(detail);
   }
   return result;
 }
@@ -54,5 +81,5 @@ export async function unitPromotionDetail(unitId: number): Promise<UnitPromotion
     .where('UnitPromotion.unitId = :unitId', { unitId })
     .getMany();
 
-  return toDetailObject(data, equipmentData);
+  return await toDetailObject(data);
 }
