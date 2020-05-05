@@ -1,9 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Field, Int, ObjectType } from 'type-graphql';
-import { getRepository, BaseEntity } from 'typeorm';
+import { getRepository } from 'typeorm';
 import { UnitSkillData } from '../../entities';
-import { SkillDataObject } from '..';
-import { skillData } from '..';
+import {
+  SkillDataObject,
+} from '..';
+
+import {
+  skillData,
+} from '..';
 
 interface UnitSkillBase<T> {
   unitId: number;
@@ -70,10 +75,19 @@ export class UnitSkillDetailObject implements UnitSkillBase<SkillDataObject> {
   mainSkillEvolution?: SkillDataObject[];
 }
 
-async function toDetailObject(p: UnitSkillDataObject, func: Function) {
-  const toData = async (id: number) => func(id);
-  const toArray = async (ids: number[]) => Promise.all(ids.filter(id => !!id).map(id => func(id)));
+async function toData(id: number): Promise<SkillDataObject> {
+  return skillData(id);
+}
 
+async function toArray(ids: number[]): Promise<SkillDataObject[]> {
+  const result: SkillDataObject[] = [];
+  for (const id of ids) {
+    result.push(await toData(id));
+  }
+  return result;
+}
+
+async function toDetailObject(p: UnitSkillDataObject, func: Function) {
   const result = new UnitSkillDetailObject();
   result.unionBurst = await toData(p.unionBurst);
   result.mainSkill = await toArray(p.mainSkill);

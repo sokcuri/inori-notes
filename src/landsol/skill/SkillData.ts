@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ObjectType, Field, Int, Float } from 'type-graphql';
+import { ObjectType, Field, Int, Float, Query, Arg } from 'type-graphql';
 import { getRepository } from 'typeorm';
 import { SkillData } from '../../entities';
+import { SkillActionObject, skillAction } from '.';
 
 @ObjectType()
 export class SkillDataObject {
@@ -74,11 +75,17 @@ export class SkillDataObject {
   @Field(type => Int)
   iconType: number;
 
+  @Field(returns => SkillActionObject)
+  async getSkillAction(
+    @Arg("actionId", type => Int) actionId: number
+  ): Promise<SkillActionObject> {
+    return await skillAction(actionId);
+  }
 }
 
-export async function skillData(skillId: number): Promise<SkillData> {
-  return getRepository(SkillData)
-    .createQueryBuilder('UnitData')
-    .where('UnitData.skillId = :skillId', { skillId })
+export async function skillData(skillId: number): Promise<SkillDataObject> {
+  return getRepository<SkillDataObject>(SkillData)
+    .createQueryBuilder('SkillData')
+    .where('SkillData.skillId = :skillId', { skillId })
     .getOne();
 }
