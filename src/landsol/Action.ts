@@ -3,6 +3,9 @@ import { Resolver, Query, Arg, Int, ObjectType, Field, registerEnumType, Float }
 
 @ObjectType()
 export class Action {
+  @Field(type => Int)
+  id: number;
+
   @Field(type => String)
   description: string;
 
