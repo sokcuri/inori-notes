@@ -1,214 +1,22 @@
-/* eslint-disable @typescript-eslint/camelcase */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Resolver, Query, Arg, Int, ObjectType, Field, registerEnumType, Float } from 'type-graphql';
+import * as Util from '../util';
 import * as Entity from '../entities';
-import * as Landsol from '../util';
-
 import { UnitNotExistError } from '../error';
 
-enum AttackType {
-  Physical = 1,
-  Magical = 2,
-}
+import {
+  Action,
+  Skill,
+  Profile,
+  Unit,
+} from '../landsol';
 
-enum Position {
-  Front = '전열',
-  Middle = '중열',
-  End = '후열',
-}
+import {
+  AttackType,
+  SkillCategory,
+  Position,
+} from '../landsol/types';
 
-enum SkillCategory {
-  'UB',
-  'UB+',
-  'Main',
-  'Main+',
-  'EX',
-  'EX+',
-  'SP',
-}
-
-enum SkillIconType {
-  PhysicalSwing         = 1001, // 물리 스킬
-  MagicalSwing          = 1002, // 마법 스킬
-  BuffStat              = 1003, // 스텟 버프
-  DebuffStat            = 1004, // 스텟 디버프
-  RecoveryHP            = 1005, // HP 회복
-  RecoveryTP            = 1006, // TP 회복
-  Snare                 = 1007, // 속박 (츠무기)
-  Devil                 = 1008, // 저주 및 속박, 마법 방어력 감소 (할사키)
-  Charm                 = 1009, // 매혹
-  Dark                  = 1010, // 암흑
-  Silence               = 1011, // 침묵
-  TauntAll              = 1012, // 도발 (적 전체 도발)
-  Barrier               = 1013, // 무효화 배리어
-  General_1014          = 1014, // unused
-  DebuffField           = 1015, // 마법 방어력 감소 및 TP 상승 감소 필드, 행동속도 감소
-  BuffField             = 1016, // 아군의 HP를 회복하는 필드 전개
-  Summon                = 1017, // 소환 (예외. 스위트 생츄어리)
-  Stun                  = 1018, // 스턴
-  Sleep                 = 1019, // 수면
-  Freeze                = 1020, // 동면
-  Bondage               = 1021, // unused
-  Poison                = 1022, // 중독 (독 상태로 만듬, 물리 방어력 감소)
-  Burn                  = 1023, // 화상
-  Chaos                 = 1024, // 혼돈
-  PhysicalSwing2        = 2001, // 물리 스킬
-  MagicalSwing2         = 2002, // 마법 스킬
-  BuffStat2             = 2003, // 스텟 버프
-  DebuffStat2           = 2004, // 스텟 디버프
-  RecoveryHP2           = 2005, // HP 회복
-  RecoveryTP2           = 2006, // TP 회복
-  Snare2                = 2007, // 속박
-  Devil2                = 2008, // 저주 및 속박, 마법 방어력 감소
-  Charm2                = 2009, // 매혹
-  Dark2                 = 2010, // 암흑
-  TauntAll2             = 2012, // 도발
-  Barrier2              = 2013, // 무효화 배리어
-  General_2014          = 2014, // unused
-  DebuffField2          = 2015, // 마법 방어력 감소 및 TP 상승 감소 필드, 행동속도 감소
-  BuffField2            = 2016, // 아군의 HP를 회복하는 필드 전개
-  Summon2               = 2017, // 소환 (예외. 스위트 생츄어리)
-  Stun2                 = 2018, // 스턴
-  Bondage2              = 2021, // unused
-  Poison2               = 2022, // 중독
-  Chaos2                = 2024, // 혼돈
-  IncreasePhysicalATK   = 3001, // 전투 시작 시 자신의 물리 공격력 증가
-  IncreasePhysicalDEF   = 3002, // 전투 시작 시 자신의 물리 방어력 증가
-  IncreaseMagicalATK    = 3003, // 전투 시작 시 자신의 마법 공격력 증가
-  IncreaseMagicalDEF    = 3004, // 전투 시작 시 자신의 마법 방어력 증가
-  IncreaseMaximumHP     = 3005, // 전투 시작 시 자신의 최대 HP 증가
-  General_3006          = 3006, // unused
-  General_3007          = 3007, // unused
-  General_3008          = 3008, // unused
-  General_3009          = 3009, // unused
-  General_3010          = 3010, // unused
-  General_3011          = 3011, // unused
-}
-
-@ObjectType()
-class Action {
-  @Field(type => String)
-  description: string;
-
-  @Field(type => String)
-  levelUpDisp: string;
-}
-
-@ObjectType()
-class Skill {
-  constructor(category: SkillCategory, data: Entity.SkillData) {
-    this.id = data.skillId;
-    this.name = data.name;
-    this.category = SkillCategory[category];
-    this.skillType = data.skillType;
-    this.range = data.skillAreaWidth;
-    this.castTime = data.skillCastTime;
-    this.description = data.description;
-    this.iconType = data.iconType;
-    this.action = [];
-  }
-
-  @Field(type => Int)
-  id: number;
-
-  @Field(type => String)
-  name: string;
-
-  @Field(type => String)
-  category: string;
-
-  @Field(type => Int)
-  skillType: number;
-
-  @Field(type => Int)
-  range: number;
-
-  @Field(type => Float)
-  castTime: number;
-
-  @Field(type => String)
-  description: string;
-
-  @Field(type => Int)
-  iconType: SkillIconType;
-
-  @Field(type => [Action])
-  action: Action[];
-}
-
-@ObjectType()
-class Profile {
-  @Field(type => String)
-  age: string;
-
-  @Field(type => String)
-  guild: string;
-
-  @Field(type => String)
-  race: string;
-
-  @Field(type => String)
-  height: string;
-
-  @Field(type => String)
-  weight: string;
-
-  @Field(type => String)
-  get birth() {
-    return `${this.birthMonth}월 ${this.birthDay}일`;
-  }
-
-  @Field(type => String)
-  birthMonth: string;
-
-  @Field(type => String)
-  birthDay: string;
-
-  @Field(type => String)
-  bloodType: string;
-
-  @Field(type => String)
-  favorite: string;
-
-  @Field(type => String)
-  voice: string;
-
-  @Field(type => String)
-  catchCopy: string;
-
-  @Field(type => String)
-  selfText: string;
-}
-
-@ObjectType()
-class Response {
-  @Field(type => String)
-  name: string;
-
-  @Field(type => String)
-  attackType: string;
-
-  @Field(type => String)
-  unitName: string;
-
-  @Field(type => Int)
-  rarity: number;
-
-  @Field(type => Int)
-  range: number;
-
-  @Field(type => String)
-  position: Position;
-
-  @Field(type => Profile)
-  profile: Profile;
-
-  @Field(type => String)
-  comment: string;
-
-  @Field(type => [Skill])
-  skill: Skill[];
-}
 
 registerEnumType(AttackType, {
   name: "AttackType",
@@ -230,16 +38,16 @@ interface UnitObject {
 
 async function getUnitObject(unitId: number): Promise<UnitObject> {
   return {
-    actualBackground: await Landsol.getOne(Entity.ActualUnitBackground, { unitId }),
-    attackPattern: await Landsol.getOne(Entity.UnitAttackPattern, { unitId }),
-    background: await Landsol.getOne(Entity.UnitBackground, { unitId }),
-    comments: await Landsol.getOne(Entity.UnitComments, { unitId }),
-    data: await Landsol.getOne(Entity.UnitData, { unitId }),
-    profile: await Landsol.getOne(Entity.UnitProfile, { unitId }),
-    promotion: await Landsol.getMany(Entity.UnitPromotion, { unitId }),
-    promotionStatus: await Landsol.getMany(Entity.UnitPromotionStatus, { unitId }),
-    rarity: await Landsol.getMany(Entity.UnitRarity, { unitId }),
-    skillData: await Landsol.getOne(Entity.UnitSkillData, { unitId }),
+    actualBackground: await Util.getOne(Entity.ActualUnitBackground, { unitId }),
+    attackPattern: await Util.getOne(Entity.UnitAttackPattern, { unitId }),
+    background: await Util.getOne(Entity.UnitBackground, { unitId }),
+    comments: await Util.getOne(Entity.UnitComments, { unitId }),
+    data: await Util.getOne(Entity.UnitData, { unitId }),
+    profile: await Util.getOne(Entity.UnitProfile, { unitId }),
+    promotion: await Util.getMany(Entity.UnitPromotion, { unitId }),
+    promotionStatus: await Util.getMany(Entity.UnitPromotionStatus, { unitId }),
+    rarity: await Util.getMany(Entity.UnitRarity, { unitId }),
+    skillData: await Util.getOne(Entity.UnitSkillData, { unitId }),
   };
 }
 
@@ -255,7 +63,7 @@ async function getActionList(skillData: Entity.SkillData) {
 
   for (let i = 0; i < skillData.action.length; i++) {
     const actionId = skillData.action[i];
-    const data = await Landsol.getOne(Entity.SkillAction, { actionId });
+    const data = await Util.getOne(Entity.SkillAction, { actionId });
     if (data) {
       action.push(await createAction(data));
     }
@@ -297,49 +105,49 @@ async function getSkillList(unit: UnitObject) {
   } = unit.skillData;
 
   for (const skillId of [unionBurst]) {
-    const data = await Landsol.getOne(Entity.SkillData, { skillId });
+    const data = await Util.getOne(Entity.SkillData, { skillId });
     if (data) {
       skill.push(await createSkill(SkillCategory['UB'], data));
     }
   }
 
   for (const skillId of [unionBurstEvolution]) {
-    const data = await Landsol.getOne(Entity.SkillData, { skillId });
+    const data = await Util.getOne(Entity.SkillData, { skillId });
     if (data) {
       skill.push(await createSkill(SkillCategory['UB+'], data));
     }
   }
 
   for (const skillId of mainSkill) {
-    const data = await Landsol.getOne(Entity.SkillData, { skillId });
+    const data = await Util.getOne(Entity.SkillData, { skillId });
     if (data) {
       skill.push(await createSkill(SkillCategory['Main'], data));
     }
   }
 
   for (const skillId of mainSkillEvolution) {
-    const data = await Landsol.getOne(Entity.SkillData, { skillId });
+    const data = await Util.getOne(Entity.SkillData, { skillId });
     if (data) {
       skill.push(await createSkill(SkillCategory['Main+'], data));
     }
   }
 
   for (const skillId of spSkill) {
-    const data = await Landsol.getOne(Entity.SkillData, { skillId });
+    const data = await Util.getOne(Entity.SkillData, { skillId });
     if (data) {
       skill.push(await createSkill(SkillCategory['SP'], data));
     }
   }
 
   for (const skillId of exSkill) {
-    const data = await Landsol.getOne(Entity.SkillData, { skillId });
+    const data = await Util.getOne(Entity.SkillData, { skillId });
     if (data) {
       skill.push(await createSkill(SkillCategory['EX'], data));
     }
   }
 
   for (const skillId of exSkillEvolution) {
-    const data = await Landsol.getOne(Entity.SkillData, { skillId });
+    const data = await Util.getOne(Entity.SkillData, { skillId });
     if (data) {
       skill.push(await createSkill(SkillCategory['EX+'], data));
     }
@@ -350,11 +158,11 @@ async function getSkillList(unit: UnitObject) {
 
 @Resolver()
 export class UnitResolver {
-  @Query(returns => Response)
+  @Query(returns => Unit)
   async unit(
     @Arg("unitId", type => Int) unitId: number
-  ): Promise<Response> {
-    const data = await Landsol.getOne(Entity.UnitData, { unitId });
+  ): Promise<Unit> {
+    const data = await Util.getOne(Entity.UnitData, { unitId });
     if (!data) {
       throw new UnitNotExistError(unitId);
     }
