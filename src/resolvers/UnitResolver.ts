@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Resolver, Query, Arg, Int, ObjectType, Field, registerEnumType, Float } from 'type-graphql';
 import * as Entity from '../entities';
-import * as Landsol from '../landsol';
+import * as Landsol from '../util';
 
 import { UnitNotExistError } from '../error';
 
@@ -86,6 +86,15 @@ enum SkillIconType {
 }
 
 @ObjectType()
+class Action {
+  @Field(type => String)
+  description: string;
+
+  @Field(type => String)
+  levelUpDisp: string;
+}
+
+@ObjectType()
 class Skill {
   constructor(category: SkillCategory, data: Entity.SkillData) {
     this.id = data.skillId;
@@ -123,8 +132,8 @@ class Skill {
   @Field(type => Int)
   iconType: SkillIconType;
 
-  @Field(type => [String])
-  action: string[];
+  @Field(type => [Action])
+  action: Action[];
 }
 
 @ObjectType()
@@ -234,11 +243,42 @@ async function getUnitObject(unitId: number): Promise<UnitObject> {
   };
 }
 
+async function createAction(data: Entity.SkillAction) {
+  const action = new Action();
+  action.description = data.description;
+  action.levelUpDisp = data.levelUpDisp;
+  return action;
+}
+
+async function getActionList(skillData: Entity.SkillData) {
+  const action: Action[] = [];
+
+  for (let i = 0; i < skillData.action.length; i++) {
+    const actionId = skillData.action[i];
+    const data = await Landsol.getOne(Entity.SkillAction, { actionId });
+    if (data) {
+      action.push(await createAction(data));
+    }
+  }
+
+  return action;
+}
+
 async function createSkill(category: SkillCategory, data: Entity.SkillData) {
   const skill = new Skill(category, data);
-  skill.action.push('test action 1');
-  skill.action.push('test action 2');
-  skill.action.push('test action 3');
+
+  const action = await getActionList(data);
+  skill.action = action;
+
+
+  // ;
+  // data.dependAction;
+  // const action = await Landsol.getOne(Entity.SkillAction, { skillId: skill.id });
+  // console.log(action);
+
+  // skill.action.push('test action 1');
+  // skill.action.push('test action 2');
+  // skill.action.push('test action 3');
 
   return skill;
 }
