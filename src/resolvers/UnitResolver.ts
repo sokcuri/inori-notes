@@ -75,7 +75,7 @@ class UnitResponse {
 @Resolver()
 export class UnitResolver {
   @Query(returns => UnitResponse)
-  async getUnit(
+  async unit(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitResponse> {
     const data = await unitData(unitId);
@@ -114,63 +114,63 @@ export class UnitResolver {
 
 
   @Query(returns => ActualUnitBackgroundObject)
-  async getActualUnitBackground(
+  async actualUnitBackground(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<ActualUnitBackgroundObject> {
     return await actualUnitBackground(unitId);
   }
 
   @Query(returns => UnitBackgroundObject)
-  async getUnitBackground(
+  async unitBackground(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitBackgroundObject> {
     return await unitBackground(unitId);
   }
 
   @Query(returns => UnitCommentsObject)
-  async getUnitComments(
+  async unitComments(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitCommentsObject> {
     return await unitComments(unitId);
   }
 
   @Query(returns => UnitDataObject)
-  async getUnitData(
+  async unitData(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitDataObject> {
     return await unitData(unitId);
   }
 
   @Query(returns => UnitProfileObject)
-  async getUnitProfile(
+  async unitProfile(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitProfileObject> {
     return await unitProfile(unitId);
   }
 
   @Query(returns => [UnitRarityObject])
-  async getUnitRarity(
+  async unitRarity(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitRarityObject[]> {
     return await unitRarity(unitId);
   }
 
   @Query(returns => UnitSkillDataObject)
-  async getUnitSkillData(
+  async unitSkillData(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitSkillDataObject> {
     return await unitSkillData(unitId);
   }
 
   @Query(returns => [UnitPromotionObject])
-  async getUnitPromotion(
+  async unitPromotion(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitPromotionObject[]> {
     return await unitPromotion(unitId);
   }
 
   @Query(returns => [UnitPromotionStatusObject])
-  async getUnitPromotionStatus(
+  async unitPromotionStatus(
     @Arg("unitId", type => Int) unitId: number
   ): Promise<UnitPromotionStatusObject[]> {
     return await unitPromotionStatus(unitId);
