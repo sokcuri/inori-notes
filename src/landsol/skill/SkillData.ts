@@ -76,7 +76,7 @@ export class SkillDataObject {
   iconType: number;
 
   @Field(returns => SkillActionObject)
-  async getSkillAction(
+  async skillAction(
     @Arg("actionId", type => Int) actionId: number
   ): Promise<SkillActionObject> {
     return await skillAction(actionId);
