@@ -20,9 +20,5 @@ export class RoomEffect extends BaseEntity {
   @Column({ name: 'nebbia', type: 'integer' })
   nebbia: number;
 
-  @Field(type => Int)
-  @Column({ name: 'arcade', type: 'integer' })
-  arcade: number;
-
 }
 

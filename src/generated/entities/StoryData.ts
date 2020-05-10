@@ -40,9 +40,5 @@ export class StoryData extends BaseEntity {
   @Column({ name: 'order', type: 'integer' })
   order: number;
 
-  @Field(type => Int)
-  @Column({ name: 'condition_free_flag', type: 'integer' })
-  conditionFreeFlag: number;
-
 }
 

@@ -57,10 +57,6 @@ export class DearStoryDetail extends BaseEntity {
   conditionEventQuestId: number;
 
   @Field(type => Int)
-  @Column({ name: 'condition_event_boss_id', type: 'integer' })
-  conditionEventBossId: number;
-
-  @Field(type => Int)
   @Column({ name: 'reward_type_1', type: 'integer' })
   rewardType1: number;
 

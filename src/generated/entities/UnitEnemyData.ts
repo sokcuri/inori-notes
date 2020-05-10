@@ -45,10 +45,6 @@ export class UnitEnemyData extends BaseEntity {
   cutin: number;
 
   @Field(type => Int)
-  @Column({ name: 'cutin_star6', type: 'integer' })
-  cutinStar6: number;
-
-  @Field(type => Int)
   @Column({ name: 'visual_change_flag', type: 'integer' })
   visualChangeFlag: number;
 

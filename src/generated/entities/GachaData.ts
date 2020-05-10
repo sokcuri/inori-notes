@@ -108,18 +108,6 @@ export class GachaData extends BaseEntity {
   @Column({ name: 'chara_odds_star3', type: 'text' })
   charaOddsStar3: string;
 
-  @Field(type => String)
-  @Column({ name: 'gacha10_special_odds_star1', type: 'text' })
-  gacha10SpecialOddsStar1: string;
-
-  @Field(type => String)
-  @Column({ name: 'gacha10_special_odds_star2', type: 'text' })
-  gacha10SpecialOddsStar2: string;
-
-  @Field(type => String)
-  @Column({ name: 'gacha10_special_odds_star3', type: 'text' })
-  gacha10SpecialOddsStar3: string;
-
   @Field(type => Int)
   @Column({ name: 'prizegacha_id', type: 'integer' })
   prizegachaId: number;
@@ -127,10 +115,6 @@ export class GachaData extends BaseEntity {
   @Field(type => Int)
   @Column({ name: 'gacha_bonus_id', type: 'integer' })
   gachaBonusId: number;
-
-  @Field(type => Int)
-  @Column({ name: 'gacha_times_limit10', type: 'integer' })
-  gachaTimesLimit10: number;
 
   @Field(type => [String])
   get charaOddsStar() {

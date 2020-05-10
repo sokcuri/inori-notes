@@ -108,13 +108,5 @@ export class EquipmentData extends BaseEntity {
   @Column({ name: 'accuracy', type: 'real' })
   accuracy: number;
 
-  @Field(type => Int)
-  @Column({ name: 'display_item', type: 'integer' })
-  displayItem: number;
-
-  @Field(type => Int)
-  @Column({ name: 'item_type', type: 'integer' })
-  itemType: number;
-
 }
 

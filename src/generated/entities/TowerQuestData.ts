@@ -200,10 +200,6 @@ export class TowerQuestData extends BaseEntity {
   @Column({ name: 'clp_flag', type: 'integer' })
   clpFlag: number;
 
-  @Field(type => Int)
-  @Column({ name: 'skip_level', type: 'integer' })
-  skipLevel: number;
-
   @Field(type => [Int])
   get rewardImage() {
     return [this.rewardImage1, this.rewardImage2, this.rewardImage3, this.rewardImage4, this.rewardImage5];

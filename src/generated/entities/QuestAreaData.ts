@@ -12,10 +12,6 @@ export class QuestAreaData extends BaseEntity {
   @Column({ name: 'area_name', type: 'text' })
   areaName: string;
 
-  @Field(type => String)
-  @Column({ name: 'area_display_name', type: 'text' })
-  areaDisplayName: string;
-
   @Field(type => Int)
   @Column({ name: 'map_type', type: 'integer' })
   mapType: number;

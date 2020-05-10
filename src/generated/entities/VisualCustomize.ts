@@ -28,14 +28,6 @@ export class VisualCustomize extends BaseEntity {
   @Column({ name: 'quest_top_movie', type: 'integer' })
   questTopMovie: number;
 
-  @Field(type => Int)
-  @Column({ name: 'profile_logo', type: 'integer' })
-  profileLogo: number;
-
-  @Field(type => Int)
-  @Column({ name: 'watched_story_id', type: 'integer' })
-  watchedStoryId: number;
-
   @Field(type => String)
   @Column({ name: 'start_time', type: 'text' })
   startTime: string;

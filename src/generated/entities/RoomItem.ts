@@ -72,9 +72,5 @@ export class RoomItem extends BaseEntity {
   @Column({ name: 'sort', type: 'integer' })
   sort: number;
 
-  @Field(type => Int)
-  @Column({ name: 'condition_quest_id', type: 'integer' })
-  conditionQuestId: number;
-
 }
 

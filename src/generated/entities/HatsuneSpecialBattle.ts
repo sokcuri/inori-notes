@@ -72,9 +72,5 @@ export class HatsuneSpecialBattle extends BaseEntity {
   @Column({ name: 'detail_boss_bg_height', type: 'real' })
   detailBossBgHeight: number;
 
-  @Field(type => String)
-  @Column({ name: 'detail_boss_motion', type: 'text' })
-  detailBossMotion: string;
-
 }
 

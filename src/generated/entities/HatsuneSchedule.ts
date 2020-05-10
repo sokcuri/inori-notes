@@ -64,9 +64,5 @@ export class HatsuneSchedule extends BaseEntity {
   @Column({ name: 'original_event_id', type: 'integer' })
   originalEventId: number;
 
-  @Field(type => Int)
-  @Column({ name: 'series_event_id', type: 'integer' })
-  seriesEventId: number;
-
 }
 

@@ -32,13 +32,5 @@ export class CampaignSchedule extends BaseEntity {
   @Column({ name: 'end_time', type: 'text' })
   endTime: string;
 
-  @Field(type => Int)
-  @Column({ name: 'level_id', type: 'integer' })
-  levelId: number;
-
-  @Field(type => Int)
-  @Column({ name: 'shiori_group_id', type: 'integer' })
-  shioriGroupId: number;
-
 }
 

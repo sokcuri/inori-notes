@@ -4,12 +4,12 @@ import { ObjectType, Field, ID, Int, Float } from 'type-graphql';
 @ObjectType()
 @Entity({ name: 'minigame' })
 export class Minigame extends BaseEntity {
-  @Field(type => Int)
-  @Column({ name: 'id', type: 'integer' })
+  @Field(type => ID)
+  @PrimaryColumn({ name: 'id', type: 'integer' })
   id: number;
 
-  @Field(type => ID)
-  @PrimaryColumn({ name: 'minigame_scheme_id', type: 'integer' })
+  @Field(type => Int)
+  @Column({ name: 'minigame_scheme_id', type: 'integer' })
   minigameSchemeId: number;
 
   @Field(type => Int)

@@ -49,26 +49,6 @@ export class ClanBattleSMapData extends BaseEntity {
   bossId5: number;
 
   @Field(type => Int)
-  @Column({ name: 'extra_battle_flag1', type: 'integer' })
-  extraBattleFlag1: number;
-
-  @Field(type => Int)
-  @Column({ name: 'extra_battle_flag2', type: 'integer' })
-  extraBattleFlag2: number;
-
-  @Field(type => Int)
-  @Column({ name: 'extra_battle_flag3', type: 'integer' })
-  extraBattleFlag3: number;
-
-  @Field(type => Int)
-  @Column({ name: 'extra_battle_flag4', type: 'integer' })
-  extraBattleFlag4: number;
-
-  @Field(type => Int)
-  @Column({ name: 'extra_battle_flag5', type: 'integer' })
-  extraBattleFlag5: number;
-
-  @Field(type => Int)
   @Column({ name: 'aura_effect', type: 'integer' })
   auraEffect: number;
 
@@ -183,11 +163,6 @@ export class ClanBattleSMapData extends BaseEntity {
   @Field(type => [Int])
   get bossId() {
     return [this.bossId1, this.bossId2, this.bossId3, this.bossId4, this.bossId5];
-  }
-
-  @Field(type => [Int])
-  get extraBattleFlag() {
-    return [this.extraBattleFlag1, this.extraBattleFlag2, this.extraBattleFlag3, this.extraBattleFlag4, this.extraBattleFlag5];
   }
 
   @Field(type => [Int])

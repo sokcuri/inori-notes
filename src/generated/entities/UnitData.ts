@@ -61,14 +61,6 @@ export class UnitData extends BaseEntity {
   cutin2: number;
 
   @Field(type => Int)
-  @Column({ name: 'cutin1_star6', type: 'integer' })
-  cutin1Star6: number;
-
-  @Field(type => Int)
-  @Column({ name: 'cutin2_star6', type: 'integer' })
-  cutin2Star6: number;
-
-  @Field(type => Int)
   @Column({ name: 'guild_id', type: 'integer' })
   guildId: number;
 
