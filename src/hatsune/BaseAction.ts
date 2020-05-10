@@ -1,3 +1,3 @@
-export abstract class BaseAction {
+export class BaseAction {
 
 }

@@ -16,6 +16,7 @@ import {
   SkillCategory,
   Position,
 } from '../landsol/types';
+import { getAction } from '../hatsune';
 
 
 registerEnumType(AttackType, {
@@ -56,6 +57,9 @@ async function createAction(data: Entity.SkillAction) {
   action.id = data.actionId;
   action.description = data.description;
   action.levelUpDisp = data.levelUpDisp;
+
+  const a = getAction(data.actionType);
+  new a();
   return action;
 }
 
