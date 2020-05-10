@@ -53,6 +53,7 @@ async function getUnitObject(unitId: number): Promise<UnitObject> {
 
 async function createAction(data: Entity.SkillAction) {
   const action = new Action();
+  action.id = data.actionId;
   action.description = data.description;
   action.levelUpDisp = data.levelUpDisp;
   return action;
